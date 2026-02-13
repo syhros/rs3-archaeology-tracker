@@ -9,6 +9,11 @@ interface ArtefactCardProps {
   onBankedChange: (name: string, val: number) => void;
 }
 
+// Helper to clean collection name (remove parenthesized collector name)
+const cleanCollectionName = (name: string) => {
+  return name.replace(/\s*\(.*?\)\s*$/, '');
+};
+
 export const ArtefactCard: React.FC<ArtefactCardProps> = ({
   artefact,
   bankedCount,
@@ -33,6 +38,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
   return (
     <div
       className={`
+        w-full min-w-[220px] max-w-[280px]
         border rounded-lg shadow-lg overflow-hidden flex flex-col transition-colors duration-300
         ${isComplete ? 'bg-green-900 border-green-700' : 'bg-gray-800 border-gray-700 hover:border-blue-500'}
       `}
@@ -105,10 +111,13 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
             {allUses.length === 0 && <li className="text-[10px] text-gray-600 italic">No collections</li>}
             {allUses.map((use, idx) => {
                 const isChecked = use.type === 'collection' && checkedCollections[use.name];
+                // Clean the name only for display
+                const displayName = use.type === 'collection' ? cleanCollectionName(use.name) : use.name;
+                
                 return (
                     <li key={`${use.name}-${idx}`} className={`text-[10px] flex items-start gap-1.5 ${isChecked ? 'text-green-400 line-through decoration-green-600/50' : 'text-gray-400'}`}>
                         <span className={`mt-0.5 w-1 h-1 rounded-full flex-shrink-0 ${isChecked ? 'bg-green-500' : 'bg-gray-600'}`}></span>
-                        <span className="leading-tight truncate" title={use.name}>{use.name}</span>
+                        <span className="leading-tight truncate" title={displayName}>{displayName}</span>
                     </li>
                 );
             })}
