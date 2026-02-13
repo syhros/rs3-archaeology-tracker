@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ARTEFACTS_JSON, COLLECTIONS_JSON } from './constants';
-import { Artefact, Collection, BankedCounts, CheckedCollections, SortMethod, Materials } from './types';
+import { Artefact, Collection, UserArtefactCounts, CheckedCollections, SortMethod, Materials } from './types';
 import { ArtefactCard } from './components/ArtefactCard';
 import { CollectionSidebar } from './components/CollectionSidebar';
 import { FilterBar } from './components/FilterBar';
@@ -12,19 +12,38 @@ const artefactsArray: Artefact[] = Object.entries(ARTEFACTS_JSON).map(([key, val
   ...value,
 }));
 
-const collectionsArray: Collection[] = Object.entries(COLLECTIONS_JSON).map(([key, value]) => ({
+const initialCollectionsArray: Collection[] = Object.entries(COLLECTIONS_JSON).map(([key, value]) => ({
   name: key,
   ...value,
 }));
 
+// --- Process "Other Uses" into Collections ---
+const otherUsesMap: Record<string, string[]> = {};
+artefactsArray.forEach(art => {
+  if (art.other_uses) {
+    art.other_uses.forEach(use => {
+      if (!otherUsesMap[use]) otherUsesMap[use] = [];
+      otherUsesMap[use].push(art.name);
+    });
+  }
+});
+
+const otherUsesCollections: Collection[] = Object.entries(otherUsesMap).map(([use, items]) => ({
+  name: use,
+  collector: 'Other Uses',
+  items: items,
+}));
+
+// Merge standard collections with Other Uses
+const allCollectionsArray = [...initialCollectionsArray, ...otherUsesCollections];
+
 // --- Precompute Collection Map ---
-// Maps each artefact name to a list of collections it belongs to.
-// This optimizes the "Donated" calculation.
+// Maps each artefact name to a list of collections (including other uses) it belongs to.
 const artefactCollectionsMap: Record<string, string[]> = {};
 artefactsArray.forEach(art => {
   artefactCollectionsMap[art.name] = [];
 });
-collectionsArray.forEach(col => {
+allCollectionsArray.forEach(col => {
   col.items.forEach(itemName => {
     if (artefactCollectionsMap[itemName]) {
       artefactCollectionsMap[itemName].push(col.name);
@@ -35,9 +54,8 @@ collectionsArray.forEach(col => {
 
 function App() {
   // --- State ---
-  // LocalStorage initialization with lazy state
-  const [bankedCounts, setBankedCounts] = useState<BankedCounts>(() => {
-    const saved = localStorage.getItem('rs3-arch-banked');
+  const [artefactCounts, setArtefactCounts] = useState<UserArtefactCounts>(() => {
+    const saved = localStorage.getItem('rs3-arch-counts-v2');
     return saved ? JSON.parse(saved) : {};
   });
 
@@ -46,7 +64,6 @@ function App() {
     return saved ? JSON.parse(saved) : {};
   });
 
-  // Material Banking State
   const [bankedMaterials, setBankedMaterials] = useState<Record<string, number>>(() => {
     const saved = localStorage.getItem('rs3-arch-mat-banked');
     return saved ? JSON.parse(saved) : {};
@@ -55,14 +72,15 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortMethod, setSortMethod] = useState<SortMethod>('level');
   const [selectedCollectionFilter, setSelectedCollectionFilter] = useState<string | null>(null);
+  const [hideCompleted, setHideCompleted] = useState(false);
   
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Mobile sidebar toggle
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isShoppingListOpen, setIsShoppingListOpen] = useState(false);
 
   // --- Effects ---
   useEffect(() => {
-    localStorage.setItem('rs3-arch-banked', JSON.stringify(bankedCounts));
-  }, [bankedCounts]);
+    localStorage.setItem('rs3-arch-counts-v2', JSON.stringify(artefactCounts));
+  }, [artefactCounts]);
 
   useEffect(() => {
     localStorage.setItem('rs3-arch-checked', JSON.stringify(checkedCollections));
@@ -73,8 +91,14 @@ function App() {
   }, [bankedMaterials]);
 
   // --- Handlers ---
-  const handleBankedChange = (name: string, val: number) => {
-    setBankedCounts(prev => ({ ...prev, [name]: val }));
+  const handleCountChange = (name: string, type: 'damaged' | 'repaired', val: number) => {
+    setArtefactCounts(prev => ({
+      ...prev,
+      [name]: {
+        ...prev[name],
+        [type]: val
+      }
+    }));
   };
 
   const handleCheckChange = (name: string, checked: boolean) => {
@@ -87,7 +111,6 @@ function App() {
 
   // --- Calculations ---
   
-  // Calculate donated count per artefact based on checked collections
   const getDonatedCount = (artefactName: string): number => {
     const relevantCollections = artefactCollectionsMap[artefactName] || [];
     return relevantCollections.reduce((acc, colName) => {
@@ -95,30 +118,45 @@ function App() {
     }, 0);
   };
 
-  // Calculate totals for banked items
   const bankedTotals = useMemo(() => {
     let xp = 0;
     let chronotes = 0;
     
     artefactsArray.forEach(art => {
-      const count = bankedCounts[art.name] || 0;
-      if (count > 0) {
-        xp += count * art.xp;
-        chronotes += count * art.individual_chronotes;
+      const counts = artefactCounts[art.name];
+      const damagedCount = counts?.damaged || 0;
+      
+      if (damagedCount > 0) {
+        xp += damagedCount * art.xp;
+        chronotes += damagedCount * art.individual_chronotes;
       }
     });
 
     return { xp, chronotes };
-  }, [bankedCounts]);
+  }, [artefactCounts]);
 
-  // Filter & Sort Artefacts
   const processedArtefacts = useMemo(() => {
     let result = artefactsArray.filter(art => {
       const matchesSearch = art.name.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      // Determine if artefact is in selected collection filter
+      // Now including 'Other Uses' as they are in allCollectionsArray
       const matchesCollection = selectedCollectionFilter 
-        ? (art.collections && art.collections.includes(selectedCollectionFilter)) 
+        ? (artefactCollectionsMap[art.name] && artefactCollectionsMap[art.name].includes(selectedCollectionFilter)) 
         : true;
-      return matchesSearch && matchesCollection;
+
+      // Hide Completed Filter
+      let matchesHideCompleted = true;
+      if (hideCompleted) {
+          const myCollections = artefactCollectionsMap[art.name] || [];
+          if (myCollections.length > 0) {
+              // If ALL of its collections are checked, hide it.
+              const allCompleted = myCollections.every(colName => checkedCollections[colName]);
+              if (allCompleted) matchesHideCompleted = false;
+          }
+      }
+
+      return matchesSearch && matchesCollection && matchesHideCompleted;
     });
 
     return result.sort((a, b) => {
@@ -127,30 +165,35 @@ function App() {
       } else if (sortMethod === 'level') {
         return a.level - b.level;
       } else if (sortMethod === 'remaining') {
-        const remainingA = Math.max(0, a.total_needed - ((bankedCounts[a.name] || 0) + getDonatedCount(a.name)));
-        const remainingB = Math.max(0, b.total_needed - ((bankedCounts[b.name] || 0) + getDonatedCount(b.name)));
-        // Sort descending by remaining (show needed first), then name
+        const countsA = artefactCounts[a.name];
+        const donatedA = getDonatedCount(a.name);
+        const remainingA = Math.max(0, a.total_needed - ((countsA?.damaged || 0) + (countsA?.repaired || 0) + donatedA));
+
+        const countsB = artefactCounts[b.name];
+        const donatedB = getDonatedCount(b.name);
+        const remainingB = Math.max(0, b.total_needed - ((countsB?.damaged || 0) + (countsB?.repaired || 0) + donatedB));
+        
         if (remainingB !== remainingA) return remainingB - remainingA;
         return a.name.localeCompare(b.name);
       }
       return 0;
     });
-  }, [searchTerm, sortMethod, selectedCollectionFilter, bankedCounts, checkedCollections]);
+  }, [searchTerm, sortMethod, selectedCollectionFilter, hideCompleted, artefactCounts, checkedCollections]);
 
-  // Calculate Shopping List
-  // Sums materials for all artefacts currently in "Banked" status.
   const shoppingListMaterials = useMemo(() => {
     const totals: Materials = {};
     artefactsArray.forEach(art => {
-      const count = bankedCounts[art.name] || 0;
-      if (count > 0 && art.materials) {
+      const counts = artefactCounts[art.name];
+      const damagedCount = counts?.damaged || 0;
+      
+      if (damagedCount > 0 && art.materials) {
         Object.entries(art.materials).forEach(([matName, matQty]) => {
-          totals[matName] = (totals[matName] || 0) + (matQty * count);
+          totals[matName] = (totals[matName] || 0) + (matQty * damagedCount);
         });
       }
     });
     return totals;
-  }, [bankedCounts]);
+  }, [artefactCounts]);
 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-900 text-gray-100">
@@ -170,16 +213,18 @@ function App() {
         md:translate-x-0 border-r border-gray-700
       `}>
         <CollectionSidebar 
-          collections={collectionsArray}
+          collections={allCollectionsArray}
           checkedCollections={checkedCollections}
           onCheckChange={handleCheckChange}
+          artefacts={artefactsArray}
+          hideCompleted={hideCompleted}
+          onHideCompletedChange={setHideCompleted}
         />
       </aside>
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0">
         
-        {/* Header / Top Bar */}
         <header className="bg-gray-800 border-b border-gray-700">
            <div className="p-4 flex items-center justify-between">
              <div className="flex items-center gap-3">
@@ -212,7 +257,7 @@ function App() {
              onSearchChange={setSearchTerm}
              sortMethod={sortMethod}
              onSortChange={setSortMethod}
-             collections={collectionsArray}
+             collections={allCollectionsArray}
              selectedCollectionFilter={selectedCollectionFilter}
              onCollectionFilterChange={setSelectedCollectionFilter}
              totalXP={bankedTotals.xp}
@@ -222,17 +267,22 @@ function App() {
 
         {/* Scrollable Content Area */}
         <main className="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-900 scroll-smooth">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 justify-items-center mx-auto max-w-[1800px]">
-            {processedArtefacts.map((artefact) => (
-              <ArtefactCard
-                key={artefact.name}
-                artefact={artefact}
-                bankedCount={bankedCounts[artefact.name] || 0}
-                donatedCount={getDonatedCount(artefact.name)}
-                checkedCollections={checkedCollections}
-                onBankedChange={handleBankedChange}
-              />
-            ))}
+          {/* Use auto-fill with minmax to handle responsive grid without overlaps */}
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-6 justify-items-center mx-auto max-w-[1800px]">
+            {processedArtefacts.map((artefact) => {
+              const counts = artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
+              return (
+                <ArtefactCard
+                  key={artefact.name}
+                  artefact={artefact}
+                  damagedCount={counts.damaged || 0}
+                  repairedCount={counts.repaired || 0}
+                  donatedCount={getDonatedCount(artefact.name)}
+                  checkedCollections={checkedCollections}
+                  onCountChange={handleCountChange}
+                />
+              );
+            })}
             
             {processedArtefacts.length === 0 && (
                 <div className="col-span-full text-center py-20 text-gray-500">
@@ -245,7 +295,6 @@ function App() {
 
       </div>
 
-      {/* Shopping List Modal */}
       <MaterialShoppingList
         materials={shoppingListMaterials}
         bankedMaterials={bankedMaterials}
