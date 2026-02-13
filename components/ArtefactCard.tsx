@@ -39,8 +39,8 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
     >
       {/* Header Section: Image, Name, Stats */}
       <div className="flex gap-3 p-3 items-start">
-        {/* Left: Small Image 30x30 */}
-        <div className="flex-shrink-0 w-[30px] h-[30px] flex items-center justify-center bg-gray-900 rounded border border-gray-700 overflow-hidden">
+        {/* Left: Small Image 40x40 with padding */}
+        <div className="flex-shrink-0 w-[40px] h-[40px] p-1 flex items-center justify-center bg-gray-900 rounded border border-gray-700 overflow-hidden">
            {imgError ? (
              <span className="text-[8px] text-red-400">?</span>
            ) : (
