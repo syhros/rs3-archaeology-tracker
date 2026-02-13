@@ -214,8 +214,8 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
                         <div className={`font-bold text-sm truncate ${isFullyCompleted ? 'text-green-400' : 'text-gray-200'}`}>
                             {collectorName}
                         </div>
-                        <div className="text-[10px] text-gray-500 mt-0.5">
-                            {items.length} collection{items.length !== 1 ? 's' : ''}
+                        <div className="text-[10px] text-gray-400 mt-0.5 font-medium">
+                            <span className={completedCount === items.length ? "text-green-400" : "text-gray-300"}>{completedCount}</span> / {items.length} completed
                         </div>
                     </div>
 

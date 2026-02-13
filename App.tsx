@@ -112,10 +112,41 @@ function App() {
   // --- Calculations ---
   
   const getDonatedCount = (artefactName: string): number => {
-    const relevantCollections = artefactCollectionsMap[artefactName] || [];
-    return relevantCollections.reduce((acc, colName) => {
-      return acc + (checkedCollections[colName] ? 1 : 0);
-    }, 0);
+    const artefact = ARTEFACTS_JSON[artefactName];
+    if (!artefact) return 0;
+
+    let count = 0;
+    
+    // Standard Collections: Always 1
+    const collectionNames = artefact.collections || [];
+    collectionNames.forEach(name => {
+        if (checkedCollections[name]) {
+            count += 1;
+        }
+    });
+
+    // Other Uses: Weighted based on remainder
+    const otherUseNames = artefact.other_uses || [];
+    if (otherUseNames.length > 0) {
+        const totalNeeded = artefact.total_needed;
+        const standardCount = collectionNames.length;
+        
+        // The remaining amount after standard collections is what's reserved for other uses
+        const remainingForOther = Math.max(0, totalNeeded - standardCount);
+        
+        // Distribute remainder evenly among other uses
+        // Usually there is only 1 other use, so it takes the full remainder.
+        // If there are multiple, we split it.
+        const perOtherUseRequirement = remainingForOther / otherUseNames.length;
+
+        otherUseNames.forEach(name => {
+            if (checkedCollections[name]) {
+                count += perOtherUseRequirement;
+            }
+        });
+    }
+
+    return count;
   };
 
   const bankedTotals = useMemo(() => {
@@ -125,10 +156,14 @@ function App() {
     artefactsArray.forEach(art => {
       const counts = artefactCounts[art.name];
       const damagedCount = counts?.damaged || 0;
+      const repairedCount = counts?.repaired || 0;
       
       if (damagedCount > 0) {
         xp += damagedCount * art.xp;
-        chronotes += damagedCount * art.individual_chronotes;
+      }
+      
+      if (damagedCount > 0 || repairedCount > 0) {
+          chronotes += (damagedCount + repairedCount) * art.individual_chronotes;
       }
     });
 
