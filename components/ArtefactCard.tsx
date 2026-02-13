@@ -22,7 +22,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
 
   // STRICT LOCAL PATH:
   // Browser will look for: [Current URL]/img/[Filename]
-  const imgSrc = `img/${artefact.img_src}`;
+  const imgSrc = `/img/${artefact.img_src}`;
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.currentTarget;
