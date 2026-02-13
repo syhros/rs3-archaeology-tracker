@@ -1,0 +1,5 @@
+{
+  "name": "RS3 Archaeology Tracker",
+  "description": "A modern grid-based tracker for RuneScape 3 Archaeology collections, calculating remaining artefacts and required materials.",
+  "requestFramePermissions": []
+}
