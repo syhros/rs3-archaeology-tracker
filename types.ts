@@ -12,6 +12,7 @@ export interface ArtefactData {
   materials: Materials;
   xp: number;
   individual_chronotes: number;
+  other_uses_total: number;
 }
 
 export interface Artefact extends ArtefactData {
@@ -30,8 +31,11 @@ export interface Collection extends CollectionData {
 
 export type SortMethod = 'level' | 'name' | 'remaining';
 
-export interface BankedCounts {
-  [artefactName: string]: number;
+export interface UserArtefactCounts {
+  [artefactName: string]: {
+    damaged: number;
+    repaired: number;
+  };
 }
 
 export interface CheckedCollections {
