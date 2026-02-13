@@ -46,6 +46,12 @@ function App() {
     return saved ? JSON.parse(saved) : {};
   });
 
+  // Material Banking State
+  const [bankedMaterials, setBankedMaterials] = useState<Record<string, number>>(() => {
+    const saved = localStorage.getItem('rs3-arch-mat-banked');
+    return saved ? JSON.parse(saved) : {};
+  });
+
   const [searchTerm, setSearchTerm] = useState('');
   const [sortMethod, setSortMethod] = useState<SortMethod>('level');
   const [selectedCollectionFilter, setSelectedCollectionFilter] = useState<string | null>(null);
@@ -62,6 +68,10 @@ function App() {
     localStorage.setItem('rs3-arch-checked', JSON.stringify(checkedCollections));
   }, [checkedCollections]);
 
+  useEffect(() => {
+    localStorage.setItem('rs3-arch-mat-banked', JSON.stringify(bankedMaterials));
+  }, [bankedMaterials]);
+
   // --- Handlers ---
   const handleBankedChange = (name: string, val: number) => {
     setBankedCounts(prev => ({ ...prev, [name]: val }));
@@ -69,6 +79,10 @@ function App() {
 
   const handleCheckChange = (name: string, checked: boolean) => {
     setCheckedCollections(prev => ({ ...prev, [name]: checked }));
+  };
+
+  const handleMaterialBankedChange = (matName: string, val: number) => {
+    setBankedMaterials(prev => ({ ...prev, [matName]: val }));
   };
 
   // --- Calculations ---
@@ -86,7 +100,7 @@ function App() {
     let result = artefactsArray.filter(art => {
       const matchesSearch = art.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCollection = selectedCollectionFilter 
-        ? (art.collections && art.collections.includes(selectedCollectionFilter)) // Use art.collections from JSON or derived map? JSON has it.
+        ? (art.collections && art.collections.includes(selectedCollectionFilter)) 
         : true;
       return matchesSearch && matchesCollection;
     });
@@ -197,6 +211,7 @@ function App() {
                 artefact={artefact}
                 bankedCount={bankedCounts[artefact.name] || 0}
                 donatedCount={getDonatedCount(artefact.name)}
+                checkedCollections={checkedCollections}
                 onBankedChange={handleBankedChange}
               />
             ))}
@@ -215,6 +230,8 @@ function App() {
       {/* Shopping List Modal */}
       <MaterialShoppingList
         materials={shoppingListMaterials}
+        bankedMaterials={bankedMaterials}
+        onMaterialBankedChange={handleMaterialBankedChange}
         isOpen={isShoppingListOpen}
         onClose={() => setIsShoppingListOpen(false)}
       />
