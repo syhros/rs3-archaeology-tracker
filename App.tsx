@@ -95,6 +95,22 @@ function App() {
     }, 0);
   };
 
+  // Calculate totals for banked items
+  const bankedTotals = useMemo(() => {
+    let xp = 0;
+    let chronotes = 0;
+    
+    artefactsArray.forEach(art => {
+      const count = bankedCounts[art.name] || 0;
+      if (count > 0) {
+        xp += count * art.xp;
+        chronotes += count * art.individual_chronotes;
+      }
+    });
+
+    return { xp, chronotes };
+  }, [bankedCounts]);
+
   // Filter & Sort Artefacts
   const processedArtefacts = useMemo(() => {
     let result = artefactsArray.filter(art => {
@@ -199,6 +215,8 @@ function App() {
              collections={collectionsArray}
              selectedCollectionFilter={selectedCollectionFilter}
              onCollectionFilterChange={setSelectedCollectionFilter}
+             totalXP={bankedTotals.xp}
+             totalChronotes={bankedTotals.chronotes}
            />
         </header>
 
