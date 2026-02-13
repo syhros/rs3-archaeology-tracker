@@ -51,7 +51,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     <img 
                         src="/img/XP_tracker_icon.png" 
                         alt="XP" 
-                        className="w-[40px] h-[40px] object-contain flex-shrink-0"
+                        className="w-[30px] h-[30px] object-contain flex-shrink-0"
                     />
                     <span className="font-mono font-bold text-gray-100 text-sm md:text-base whitespace-nowrap">
                         {totalXP.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} XP
@@ -62,7 +62,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     <img 
                         src="/img/100px-Chronotes_10000_detail.png" 
                         alt="Chronotes" 
-                        className="w-[40px] h-[40px] object-contain flex-shrink-0"
+                        className="w-[30px] h-[30px] object-contain flex-shrink-0"
                     />
                     <span className="font-mono font-bold text-gray-100 text-sm md:text-base whitespace-nowrap">
                         {totalChronotes.toLocaleString()} Chronotes
