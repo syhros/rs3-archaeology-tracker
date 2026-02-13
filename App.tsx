@@ -5,6 +5,7 @@ import { ArtefactCard } from './components/ArtefactCard';
 import { CollectionSidebar } from './components/CollectionSidebar';
 import { FilterBar } from './components/FilterBar';
 import { MaterialShoppingList } from './components/MaterialShoppingList';
+import { ExcavationList } from './components/ExcavationList';
 
 // --- Data Transformation ---
 const artefactsArray: Artefact[] = Object.entries(ARTEFACTS_JSON).map(([key, value]) => ({
@@ -76,6 +77,7 @@ function App() {
   
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isShoppingListOpen, setIsShoppingListOpen] = useState(false);
+  const [isExcavationListOpen, setIsExcavationListOpen] = useState(false);
 
   // --- Effects ---
   useEffect(() => {
@@ -230,6 +232,55 @@ function App() {
     return totals;
   }, [artefactCounts]);
 
+  // --- Excavation List Logic ---
+  const excavationData = useMemo(() => {
+    const grouped: Record<string, { artefact: Artefact, count: number }[]> = {};
+    
+    artefactsArray.forEach(art => {
+        const counts = artefactCounts[art.name];
+        const donated = getDonatedCount(art.name);
+        // Using ceil because getDonatedCount can be fractional for other uses logic, 
+        // though physically you can't have fractional artefacts. 
+        // However, standard collections are integer 1. 
+        // Let's ceil the donated part just in case, but usually Math.max handles logic.
+        // Actually, total_needed is integer. Damaged/Repaired are integers. 
+        // Donated might be float if checkedCollections splits 'Other Uses'. 
+        // We should treat fractional requirement as needing the item. 
+        // E.g. if we need 0.5 more, we need 1 more physical item.
+        
+        const totalHave = (counts?.damaged || 0) + (counts?.repaired || 0) + donated;
+        const remaining = Math.max(0, art.total_needed - totalHave);
+        
+        // If remaining is 0.5, we effectively need 1 artefact to cover it.
+        const neededCount = Math.ceil(remaining);
+
+        if (neededCount > 0) {
+            const digSite = art.dig_sites[0] || 'Unknown';
+            if (!grouped[digSite]) {
+                grouped[digSite] = [];
+            }
+            grouped[digSite].push({ artefact: art, count: neededCount });
+        }
+    });
+
+    // Sort artefacts within groups by level
+    Object.values(grouped).forEach(list => {
+        list.sort((a, b) => a.artefact.level - b.artefact.level);
+    });
+
+    // Sort groups by min level of artefacts in them
+    const sortedSites = Object.keys(grouped).sort((a, b) => {
+        const minLevelA = Math.min(...grouped[a].map(i => i.artefact.level));
+        const minLevelB = Math.min(...grouped[b].map(i => i.artefact.level));
+        return minLevelA - minLevelB;
+    });
+
+    return sortedSites.map(site => ({
+        siteName: site,
+        items: grouped[site]
+    }));
+  }, [artefactCounts, checkedCollections]);
+
   return (
     <div className="flex h-screen overflow-hidden bg-gray-900 text-gray-100">
       
@@ -276,15 +327,27 @@ function App() {
                </h1>
              </div>
              
-             <button
-                onClick={() => setIsShoppingListOpen(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold shadow-lg transition-transform active:scale-95"
-             >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-                <span className="hidden sm:inline">Material List</span>
-             </button>
+             <div className="flex gap-2">
+                <button
+                    onClick={() => setIsExcavationListOpen(true)}
+                    className="flex items-center gap-2 px-4 py-2 bg-yellow-700 hover:bg-yellow-600 rounded text-sm font-semibold shadow-lg transition-transform active:scale-95"
+                >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                    <span className="hidden sm:inline">Excavation List</span>
+                </button>
+
+                <button
+                    onClick={() => setIsShoppingListOpen(true)}
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold shadow-lg transition-transform active:scale-95"
+                >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                    <span className="hidden sm:inline">Material List</span>
+                </button>
+             </div>
            </div>
            
            <FilterBar
@@ -336,6 +399,12 @@ function App() {
         onMaterialBankedChange={handleMaterialBankedChange}
         isOpen={isShoppingListOpen}
         onClose={() => setIsShoppingListOpen(false)}
+      />
+
+      <ExcavationList
+        groups={excavationData}
+        isOpen={isExcavationListOpen}
+        onClose={() => setIsExcavationListOpen(false)}
       />
 
     </div>

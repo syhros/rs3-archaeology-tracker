@@ -77,6 +77,12 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
       if (!groups[col.collector]) groups[col.collector] = [];
       groups[col.collector].push(col);
     });
+
+    // Sort collections alphabetically within each group
+    Object.keys(groups).forEach(key => {
+        groups[key].sort((a, b) => a.name.localeCompare(b.name));
+    });
+
     return groups;
   }, [filteredCollections]);
 
