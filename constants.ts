@@ -18,7 +18,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 12
         },
         "xp": 305.1,
-        "individual_chronotes": 206
+        "individual_chronotes": 206,
+        "other_uses_total": 0
     },
     "Venator light crossbow": {
         "img_src": "Venator_light_crossbow.png",
@@ -37,7 +38,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 16
         },
         "xp": 305.1,
-        "individual_chronotes": 206
+        "individual_chronotes": 206,
+        "other_uses_total": 0
     },
     "Primis Elementis standard": {
         "img_src": "Primis_Elementis_standard.png",
@@ -56,7 +58,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 12
         },
         "xp": 430.8,
-        "individual_chronotes": 220
+        "individual_chronotes": 220,
+        "other_uses_total": 0
     },
     "Legionary gladius": {
         "img_src": "Legionary_gladius.png",
@@ -76,7 +79,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Imperial steel": 12
         },
         "xp": 430.8,
-        "individual_chronotes": 220
+        "individual_chronotes": 220,
+        "other_uses_total": 0
     },
     "Legionary square shield": {
         "img_src": "Legionary_square_shield.png",
@@ -96,7 +100,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Imperial steel": 12
         },
         "xp": 430.8,
-        "individual_chronotes": 220
+        "individual_chronotes": 220,
+        "other_uses_total": 0
     },
     "Zaros effigy": {
         "img_src": "Zaros_effigy.png",
@@ -116,7 +121,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 12
         },
         "xp": 520.5,
-        "individual_chronotes": 244
+        "individual_chronotes": 244,
+        "other_uses_total": 0
     },
     "Zarosian training dummy": {
         "img_src": "Zarosian_training_dummy.png",
@@ -125,7 +131,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian I (Soran, Emissary of Zaros)",
             "Museum - Zarosian I (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Katarina"
+        ],
         "dig_sites": [
             "Castra debris"
         ],
@@ -135,7 +143,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 14
         },
         "xp": 520.5,
-        "individual_chronotes": 244
+        "individual_chronotes": 244,
+        "other_uses_total": 1
     },
     "Crest of Dagon": {
         "img_src": "Crest_of_Dagon.png",
@@ -146,7 +155,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian I (Velucia)",
             "Knowledge is Power (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Eyes in Their Stars"
+        ],
         "dig_sites": [
             "Lodge art storage"
         ],
@@ -156,7 +167,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 18
         },
         "xp": 646.2,
-        "individual_chronotes": 272
+        "individual_chronotes": 272,
+        "other_uses_total": 3
     },
     "'Disorder' painting": {
         "img_src": "'Disorder'_painting.png",
@@ -166,7 +178,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian I (Isaura)",
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
-        "other_uses": ["Mystery: A Study in Aether"],
+        "other_uses": [],
         "dig_sites": [
             "Lodge art storage"
         ],
@@ -178,7 +190,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cadmium red": 14
         },
         "xp": 646.2,
-        "individual_chronotes": 272
+        "individual_chronotes": 272,
+        "other_uses_total": 0
     },
     "Hookah pipe": {
         "img_src": "Hookah_pipe.png",
@@ -199,7 +212,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 8
         },
         "xp": 574.4,
-        "individual_chronotes": 250
+        "individual_chronotes": 250,
+        "other_uses_total": 0
     },
     "Opulent wine goblet": {
         "img_src": "Opulent_wine_goblet.png",
@@ -209,7 +223,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian I (Velucia)",
             "Zamorakian I (Isaura)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Dorian"
+        ],
         "dig_sites": [
             "Lodge bar storage"
         ],
@@ -219,7 +235,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 16
         },
         "xp": 574.4,
-        "individual_chronotes": 250
+        "individual_chronotes": 250,
+        "other_uses_total": 1
     },
     "Legatus Maximus figurine": {
         "img_src": "Legatus_Maximus_figurine.png",
@@ -241,7 +258,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 10
         },
         "xp": 664.1,
-        "individual_chronotes": 274
+        "individual_chronotes": 274,
+        "other_uses_total": 0
     },
     "'Solem in Umbra' painting": {
         "img_src": "'Solem_in_Umbra'_painting.png",
@@ -251,7 +269,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian I (Soran, Emissary of Zaros)",
             "Museum - Zarosian I (Velucia)"
         ],
-        "other_uses": ["Mystery: The Spy Master"],
+        "other_uses": [],
         "dig_sites": [
             "Administratum debris"
         ],
@@ -262,7 +280,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Tyrian purple": 14
         },
         "xp": 664.1,
-        "individual_chronotes": 274
+        "individual_chronotes": 274,
+        "other_uses_total": 0
     },
     "Imp mask": {
         "img_src": "Imp_mask.png",
@@ -283,7 +302,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Demonhide": 12
         },
         "xp": 735.9,
-        "individual_chronotes": 282
+        "individual_chronotes": 282,
+        "other_uses_total": 0
     },
     "Lesser demon mask": {
         "img_src": "Lesser_demon_mask.png",
@@ -305,7 +325,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cadmium red": 6
         },
         "xp": 735.9,
-        "individual_chronotes": 282
+        "individual_chronotes": 282,
+        "other_uses_total": 0
     },
     "Greater demon mask": {
         "img_src": "Greater_demon_mask.png",
@@ -315,7 +336,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian I (Isaura)",
             "Hat Hoarder (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "How Do You Do, Fellow Demon"
+        ],
         "dig_sites": [
             "Cultist footlocker"
         ],
@@ -327,7 +350,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Demonhide": 12
         },
         "xp": 735.9,
-        "individual_chronotes": 282
+        "individual_chronotes": 282,
+        "other_uses_total": 0
     },
     "Order of Dis robes": {
         "img_src": "Order_of_Dis_robes.png",
@@ -336,7 +360,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian I (Velucia)",
             "Zamorakian I (Isaura)"
         ],
-        "other_uses": ["Mystery: Eyes in their Stars"],
+        "other_uses": [],
         "dig_sites": [
             "Sacrificial altar"
         ],
@@ -347,7 +371,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Eye of Dagon": 14
         },
         "xp": 861.5,
-        "individual_chronotes": 352
+        "individual_chronotes": 352,
+        "other_uses_total": 0
     },
     "Ritual dagger": {
         "img_src": "Ritual_dagger.png",
@@ -357,7 +382,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian I (Velucia)",
             "Zamorakian I (Isaura)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "I Made Dis"
+        ],
         "dig_sites": [
             "Sacrificial altar"
         ],
@@ -367,7 +394,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hellfire metal": 24
         },
         "xp": 861.5,
-        "individual_chronotes": 352
+        "individual_chronotes": 352,
+        "other_uses_total": 0
     },
     "'Frying pan'": {
         "img_src": "'Frying_pan'.png",
@@ -376,7 +404,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist I (Sir Atcha)",
             "Museum - Saradominist I (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Fallen Angels"
+        ],
         "dig_sites": [
             "Prodromoi remains"
         ],
@@ -386,7 +416,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White marble": 24
         },
         "xp": 1073.3,
-        "individual_chronotes": 392
+        "individual_chronotes": 392,
+        "other_uses_total": 1
     },
     "Hallowed lantern": {
         "img_src": "Hallowed_lantern.png",
@@ -395,7 +426,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist I (Sir Atcha)",
             "Museum - Saradominist I (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Statue of Hebe",
+            "'The Epic of Hebe'"
+        ],
         "dig_sites": [
             "Prodromoi remains"
         ],
@@ -405,7 +439,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Keramos": 24
         },
         "xp": 1073.3,
-        "individual_chronotes": 392
+        "individual_chronotes": 392,
+        "other_uses_total": 2
     },
     "Branding iron": {
         "img_src": "Branding_iron.png",
@@ -425,7 +460,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hellfire metal": 20
         },
         "xp": 1283.3,
-        "individual_chronotes": 412
+        "individual_chronotes": 412,
+        "other_uses_total": 0
     },
     "Manacles": {
         "img_src": "Manacles.png",
@@ -445,7 +481,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Eye of Dagon": 14
         },
         "xp": 1283.3,
-        "individual_chronotes": 412
+        "individual_chronotes": 412,
+        "other_uses_total": 0
     },
     "Ancient timepiece": {
         "img_src": "Ancient_timepiece.png",
@@ -456,7 +493,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Blingy Fings (Chief Tess)"
         ],
-        "other_uses": ["Mystery: The Spy Master"],
+        "other_uses": [
+            "Time Served"
+        ],
         "dig_sites": [
             "Praesidio remains"
         ],
@@ -467,7 +506,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 18
         },
         "xp": 1423.3,
-        "individual_chronotes": 416
+        "individual_chronotes": 416,
+        "other_uses_total": 1
     },
     "Legatus pendant": {
         "img_src": "Legatus_pendant.png",
@@ -477,7 +517,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Blingy Fings (Chief Tess)"
         ],
-        "other_uses": ["Mystery: The Spy Master"],
+        "other_uses": [
+            "Legatus barrier",
+            "The Vault of Shadows"
+        ],
         "dig_sites": [
             "Praesidio remains"
         ],
@@ -488,7 +531,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 12
         },
         "xp": 1423.3,
-        "individual_chronotes": 416
+        "individual_chronotes": 416,
+        "other_uses_total": 1
     },
     "Ceremonial unicorn ornament": {
         "img_src": "Ceremonial_unicorn_ornament.png",
@@ -498,7 +542,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist I (Velucia)",
             "Hat Hoarder (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Eduardo"
+        ],
         "dig_sites": [
             "Monoceros remains"
         ],
@@ -508,7 +554,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cobalt blue": 20
         },
         "xp": 1493.3,
-        "individual_chronotes": 418
+        "individual_chronotes": 418,
+        "other_uses_total": 1
     },
     "Ceremonial unicorn saddle": {
         "img_src": "Ceremonial_unicorn_saddle.png",
@@ -527,7 +574,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cobalt blue": 22
         },
         "xp": 1493.3,
-        "individual_chronotes": 418
+        "individual_chronotes": 418,
+        "other_uses_total": 0
     },
     "Everlight harp": {
         "img_src": "Everlight_harp.png",
@@ -537,7 +585,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wise Am the Music Man (Wise Old Man)",
             "Museum - Saradominist I (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Statue of Mesomedes"
+        ],
         "dig_sites": [
             "Amphitheatre debris"
         ],
@@ -547,7 +597,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 22
         },
         "xp": 1703.3,
-        "individual_chronotes": 466
+        "individual_chronotes": 466,
+        "other_uses_total": 1
     },
     "Everlight trumpet": {
         "img_src": "Everlight_trumpet.png",
@@ -558,7 +609,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist I (Velucia)",
             "Saradominist I (Sir Atcha)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "That Old Black Magic: Skelly By Everlight"
+        ],
         "dig_sites": [
             "Amphitheatre debris"
         ],
@@ -568,7 +621,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 24
         },
         "xp": 1703.3,
-        "individual_chronotes": 466
+        "individual_chronotes": 466,
+        "other_uses_total": 1
     },
     "Everlight violin": {
         "img_src": "Everlight_violin.png",
@@ -589,7 +643,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 16
         },
         "xp": 1703.3,
-        "individual_chronotes": 466
+        "individual_chronotes": 466,
+        "other_uses_total": 0
     },
     "Folded-arm figurine (female)": {
         "img_src": "Folded-arm_figurine_(female).png",
@@ -608,7 +663,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 24
         },
         "xp": 2053.3,
-        "individual_chronotes": 490
+        "individual_chronotes": 490,
+        "other_uses_total": 0
     },
     "Folded-arm figurine (male)": {
         "img_src": "Folded-arm_figurine_(male).png",
@@ -627,7 +683,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 24
         },
         "xp": 2053.3,
-        "individual_chronotes": 490
+        "individual_chronotes": 490,
+        "other_uses_total": 0
     },
     "Pontifex signet ring": {
         "img_src": "Pontifex_signet_ring.png",
@@ -637,7 +694,11 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Blingy Fings (Chief Tess)"
         ],
-        "other_uses": ["Mystery: The Spy Master"],
+        "other_uses": [
+            "Pontifex barrier",
+            "The Vault of Shadows",
+            "Pontifex observation ring"
+        ],
         "dig_sites": [
             "Carcerem debris"
         ],
@@ -648,7 +709,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 22
         },
         "xp": 2193.3,
-        "individual_chronotes": 508
+        "individual_chronotes": 508,
+        "other_uses_total": 2
     },
     "'Incite Fear' spell scroll": {
         "img_src": "'Incite_Fear'_spell_scroll.png",
@@ -659,7 +721,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: Vault of Shadows"],
+        "other_uses": [
+            "The Vault of Shadows"
+        ],
         "dig_sites": [
             "Carcerem debris"
         ],
@@ -670,7 +734,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 18
         },
         "xp": 2193.3,
-        "individual_chronotes": 508
+        "individual_chronotes": 508,
+        "other_uses_total": 1
     },
     "Apex cap": {
         "img_src": "Apex_cap.png",
@@ -690,7 +755,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 20
         },
         "xp": 2193.3,
-        "individual_chronotes": 540
+        "individual_chronotes": 540,
+        "other_uses_total": 0
     },
     "Curse tablet": {
         "img_src": "Curse_tablet.png",
@@ -711,7 +777,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 12
         },
         "xp": 2333.3,
-        "individual_chronotes": 540
+        "individual_chronotes": 540,
+        "other_uses_total": 0
     },
     "Funerary urn of shadow": {
         "img_src": "Funerary_urn_of_shadow.png",
@@ -720,7 +787,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Urns of the Empire (Eblis)",
             "Museum - Zarosian V (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Secrets of the Inquisition"
+        ],
         "dig_sites": [
             "Ministry remains"
         ],
@@ -731,7 +800,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 20
         },
         "xp": 2333.3,
-        "individual_chronotes": 540
+        "individual_chronotes": 540,
+        "other_uses_total": 1
     },
     "Dominion discus": {
         "img_src": "Dominion_discus.png",
@@ -750,7 +820,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Star of Saradomin": 28
         },
         "xp": 2566.7,
-        "individual_chronotes": 556
+        "individual_chronotes": 556,
+        "other_uses_total": 0
     },
     "Dominion javelin": {
         "img_src": "Dominion_javelin.png",
@@ -769,7 +840,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 30
         },
         "xp": 2566.7,
-        "individual_chronotes": 556
+        "individual_chronotes": 556,
+        "other_uses_total": 0
     },
     "Dominion pelte shield": {
         "img_src": "Dominion_pelte_shield.png",
@@ -788,7 +860,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 28
         },
         "xp": 2566.7,
-        "individual_chronotes": 556
+        "individual_chronotes": 556,
+        "other_uses_total": 0
     },
     "Infula robes": {
         "img_src": "Infula_robes.png",
@@ -809,7 +882,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Tyrian purple": 12
         },
         "xp": 2800.0,
-        "individual_chronotes": 558
+        "individual_chronotes": 558,
+        "other_uses_total": 0
     },
     "Funerary urn of smoke": {
         "img_src": "Funerary_urn_of_smoke.png",
@@ -818,7 +892,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Urns of the Empire (Eblis)",
             "Museum - Zarosian V (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Secrets of the Inquisition"
+        ],
         "dig_sites": [
             "Cathedral debris"
         ],
@@ -829,7 +905,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 20
         },
         "xp": 2800.0,
-        "individual_chronotes": 558
+        "individual_chronotes": 558,
+        "other_uses_total": 1
     },
     "Hand of the Ancients": {
         "img_src": "Hand_of_the_Ancients.png",
@@ -850,7 +927,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 18
         },
         "xp": 2800.0,
-        "individual_chronotes": 558
+        "individual_chronotes": 558,
+        "other_uses_total": 0
     },
     "Decorative amphora": {
         "img_src": "Decorative_amphora.png",
@@ -870,7 +948,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Soapstone": 28
         },
         "xp": 3033.3,
-        "individual_chronotes": 560
+        "individual_chronotes": 560,
+        "other_uses_total": 0
     },
     "Funerary urn of ice": {
         "img_src": "Funerary_urn_of_ice.png",
@@ -879,7 +958,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Urns of the Empire (Eblis)",
             "Museum - Zarosian VI (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Secrets of the Inquisition"
+        ],
         "dig_sites": [
             "Marketplace debris"
         ],
@@ -890,7 +971,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 20
         },
         "xp": 3033.3,
-        "individual_chronotes": 560
+        "individual_chronotes": 560,
+        "other_uses_total": 1
     },
     "Loarnab rod": {
         "img_src": "Loarnab_rod.png",
@@ -910,7 +992,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Imperial steel": 18
         },
         "xp": 3033.3,
-        "individual_chronotes": 560
+        "individual_chronotes": 560,
+        "other_uses_total": 0
     },
     "Inquisitor's seal": {
         "img_src": "Inquisitor's_seal.png",
@@ -931,7 +1014,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 14
         },
         "xp": 3266.7,
-        "individual_chronotes": 562
+        "individual_chronotes": 562,
+        "other_uses_total": 0
     },
     "Inquisitor's ceremonial mask": {
         "img_src": "Inquisitor's_ceremonial_mask.png",
@@ -952,7 +1036,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 22
         },
         "xp": 3266.7,
-        "individual_chronotes": 562
+        "individual_chronotes": 562,
+        "other_uses_total": 0
     },
     "Inquisitor's ceremonial armour": {
         "img_src": "Inquisitor's_ceremonial_armour.png",
@@ -972,7 +1057,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Tyrian purple": 18
         },
         "xp": 3266.7,
-        "individual_chronotes": 562
+        "individual_chronotes": 562,
+        "other_uses_total": 0
     },
     "'Lust' metal sculpture": {
         "img_src": "'Lust'_metal_sculpture.png",
@@ -993,7 +1079,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 24
         },
         "xp": 3500.0,
-        "individual_chronotes": 578
+        "individual_chronotes": 578,
+        "other_uses_total": 0
     },
     "'The Lake of Fire' painting": {
         "img_src": "'The_Lake_of_Fire'_painting.png",
@@ -1003,7 +1090,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)",
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
-        "other_uses": ["Mystery: A Study in Aether"],
+        "other_uses": [],
         "dig_sites": [
             "Infernal art"
         ],
@@ -1015,7 +1102,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cadmium red": 34
         },
         "xp": 3500.0,
-        "individual_chronotes": 578
+        "individual_chronotes": 578,
+        "other_uses_total": 0
     },
     "Gladiator sword": {
         "img_src": "Gladiator_sword.png",
@@ -1035,7 +1123,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 16
         },
         "xp": 3773.3,
-        "individual_chronotes": 580
+        "individual_chronotes": 580,
+        "other_uses_total": 0
     },
     "Gladiator helmet": {
         "img_src": "Gladiator_helmet.png",
@@ -1055,7 +1144,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 18
         },
         "xp": 3773.3,
-        "individual_chronotes": 580
+        "individual_chronotes": 580,
+        "other_uses_total": 0
     },
     "Funerary urn of blood": {
         "img_src": "Funerary_urn_of_blood.png",
@@ -1064,7 +1154,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Urns of the Empire (Eblis)",
             "Museum - Zarosian VII (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Secrets of the Inquisition"
+        ],
         "dig_sites": [
             "Gladiator remains"
         ],
@@ -1075,7 +1167,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 20
         },
         "xp": 3773.3,
-        "individual_chronotes": 580
+        "individual_chronotes": 580,
+        "other_uses_total": 1
     },
     "'The Serpent's Fall' carving": {
         "img_src": "'The_Serpent's_Fall'_carving.png",
@@ -1096,7 +1189,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 12
         },
         "xp": 3966.7,
-        "individual_chronotes": 582
+        "individual_chronotes": 582,
+        "other_uses_total": 0
     },
     "Model chariot": {
         "img_src": "Model_chariot.png",
@@ -1117,7 +1211,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 14
         },
         "xp": 3966.7,
-        "individual_chronotes": 582
+        "individual_chronotes": 582,
+        "other_uses_total": 0
     },
     "Funerary urn of miasma": {
         "img_src": "Funerary_urn_of_miasma.png",
@@ -1137,7 +1232,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 20
         },
         "xp": 3966.7,
-        "individual_chronotes": 582
+        "individual_chronotes": 582,
+        "other_uses_total": 0
     },
     "Chaos star": {
         "img_src": "Chaos_star.png",
@@ -1146,7 +1242,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian II (Velucia)",
             "Zamorakian II (Isaura)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Dagon Bye",
+            "Abyssal Gatestone"
+        ],
         "dig_sites": [
             "Shakroth remains"
         ],
@@ -1156,7 +1255,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hellfire metal": 36
         },
         "xp": 4200.0,
-        "individual_chronotes": 584
+        "individual_chronotes": 584,
+        "other_uses_total": 2
     },
     "Spiked dog collar": {
         "img_src": "Spiked_dog_collar.png",
@@ -1165,7 +1265,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian II (Velucia)",
             "Zamorakian II (Isaura)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Who's a Bad Boy?"
+        ],
         "dig_sites": [
             "Shakroth remains"
         ],
@@ -1176,7 +1278,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Chaotic brimstone": 16
         },
         "xp": 4200.0,
-        "individual_chronotes": 584
+        "individual_chronotes": 584,
+        "other_uses_total": 0
     },
     "Bronze Dominion medal": {
         "img_src": "Bronze_Dominion_medal.png",
@@ -1196,7 +1299,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Star of Saradomin": 26
         },
         "xp": 4433.3,
-        "individual_chronotes": 572
+        "individual_chronotes": 572,
+        "other_uses_total": 0
     },
     "Silver Dominion medal": {
         "img_src": "Silver_Dominion_medal.png",
@@ -1216,7 +1320,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Star of Saradomin": 26
         },
         "xp": 4433.3,
-        "individual_chronotes": 572
+        "individual_chronotes": 572,
+        "other_uses_total": 0
     },
     "Dominion torch": {
         "img_src": "Dominion_torch.png",
@@ -1226,7 +1331,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist II (Sir Atcha)",
             "Museum - Saradominist II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Statue of Padosan",
+            "Hallowed Be..."
+        ],
         "dig_sites": [
             "Dominion Games podium"
         ],
@@ -1238,7 +1346,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Star of Saradomin": 18
         },
         "xp": 4433.3,
-        "individual_chronotes": 572
+        "individual_chronotes": 572,
+        "other_uses_total": 2
     },
     "Ikovian gerege": {
         "img_src": "Ikovian_gerege.png",
@@ -1248,7 +1357,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)",
             "Knowledge is Power (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Stormguard portal"
+        ],
         "dig_sites": [
             "Ikovian memorial"
         ],
@@ -1258,7 +1369,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wings of War": 30
         },
         "xp": 4666.7,
-        "individual_chronotes": 602
+        "individual_chronotes": 602,
+        "other_uses_total": 1
     },
     "Toy glider": {
         "img_src": "Toy_glider.png",
@@ -1277,7 +1389,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 30
         },
         "xp": 4666.7,
-        "individual_chronotes": 602
+        "individual_chronotes": 602,
+        "other_uses_total": 0
     },
     "Toy war golem": {
         "img_src": "Toy_war_golem.png",
@@ -1296,7 +1409,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 30
         },
         "xp": 4666.7,
-        "individual_chronotes": 602
+        "individual_chronotes": 602,
+        "other_uses_total": 0
     },
     "Decorative vase": {
         "img_src": "Decorative_vase.png",
@@ -1315,7 +1429,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cobalt blue": 30
         },
         "xp": 5133.3,
-        "individual_chronotes": 606
+        "individual_chronotes": 606,
+        "other_uses_total": 0
     },
     "Patera bowl": {
         "img_src": "Patera_bowl.png",
@@ -1334,7 +1449,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 30
         },
         "xp": 5133.3,
-        "individual_chronotes": 606
+        "individual_chronotes": 606,
+        "other_uses_total": 0
     },
     "Kantharos cup": {
         "img_src": "Kantharos_cup.png",
@@ -1343,7 +1459,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist II (Sir Atcha)",
             "Museum - Saradominist II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "The Everlight"
+        ],
         "dig_sites": [
             "Oikos studio debris"
         ],
@@ -1353,7 +1471,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 36
         },
         "xp": 5133.3,
-        "individual_chronotes": 606
+        "individual_chronotes": 606,
+        "other_uses_total": 1
     },
     "Castle gatestone": {
         "img_src": "Castle_gatestone.png",
@@ -1372,7 +1491,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 32
         },
         "xp": 5366.7,
-        "individual_chronotes": 622
+        "individual_chronotes": 622,
+        "other_uses_total": 0
     },
     "Engraved ring of kinship": {
         "img_src": "Engraved_ring_of_kinship.png",
@@ -1391,7 +1511,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 40
         },
         "xp": 5366.7,
-        "individual_chronotes": 622
+        "individual_chronotes": 622,
+        "other_uses_total": 0
     },
     "Ceremonial mace": {
         "img_src": "Ceremonial_mace.png",
@@ -1412,7 +1533,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 28
         },
         "xp": 5600.0,
-        "individual_chronotes": 624
+        "individual_chronotes": 624,
+        "other_uses_total": 0
     },
     "Pontifex Maximus figurine": {
         "img_src": "Pontifex_Maximus_figurine.png",
@@ -1422,7 +1544,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "City of Senntisten"
+        ],
         "dig_sites": [
             "Kharid-et chapel debris"
         ],
@@ -1433,7 +1557,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 28
         },
         "xp": 5600.0,
-        "individual_chronotes": 624
+        "individual_chronotes": 624,
+        "other_uses_total": 0
     },
     "'Consensus ad Idem' painting": {
         "img_src": "'Consensus_ad_Idem'_painting.png",
@@ -1443,7 +1568,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: The Spy Master"],
+        "other_uses": [],
         "dig_sites": [
             "Kharid-et chapel debris"
         ],
@@ -1454,7 +1579,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Tyrian purple": 50
         },
         "xp": 5600.0,
-        "individual_chronotes": 624
+        "individual_chronotes": 624,
+        "other_uses_total": 0
     },
     "Avian song-egg player": {
         "img_src": "Avian_song-egg_player.png",
@@ -1474,7 +1600,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean yellow": 32
         },
         "xp": 6066.7,
-        "individual_chronotes": 628
+        "individual_chronotes": 628,
+        "other_uses_total": 0
     },
     "Keshik drum": {
         "img_src": "Keshik_drum.png",
@@ -1484,7 +1611,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)",
             "Wise Am the Music Man (Wise Old Man)"
         ],
-        "other_uses": ["Mystery: Breaking the Seal"],
+        "other_uses": [],
         "dig_sites": [
             "Keshik ger"
         ],
@@ -1496,7 +1623,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 16
         },
         "xp": 6066.7,
-        "individual_chronotes": 628
+        "individual_chronotes": 628,
+        "other_uses_total": 0
     },
     "Morin khuur": {
         "img_src": "Morin_khuur.png",
@@ -1516,7 +1644,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 32
         },
         "xp": 6066.7,
-        "individual_chronotes": 628
+        "individual_chronotes": 628,
+        "other_uses_total": 0
     },
     "Ekeleshuun blinder mask": {
         "img_src": "Ekeleshuun_blinder_mask.png",
@@ -1537,7 +1666,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vellum": 24
         },
         "xp": 6066.7,
-        "individual_chronotes": 628
+        "individual_chronotes": 628,
+        "other_uses_total": 0
     },
     "Narogoshuun 'Hob-da-Gob' ball": {
         "img_src": "Narogoshuun_'Hob-da-Gob'_ball.png",
@@ -1556,7 +1686,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Mark of the Kyzaj": 32
         },
         "xp": 6066.7,
-        "individual_chronotes": 628
+        "individual_chronotes": 628,
+        "other_uses_total": 0
     },
     "Rekeshuun war tether": {
         "img_src": "Rekeshuun_war_tether.png",
@@ -1576,7 +1707,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 26
         },
         "xp": 6066.7,
-        "individual_chronotes": 628
+        "individual_chronotes": 628,
+        "other_uses_total": 0
     },
     "Exploratory totem": {
         "img_src": "Exploratory_totem.png",
@@ -1595,7 +1727,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 36
         },
         "xp": 6300.0,
-        "individual_chronotes": 644
+        "individual_chronotes": 644,
+        "other_uses_total": 0
     },
     "Excavator portal mine": {
         "img_src": "Excavator_portal_mine.png",
@@ -1614,7 +1747,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 34
         },
         "xp": 5366.7,
-        "individual_chronotes": 644
+        "individual_chronotes": 644,
+        "other_uses_total": 0
     },
     "Storage totem": {
         "img_src": "Storage_totem.png",
@@ -1633,7 +1767,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 34
         },
         "xp": 6533.3,
-        "individual_chronotes": 646
+        "individual_chronotes": 646,
+        "other_uses_total": 0
     },
     "Plant seed satchel": {
         "img_src": "Plant_seed_satchel.png",
@@ -1653,7 +1788,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 14
         },
         "xp": 6533.3,
-        "individual_chronotes": 646
+        "individual_chronotes": 646,
+        "other_uses_total": 0
     },
     "Snuff box": {
         "img_src": "Snuff_box.png",
@@ -1673,7 +1809,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Felt": 20
         },
         "xp": 6533.3,
-        "individual_chronotes": 646
+        "individual_chronotes": 646,
+        "other_uses_total": 0
     },
     "Ogre Kyzaj axe": {
         "img_src": "Ogre_Kyzaj_axe.png",
@@ -1693,7 +1830,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Fossilised bone": 24
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Ork cleaver sword": {
         "img_src": "Ork_cleaver_sword.png",
@@ -1712,7 +1850,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Fossilised bone": 36
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Larupia trophy": {
         "img_src": "Larupia_trophy.png",
@@ -1732,7 +1871,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 26
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Lion trophy": {
         "img_src": "Lion_trophy.png",
@@ -1752,7 +1892,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 26
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "She-wolf trophy": {
         "img_src": "She-wolf_trophy.png",
@@ -1772,7 +1913,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Animal furs": 28
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Aviansie dreamcoat": {
         "img_src": "Aviansie_dreamcoat.png",
@@ -1781,7 +1923,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Armadylean I (Velucia)",
             "Armadylean I (Lowse)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Ring of Solomon"
+        ],
         "dig_sites": [
             "Tailory debris"
         ],
@@ -1792,7 +1936,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Animal furs": 22
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 1
     },
     "Ceremonial plume": {
         "img_src": "Ceremonial_plume.png",
@@ -1812,7 +1957,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 34
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Peacocking parasol": {
         "img_src": "Peacocking_parasol.png",
@@ -1832,7 +1978,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 20
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Pontifex censer": {
         "img_src": "Pontifex_censer.png",
@@ -1853,7 +2000,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 32
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Pontifex crozier": {
         "img_src": "Pontifex_crozier.png",
@@ -1874,7 +2022,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 32
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Pontifex mitre": {
         "img_src": "Pontifex_mitre.png",
@@ -1895,7 +2044,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 20
         },
         "xp": 7388.9,
-        "individual_chronotes": 666
+        "individual_chronotes": 666,
+        "other_uses_total": 0
     },
     "Thorobshuun battle standard": {
         "img_src": "Thorobshuun_battle_standard.png",
@@ -1904,7 +2054,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Green Gobbo Goodies I (General Wartface)",
             "Museum - Bandosian I (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Red hand cave painting"
+        ],
         "dig_sites": [
             "Goblin dorm debris"
         ],
@@ -1916,7 +2068,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 20
         },
         "xp": 8166.7,
-        "individual_chronotes": 684
+        "individual_chronotes": 684,
+        "other_uses_total": 1
     },
     "Yurkolgokh stink grenade": {
         "img_src": "Yurkolgokh_stink_grenade.png",
@@ -1935,7 +2088,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vulcanised rubber": 36
         },
         "xp": 8166.7,
-        "individual_chronotes": 684
+        "individual_chronotes": 684,
+        "other_uses_total": 0
     },
     "Dominarian device": {
         "img_src": "Dominarian_device.png",
@@ -1944,7 +2098,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist III (Sir Atcha)",
             "Museum - Saradominist III (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Andvaranaut"
+        ],
         "dig_sites": [
             "Oikos fishing hut remnants"
         ],
@@ -1955,7 +2111,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 22
         },
         "xp": 8555.6,
-        "individual_chronotes": 686
+        "individual_chronotes": 686,
+        "other_uses_total": 1
     },
     "Fishing trident": {
         "img_src": "Fishing_trident.png",
@@ -1976,7 +2133,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 22
         },
         "xp": 8555.6,
-        "individual_chronotes": 686
+        "individual_chronotes": 686,
+        "other_uses_total": 0
     },
     "Hawkeye lens multi-vision scope": {
         "img_src": "Hawkeye_lens_multi-vision_scope.png",
@@ -1995,7 +2153,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 34
         },
         "xp": 8944.4,
-        "individual_chronotes": 688
+        "individual_chronotes": 688,
+        "other_uses_total": 0
     },
     "Talon-3 razor wing": {
         "img_src": "Talon-3_razor_wing.png",
@@ -2014,7 +2173,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wings of War": 34
         },
         "xp": 8944.4,
-        "individual_chronotes": 688
+        "individual_chronotes": 688,
+        "other_uses_total": 0
     },
     "Necromantic focus": {
         "img_src": "Necromantic_focus.png",
@@ -2025,7 +2185,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian III (Soran, Emissary of Zaros)",
             "Knowledge is Power (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Tomes of the Warlock"
+        ],
         "dig_sites": [
             "Orcus altar"
         ],
@@ -2036,7 +2198,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 30
         },
         "xp": 9333.3,
-        "individual_chronotes": 704
+        "individual_chronotes": 704,
+        "other_uses_total": 1
     },
     "'Exsanguinate' spell scroll": {
         "img_src": "'Exsanguinate'_spell_scroll.png",
@@ -2047,7 +2210,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: Vault of Shadows"],
+        "other_uses": [
+            "The Vault of Shadows"
+        ],
         "dig_sites": [
             "Orcus altar"
         ],
@@ -2057,7 +2222,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 36
         },
         "xp": 9333.3,
-        "individual_chronotes": 704
+        "individual_chronotes": 704,
+        "other_uses_total": 1
     },
     "Spent summoning charm": {
         "img_src": "Spent_summoning_charm.png",
@@ -2076,7 +2242,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Felt": 30
         },
         "xp": 9722.2,
-        "individual_chronotes": 706
+        "individual_chronotes": 706,
+        "other_uses_total": 0
     },
     "'Friendship bracelet'": {
         "img_src": "'Friendship_bracelet'.png",
@@ -2085,7 +2252,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin VI (Sharrigan)",
             "Museum - Dragonkin VI (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Daemonheim - Depths excavation site"
+        ],
         "dig_sites": [
             "Communal space"
         ],
@@ -2095,7 +2264,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Felt": 46
         },
         "xp": 9722.2,
-        "individual_chronotes": 706
+        "individual_chronotes": 706,
+        "other_uses_total": 1
     },
     "Homely totem": {
         "img_src": "Homely_totem.png",
@@ -2114,7 +2284,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Felt": 40
         },
         "xp": 9722.2,
-        "individual_chronotes": 706
+        "individual_chronotes": 706,
+        "other_uses_total": 0
     },
     "'Torment' metal sculpture": {
         "img_src": "'Torment'_metal_sculpture.png",
@@ -2134,7 +2305,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hellfire metal": 38
         },
         "xp": 10500.0,
-        "individual_chronotes": 724
+        "individual_chronotes": 724,
+        "other_uses_total": 0
     },
     "'Pandemonium' tapestry": {
         "img_src": "'Pandemonium'_tapestry.png",
@@ -2144,7 +2316,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)",
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
-        "other_uses": ["Mystery: A Study in Aether"],
+        "other_uses": [],
         "dig_sites": [
             "Dis overspill"
         ],
@@ -2156,7 +2328,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cadmium red": 42
         },
         "xp": 10500.0,
-        "individual_chronotes": 724
+        "individual_chronotes": 724,
+        "other_uses_total": 0
     },
     "High priest crozier": {
         "img_src": "High_priest_crozier.png",
@@ -2177,7 +2350,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 28
         },
         "xp": 10500.0,
-        "individual_chronotes": 724
+        "individual_chronotes": 724,
+        "other_uses_total": 0
     },
     "High priest mitre": {
         "img_src": "High_priest_mitre.png",
@@ -2199,7 +2373,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 28
         },
         "xp": 10500.0,
-        "individual_chronotes": 724
+        "individual_chronotes": 724,
+        "other_uses_total": 0
     },
     "High priest orb": {
         "img_src": "High_priest_orb.png",
@@ -2220,7 +2395,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 28
         },
         "xp": 10500.0,
-        "individual_chronotes": 724
+        "individual_chronotes": 724,
+        "other_uses_total": 0
     },
     "Pasaha": {
         "img_src": "Pasaha.png",
@@ -2229,7 +2405,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin I (Velucia)",
             "Dragonkin I (Sharrigan)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Artificer's measure"
+        ],
         "dig_sites": [
             "Varanusaur remains"
         ],
@@ -2239,7 +2417,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 38
         },
         "xp": 10888.9,
-        "individual_chronotes": 726
+        "individual_chronotes": 726,
+        "other_uses_total": 1
     },
     "Ritual bell": {
         "img_src": "Ritual_bell.png",
@@ -2258,7 +2437,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 38
         },
         "xp": 10888.9,
-        "individual_chronotes": 726
+        "individual_chronotes": 726,
+        "other_uses_total": 0
     },
     "Prototype gravimeter": {
         "img_src": "Prototype_gravimeter.png",
@@ -2278,7 +2458,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 26
         },
         "xp": 11277.8,
-        "individual_chronotes": 742
+        "individual_chronotes": 742,
+        "other_uses_total": 0
     },
     "Songbird recorder": {
         "img_src": "Songbird_recorder.png",
@@ -2298,7 +2479,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 36
         },
         "xp": 11277.8,
-        "individual_chronotes": 742
+        "individual_chronotes": 742,
+        "other_uses_total": 0
     },
     "Amphora": {
         "img_src": "Amphora.png",
@@ -2317,7 +2499,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Keramos": 46
         },
         "xp": 11666.7,
-        "individual_chronotes": 742
+        "individual_chronotes": 742,
+        "other_uses_total": 0
     },
     "Rod of Asclepius": {
         "img_src": "Rod_of_Asclepius.png",
@@ -2327,7 +2510,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist III (Velucia)",
             "Showy Fings (Chief Tess)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Statue of Tromple"
+        ],
         "dig_sites": [
             "Acropolis debris"
         ],
@@ -2338,7 +2523,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 26
         },
         "xp": 11666.7,
-        "individual_chronotes": 742
+        "individual_chronotes": 742,
+        "other_uses_total": 1
     },
     "Zarosian ewer": {
         "img_src": "Zarosian_ewer.png",
@@ -2357,7 +2543,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 30
         },
         "xp": 12500.0,
-        "individual_chronotes": 760
+        "individual_chronotes": 760,
+        "other_uses_total": 0
     },
     "Zarosian stein": {
         "img_src": "Zarosian_stein.png",
@@ -2377,7 +2564,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 30
         },
         "xp": 12500.0,
-        "individual_chronotes": 760
+        "individual_chronotes": 760,
+        "other_uses_total": 0
     },
     "Beastkeeper helm": {
         "img_src": "Beastkeeper_helm.png",
@@ -2399,7 +2587,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Fossilised bone": 24
         },
         "xp": 13333.3,
-        "individual_chronotes": 776
+        "individual_chronotes": 776,
+        "other_uses_total": 0
     },
     "Idithuun horn ring": {
         "img_src": "Idithuun_horn_ring.png",
@@ -2418,7 +2607,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vulcanised rubber": 44
         },
         "xp": 13333.3,
-        "individual_chronotes": 776
+        "individual_chronotes": 776,
+        "other_uses_total": 0
     },
     "'Nosorog!' sculpture": {
         "img_src": "'Nosorog!'_sculpture.png",
@@ -2438,7 +2628,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Warforged bronze": 30
         },
         "xp": 13333.3,
-        "individual_chronotes": 776
+        "individual_chronotes": 776,
+        "other_uses_total": 0
     },
     "Dayguard shield": {
         "img_src": "Dayguard_shield.png",
@@ -2458,7 +2649,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 20
         },
         "xp": 14166.7,
-        "individual_chronotes": 778
+        "individual_chronotes": 778,
+        "other_uses_total": 0
     },
     "Stormguard gerege": {
         "img_src": "Stormguard_gerege.png",
@@ -2467,7 +2659,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Armadylean II (Velucia)",
             "Armadylean II (Lowse)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Howl's Floating Workshop"
+        ],
         "dig_sites": [
             "Keshik tower debris"
         ],
@@ -2478,7 +2672,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 20
         },
         "xp": 14166.7,
-        "individual_chronotes": 778
+        "individual_chronotes": 778,
+        "other_uses_total": 1
     },
     "Vazara": {
         "img_src": "Vazara.png",
@@ -2498,7 +2693,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 28
         },
         "xp": 15000.0,
-        "individual_chronotes": 794
+        "individual_chronotes": 794,
+        "other_uses_total": 0
     },
     "Kilaya": {
         "img_src": "Kilaya.png",
@@ -2517,7 +2713,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 40
         },
         "xp": 15000.0,
-        "individual_chronotes": 794
+        "individual_chronotes": 794,
+        "other_uses_total": 0
     },
     "Garagorshuun anchor": {
         "img_src": "Garagorshuun_anchor.png",
@@ -2526,7 +2723,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Green Gobbo Goodies II (General Wartface)",
             "Museum - Bandosian II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Green skull cave painting"
+        ],
         "dig_sites": [
             "Goblin trainee remains"
         ],
@@ -2537,7 +2736,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 30
         },
         "xp": 15833.3,
-        "individual_chronotes": 810
+        "individual_chronotes": 810,
+        "other_uses_total": 1
     },
     "Ourg megahitter": {
         "img_src": "Ourg_megahitter.png",
@@ -2546,7 +2746,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Red Rum Relics II (General Bentnoze)",
             "Museum - Bandosian II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Asgarnia Smith"
+        ],
         "dig_sites": [
             "Goblin trainee remains"
         ],
@@ -2558,7 +2760,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Malachite green": 22
         },
         "xp": 15833.3,
-        "individual_chronotes": 810
+        "individual_chronotes": 810,
+        "other_uses_total": 1
     },
     "Ourg tower/goblin cower shield": {
         "img_src": "Ourg_tower-goblin_cower_shield.png",
@@ -2579,7 +2782,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 20
         },
         "xp": 15833.3,
-        "individual_chronotes": 810
+        "individual_chronotes": 810,
+        "other_uses_total": 0
     },
     "Hellfire haladie": {
         "img_src": "Hellfire_haladie.png",
@@ -2599,7 +2803,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 20
         },
         "xp": 16666.7,
-        "individual_chronotes": 826
+        "individual_chronotes": 826,
+        "other_uses_total": 0
     },
     "Hellfire katar": {
         "img_src": "Hellfire_katar.png",
@@ -2608,7 +2813,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian III (Velucia)",
             "Zamorakian III (Isaura)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "The Rings of Razulei"
+        ],
         "dig_sites": [
             "Byzroth remains"
         ],
@@ -2618,7 +2825,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 40
         },
         "xp": 16666.7,
-        "individual_chronotes": 826
+        "individual_chronotes": 826,
+        "other_uses_total": 2
     },
     "Hellfire zaghnal": {
         "img_src": "Hellfire_zaghnal.png",
@@ -2638,7 +2846,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 26
         },
         "xp": 16666.7,
-        "individual_chronotes": 826
+        "individual_chronotes": 826,
+        "other_uses_total": 0
     },
     "Golem heart": {
         "img_src": "Golem_heart.png",
@@ -2647,7 +2856,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Armadylean II (Velucia)",
             "Armadylean II (Lowse)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Golem framework"
+        ],
         "dig_sites": [
             "Destroyed golem"
         ],
@@ -2659,7 +2870,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Soapstone": 16
         },
         "xp": 16666.7,
-        "individual_chronotes": 826
+        "individual_chronotes": 826,
+        "other_uses_total": 1
     },
     "Golem instruction": {
         "img_src": "Golem_instruction.png",
@@ -2669,7 +2881,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean II (Lowse)",
             "Knowledge is Power (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Golem framework",
+            "Elissa Giovanni"
+        ],
         "dig_sites": [
             "Destroyed golem"
         ],
@@ -2679,7 +2894,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vellum": 44
         },
         "xp": 16666.7,
-        "individual_chronotes": 826
+        "individual_chronotes": 826,
+        "other_uses_total": 2
     },
     "Death mask": {
         "img_src": "Death_mask.png",
@@ -2688,7 +2904,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin I (Velucia)",
             "Dragonkin I (Sharrigan)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Evil Bob's Catspaw"
+        ],
         "dig_sites": [
             "Dragonkin coffin"
         ],
@@ -2698,7 +2916,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Soapstone": 34
         },
         "xp": 17500.0,
-        "individual_chronotes": 828
+        "individual_chronotes": 828,
+        "other_uses_total": 1
     },
     "Dragonkin calendar": {
         "img_src": "Dragonkin_calendar.png",
@@ -2718,7 +2937,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 28
         },
         "xp": 17500.0,
-        "individual_chronotes": 828
+        "individual_chronotes": 828,
+        "other_uses_total": 0
     },
     "Dragonkin staff": {
         "img_src": "Dragonkin_staff.png",
@@ -2737,7 +2957,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 34
         },
         "xp": 17500.0,
-        "individual_chronotes": 828
+        "individual_chronotes": 828,
+        "other_uses_total": 0
     },
     "Dorgeshuun spear": {
         "img_src": "Dorgeshuun_spear.png",
@@ -2746,7 +2967,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Green Gobbo Goodies III (General Wartface)",
             "Museum - Bandosian II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Stick It to Da Boss Man",
+            "You Have Chosen..."
+        ],
         "dig_sites": [
             "Kyzaj champion's boudoir"
         ],
@@ -2756,7 +2980,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 42
         },
         "xp": 18666.7,
-        "individual_chronotes": 844
+        "individual_chronotes": 844,
+        "other_uses_total": 1
     },
     "'Forged in War' sculpture": {
         "img_src": "'Forged_in_War'_sculpture.png",
@@ -2765,7 +2990,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Red Rum Relics II (General Bentnoze)",
             "Museum - Bandosian II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "You Have Chosen..."
+        ],
         "dig_sites": [
             "Kyzaj champion's boudoir"
         ],
@@ -2775,7 +3002,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Yu'biusk clay": 42
         },
         "xp": 18666.7,
-        "individual_chronotes": 844
+        "individual_chronotes": 844,
+        "other_uses_total": 1
     },
     "'Smoke Cloud' spell scroll": {
         "img_src": "'Smoke_Cloud'_spell_scroll.png",
@@ -2786,7 +3014,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: Vault of Shadows"],
+        "other_uses": [
+            "The Vault of Shadows"
+        ],
         "dig_sites": [
             "Culinarum debris"
         ],
@@ -2797,7 +3027,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 32
         },
         "xp": 18666.7,
-        "individual_chronotes": 844
+        "individual_chronotes": 844,
+        "other_uses_total": 1
     },
     "Vigorem vial": {
         "img_src": "Vigorem_vial.png",
@@ -2816,7 +3047,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 38
         },
         "xp": 18666.7,
-        "individual_chronotes": 844
+        "individual_chronotes": 844,
+        "other_uses_total": 0
     },
     "Kopis dagger": {
         "img_src": "Kopis_dagger.png",
@@ -2835,7 +3067,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 42
         },
         "xp": 18666.7,
-        "individual_chronotes": 844
+        "individual_chronotes": 844,
+        "other_uses_total": 0
     },
     "Xiphos short sword": {
         "img_src": "Xiphos_short_sword.png",
@@ -2854,7 +3087,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Leather scraps": 46
         },
         "xp": 18666.7,
-        "individual_chronotes": 844
+        "individual_chronotes": 844,
+        "other_uses_total": 0
     },
     "Dragon scalpel": {
         "img_src": "Dragon_scalpel.png",
@@ -2863,7 +3097,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin II (Sharrigan)",
             "Museum - Dragonkin II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Artificer's measure"
+        ],
         "dig_sites": [
             "Autopsy table"
         ],
@@ -2873,7 +3109,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Felt": 42
         },
         "xp": 19833.3,
-        "individual_chronotes": 860
+        "individual_chronotes": 860,
+        "other_uses_total": 1
     },
     "Protective goggles": {
         "img_src": "Protective_goggles.png",
@@ -2882,7 +3119,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin II (Sharrigan)",
             "Museum - Dragonkin II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Artificer's measure"
+        ],
         "dig_sites": [
             "Autopsy table"
         ],
@@ -2892,7 +3131,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 52
         },
         "xp": 19833.3,
-        "individual_chronotes": 860
+        "individual_chronotes": 860,
+        "other_uses_total": 1
     },
     "Dragon burner": {
         "img_src": "Dragon_burner.png",
@@ -2901,7 +3141,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin II (Sharrigan)",
             "Museum - Dragonkin II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Orthen furnace core"
+        ],
         "dig_sites": [
             "Experiment workbench"
         ],
@@ -2911,7 +3153,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orgone": 42
         },
         "xp": 21000.0,
-        "individual_chronotes": 862
+        "individual_chronotes": 862,
+        "other_uses_total": 4
     },
     "Orthenglass flask": {
         "img_src": "Orthenglass_flask.png",
@@ -2920,7 +3163,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin II (Sharrigan)",
             "Museum - Dragonkin II (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Soma",
+            "Artificer's measure"
+        ],
         "dig_sites": [
             "Experiment workbench"
         ],
@@ -2930,7 +3176,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 60
         },
         "xp": 21000.0,
-        "individual_chronotes": 862
+        "individual_chronotes": 862,
+        "other_uses_total": 2
     },
     "Blackfire lance": {
         "img_src": "Blackfire_lance.png",
@@ -2949,7 +3196,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Quintessence": 46
         },
         "xp": 22166.7,
-        "individual_chronotes": 878
+        "individual_chronotes": 878,
+        "other_uses_total": 0
     },
     "Nightguard shield": {
         "img_src": "Nightguard_shield.png",
@@ -2969,7 +3217,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 30
         },
         "xp": 22166.7,
-        "individual_chronotes": 878
+        "individual_chronotes": 878,
+        "other_uses_total": 0
     },
     "Projection attuner": {
         "img_src": "Projection_attuner.png",
@@ -2989,7 +3238,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 40
         },
         "xp": 22166.7,
-        "individual_chronotes": 878
+        "individual_chronotes": 878,
+        "other_uses_total": 0
     },
     "Golden projection 'needle'": {
         "img_src": "Golden_projection_'needle'.png",
@@ -3008,7 +3258,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 60
         },
         "xp": 22166.7,
-        "individual_chronotes": 878
+        "individual_chronotes": 878,
+        "other_uses_total": 0
     },
     "'Possession' metal sculpture": {
         "img_src": "'Possession'_metal_sculpture.png",
@@ -3028,7 +3279,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 44
         },
         "xp": 23333.3,
-        "individual_chronotes": 894
+        "individual_chronotes": 894,
+        "other_uses_total": 0
     },
     "Trishula": {
         "img_src": "Trishula.png",
@@ -3048,7 +3300,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 20
         },
         "xp": 23333.3,
-        "individual_chronotes": 894
+        "individual_chronotes": 894,
+        "other_uses_total": 0
     },
     "Tsutsaroth piercing": {
         "img_src": "Tsutsaroth_piercing.png",
@@ -3068,7 +3321,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Cadmium red": 24
         },
         "xp": 23333.3,
-        "individual_chronotes": 894
+        "individual_chronotes": 894,
+        "other_uses_total": 0
     },
     "Huzamogaarb chaos crown": {
         "img_src": "Huzamogaarb_chaos_crown.png",
@@ -3089,7 +3343,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Eye of Dagon": 20
         },
         "xp": 23333.3,
-        "individual_chronotes": 894
+        "individual_chronotes": 894,
+        "other_uses_total": 0
     },
     "Saragorgak star crown": {
         "img_src": "Saragorgak_star_crown.png",
@@ -3110,7 +3365,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Star of Saradomin": 20
         },
         "xp": 23333.3,
-        "individual_chronotes": 894
+        "individual_chronotes": 894,
+        "other_uses_total": 0
     },
     "'The Pride of Padosan' painting": {
         "img_src": "'The_Pride_of_Padosan'_painting.png",
@@ -3132,7 +3388,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vellum": 16
         },
         "xp": 24500.0,
-        "individual_chronotes": 910
+        "individual_chronotes": 910,
+        "other_uses_total": 0
     },
     "'Hallowed Be the Everlight' painting": {
         "img_src": "'Hallowed_Be_the_Everlight'_painting.png",
@@ -3142,7 +3399,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist IV (Sir Atcha)",
             "Radiant Renaissance (Art Critic Jacques)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Hallowed Be..."
+        ],
         "dig_sites": [
             "Stockpiled art"
         ],
@@ -3154,7 +3413,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vellum": 16
         },
         "xp": 24500.0,
-        "individual_chronotes": 910
+        "individual_chronotes": 910,
+        "other_uses_total": 0
     },
     "'The Lord of Light' painting": {
         "img_src": "'The_Lord_of_Light'_painting.png",
@@ -3176,7 +3436,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vellum": 16
         },
         "xp": 24500.0,
-        "individual_chronotes": 910
+        "individual_chronotes": 910,
+        "other_uses_total": 0
     },
     "Meditation pipe": {
         "img_src": "Meditation_pipe.png",
@@ -3195,7 +3456,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 40
         },
         "xp": 25666.7,
-        "individual_chronotes": 912
+        "individual_chronotes": 912,
+        "other_uses_total": 0
     },
     "Singing bowl": {
         "img_src": "Singing_bowl.png",
@@ -3204,7 +3466,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin III (Sharrigan)",
             "Museum - Dragonkin III (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Fragmented Memories"
+        ],
         "dig_sites": [
             "Aughra remains"
         ],
@@ -3214,7 +3478,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 40
         },
         "xp": 25666.7,
-        "individual_chronotes": 912
+        "individual_chronotes": 912,
+        "other_uses_total": 0
     },
     "Personal totem": {
         "img_src": "Personal_totem.png",
@@ -3234,7 +3499,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 26
         },
         "xp": 25666.7,
-        "individual_chronotes": 912
+        "individual_chronotes": 912,
+        "other_uses_total": 0
     },
     "Ancient magic tablet": {
         "img_src": "Ancient_magic_tablet.png",
@@ -3244,7 +3510,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian III (Velucia)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: Vault of Shadows"],
+        "other_uses": [],
         "dig_sites": [
             "Ancient magick munitions"
         ],
@@ -3254,7 +3520,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 64
         },
         "xp": 27000.0,
-        "individual_chronotes": 942
+        "individual_chronotes": 942,
+        "other_uses_total": 0
     },
     "Portable phylactery": {
         "img_src": "Portable_phylactery.png",
@@ -3264,7 +3531,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: Vault of Shadows"],
+        "other_uses": [
+            "The Forgotten Prisoner"
+        ],
         "dig_sites": [
             "Ancient magick munitions"
         ],
@@ -3275,7 +3544,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 20
         },
         "xp": 27000.0,
-        "individual_chronotes": 942
+        "individual_chronotes": 942,
+        "other_uses_total": 1
     },
     "'Animate Dead' spell scroll": {
         "img_src": "'Animate_Dead'_spell_scroll.png",
@@ -3286,7 +3556,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: Vault of Shadows"],
+        "other_uses": [
+            "The Vault of Shadows"
+        ],
         "dig_sites": [
             "Ancient magick munitions"
         ],
@@ -3297,7 +3569,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blood of Orcus": 40
         },
         "xp": 27000.0,
-        "individual_chronotes": 942
+        "individual_chronotes": 942,
+        "other_uses_total": 1
     },
     "Comfort gatestone": {
         "img_src": "Comfort_gatestone.png",
@@ -3317,7 +3590,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 30
         },
         "xp": 27000.0,
-        "individual_chronotes": 942
+        "individual_chronotes": 942,
+        "other_uses_total": 0
     },
     "Halak's cube": {
         "img_src": "Halak's_cube.png",
@@ -3337,7 +3611,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orgone": 28
         },
         "xp": 27000.0,
-        "individual_chronotes": 942
+        "individual_chronotes": 942,
+        "other_uses_total": 0
     },
     "Lingam stone": {
         "img_src": "Lingam_stone.png",
@@ -3346,7 +3621,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin III (Sharrigan)",
             "Museum - Dragonkin III (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Xolo City"
+        ],
         "dig_sites": [
             "Moksha device"
         ],
@@ -3357,7 +3634,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 32
         },
         "xp": 28333.3,
-        "individual_chronotes": 958
+        "individual_chronotes": 958,
+        "other_uses_total": 1
     },
     "Master control": {
         "img_src": "Master_control.png",
@@ -3366,7 +3644,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin III (Sharrigan)",
             "Museum - Dragonkin III (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Fragmented Memories"
+        ],
         "dig_sites": [
             "Moksha device"
         ],
@@ -3377,7 +3657,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Compass rose": 44
         },
         "xp": 28333.3,
-        "individual_chronotes": 958
+        "individual_chronotes": 958,
+        "other_uses_total": 1
     },
     "'The Enlightened Soul' scroll": {
         "img_src": "'The_Enlightened_Soul'_scroll.png",
@@ -3397,7 +3678,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Vellum": 60
         },
         "xp": 29666.7,
-        "individual_chronotes": 988
+        "individual_chronotes": 988,
+        "other_uses_total": 0
     },
     "'The Eudoxian Elements' tablet": {
         "img_src": "'The_Eudoxian_Elements'_tablet.png",
@@ -3417,7 +3699,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 50
         },
         "xp": 29666.7,
-        "individual_chronotes": 988
+        "individual_chronotes": 988,
+        "other_uses_total": 0
     },
     "Drogokishuun hook sword": {
         "img_src": "Drogokishuun_hook_sword.png",
@@ -3437,7 +3720,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Fossilised bone": 32
         },
         "xp": 31000.0,
-        "individual_chronotes": 1004
+        "individual_chronotes": 1004,
+        "other_uses_total": 0
     },
     "Hobgoblin mansticker": {
         "img_src": "Hobgoblin_mansticker.png",
@@ -3456,7 +3740,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Fossilised bone": 46
         },
         "xp": 31000.0,
-        "individual_chronotes": 1004
+        "individual_chronotes": 1004,
+        "other_uses_total": 0
     },
     "Chaos Elemental trophy": {
         "img_src": "Chaos_Elemental_trophy.png",
@@ -3476,7 +3761,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hellfire metal": 30
         },
         "xp": 31000.0,
-        "individual_chronotes": 1004
+        "individual_chronotes": 1004,
+        "other_uses_total": 0
     },
     "Virius trophy": {
         "img_src": "Virius_trophy.png",
@@ -3496,7 +3782,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 34
         },
         "xp": 31000.0,
-        "individual_chronotes": 1004
+        "individual_chronotes": 1004,
+        "other_uses_total": 0
     },
     "Flat cap": {
         "img_src": "Flat_cap.png",
@@ -3516,7 +3803,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 54
         },
         "xp": 32333.3,
-        "individual_chronotes": 1004
+        "individual_chronotes": 1004,
+        "other_uses_total": 0
     },
     "Night owl flight goggles": {
         "img_src": "Night_owl_flight_goggles.png",
@@ -3536,7 +3824,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 30
         },
         "xp": 32333.3,
-        "individual_chronotes": 1004
+        "individual_chronotes": 1004,
+        "other_uses_total": 0
     },
     "Prototype godbow": {
         "img_src": "Prototype_godbow.png",
@@ -3556,7 +3845,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wings of War": 34
         },
         "xp": 33666.7,
-        "individual_chronotes": 1050
+        "individual_chronotes": 1050,
+        "other_uses_total": 0
     },
     "Prototype godsword": {
         "img_src": "Prototype_godsword.png",
@@ -3565,7 +3855,10 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Armadylean III (Velucia)",
             "Armadylean III (Lowse)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "That's Not How it Works",
+            "The Subtle Blade"
+        ],
         "dig_sites": [
             "Aetherium forge"
         ],
@@ -3576,7 +3869,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 34
         },
         "xp": 33666.7,
-        "individual_chronotes": 1050
+        "individual_chronotes": 1050,
+        "other_uses_total": 1
     },
     "Prototype godstaff": {
         "img_src": "Prototype_godstaff.png",
@@ -3596,7 +3890,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wings of War": 34
         },
         "xp": 33666.7,
-        "individual_chronotes": 1050
+        "individual_chronotes": 1050,
+        "other_uses_total": 0
     },
     "Xolo hard hat": {
         "img_src": "Xolo_hard_hat.png",
@@ -3615,7 +3910,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 66
         },
         "xp": 35000.0,
-        "individual_chronotes": 1066
+        "individual_chronotes": 1066,
+        "other_uses_total": 0
     },
     "Xolo pickaxe": {
         "img_src": "Xolo_pickaxe.png",
@@ -3635,7 +3931,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orgone": 34
         },
         "xp": 35000.0,
-        "individual_chronotes": 1066
+        "individual_chronotes": 1066,
+        "other_uses_total": 0
     },
     "Portable portal generator": {
         "img_src": "Portable_portal_generator.png",
@@ -3655,7 +3952,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 34
         },
         "xp": 35000.0,
-        "individual_chronotes": 1066
+        "individual_chronotes": 1066,
+        "other_uses_total": 0
     },
     "Warped trinket": {
         "img_src": "Warped_trinket.png",
@@ -3676,7 +3974,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 30
         },
         "xp": 35000.0,
-        "individual_chronotes": 1066
+        "individual_chronotes": 1066,
+        "other_uses_total": 0
     },
     "Praetorian hood": {
         "img_src": "Praetorian_hood.png",
@@ -3698,7 +3997,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Death rune": 30
         },
         "xp": 36666.7,
-        "individual_chronotes": 1096
+        "individual_chronotes": 1096,
+        "other_uses_total": 0
     },
     "Praetorian robes": {
         "img_src": "Praetorian_robes.png",
@@ -3719,7 +4019,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Death rune": 50
         },
         "xp": 36666.7,
-        "individual_chronotes": 1096
+        "individual_chronotes": 1096,
+        "other_uses_total": 0
     },
     "Praetorian staff": {
         "img_src": "Praetorian_staff.png",
@@ -3728,7 +4029,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian IV (Soran, Emissary of Zaros)",
             "Museum - Zarosian IV (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Inquisitor staff"
+        ],
         "dig_sites": [
             "Praetorian remains"
         ],
@@ -3740,7 +4043,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Death rune": 100
         },
         "xp": 36666.7,
-        "individual_chronotes": 1096
+        "individual_chronotes": 1096,
+        "other_uses_total": 1
     },
     "Kal-i-kra chieftain crown": {
         "img_src": "Kal-i-kra_chieftain_crown.png",
@@ -3760,7 +4064,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Animal furs": 60
         },
         "xp": 38333.3,
-        "individual_chronotes": 1112
+        "individual_chronotes": 1112,
+        "other_uses_total": 0
     },
     "Kal-i-kra mace": {
         "img_src": "Kal-i-kra_mace.png",
@@ -3780,7 +4085,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Fossilised bone": 40
         },
         "xp": 38333.3,
-        "individual_chronotes": 1112
+        "individual_chronotes": 1112,
+        "other_uses_total": 0
     },
     "Kal-i-kra warhorn": {
         "img_src": "Kal-i-kra_warhorn.png",
@@ -3800,7 +4106,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Animal furs": 40
         },
         "xp": 38333.3,
-        "individual_chronotes": 1112
+        "individual_chronotes": 1112,
+        "other_uses_total": 0
     },
     "Tsutsaroth helm": {
         "img_src": "Tsutsaroth_helm.png",
@@ -3821,7 +4128,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 40
         },
         "xp": 40000.0,
-        "individual_chronotes": 1142
+        "individual_chronotes": 1142,
+        "other_uses_total": 0
     },
     "Tsutsaroth pauldron": {
         "img_src": "Tsutsaroth_pauldron.png",
@@ -3841,7 +4149,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Eye of Dagon": 40
         },
         "xp": 40000.0,
-        "individual_chronotes": 1142
+        "individual_chronotes": 1142,
+        "other_uses_total": 0
     },
     "Tsutsaroth urumi": {
         "img_src": "Tsutsaroth_urumi.png",
@@ -3861,7 +4170,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Third Age iron": 40
         },
         "xp": 40000.0,
-        "individual_chronotes": 1142
+        "individual_chronotes": 1142,
+        "other_uses_total": 0
     },
     "Kontos lance": {
         "img_src": "Kontos_lance.png",
@@ -3880,7 +4190,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Samite silk": 62
         },
         "xp": 41666.7,
-        "individual_chronotes": 1158
+        "individual_chronotes": 1158,
+        "other_uses_total": 0
     },
     "Doru spear": {
         "img_src": "Doru_spear.png",
@@ -3899,7 +4210,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 62
         },
         "xp": 41666.7,
-        "individual_chronotes": 1158
+        "individual_chronotes": 1158,
+        "other_uses_total": 0
     },
     "Ancient globe": {
         "img_src": "Ancient_globe.png",
@@ -3919,7 +4231,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 60
         },
         "xp": 43333.3,
-        "individual_chronotes": 1174
+        "individual_chronotes": 1174,
+        "other_uses_total": 0
     },
     "Battle plans": {
         "img_src": "Battle_plans.png",
@@ -3939,7 +4252,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Ancient vis": 34
         },
         "xp": 43333.3,
-        "individual_chronotes": 1174
+        "individual_chronotes": 1174,
+        "other_uses_total": 0
     },
     "'Prima Legio' painting": {
         "img_src": "'Prima_Legio'_painting.png",
@@ -3949,7 +4263,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian IV (Velucia)",
             "Zarosian IV (Soran, Emissary of Zaros)"
         ],
-        "other_uses": ["Mystery: The Spy Master"],
+        "other_uses": [],
         "dig_sites": [
             "War table debris"
         ],
@@ -3961,7 +4275,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian insignia": 20
         },
         "xp": 43333.3,
-        "individual_chronotes": 1174
+        "individual_chronotes": 1174,
+        "other_uses_total": 0
     },
     "Chuluu stone": {
         "img_src": "Chuluu_stone.png",
@@ -3971,7 +4286,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Armadylean III (Lowse)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Experimental Aether Reactor"
+        ],
         "dig_sites": [
             "Howl's workshop debris"
         ],
@@ -3983,7 +4300,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 24
         },
         "xp": 43333.3,
-        "individual_chronotes": 1174
+        "individual_chronotes": 1174,
+        "other_uses_total": 1
     },
     "Quintessence counter": {
         "img_src": "Quintessence_counter.png",
@@ -4003,7 +4321,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "White oak": 40
         },
         "xp": 43333.3,
-        "individual_chronotes": 1174
+        "individual_chronotes": 1174,
+        "other_uses_total": 0
     },
     "Spherical astrolabe": {
         "img_src": "Spherical_astrolabe.png",
@@ -4023,7 +4342,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orthenglass": 48
         },
         "xp": 43333.3,
-        "individual_chronotes": 1174
+        "individual_chronotes": 1174,
+        "other_uses_total": 0
     },
     "Xolo shield": {
         "img_src": "Xolo_shield.png",
@@ -4043,7 +4363,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Felt": 42
         },
         "xp": 45000.0,
-        "individual_chronotes": 1204
+        "individual_chronotes": 1204,
+        "other_uses_total": 0
     },
     "Xolo spear": {
         "img_src": "Xolo_spear.png",
@@ -4062,7 +4383,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Orgone": 64
         },
         "xp": 45000.0,
-        "individual_chronotes": 1204
+        "individual_chronotes": 1204,
+        "other_uses_total": 0
     },
     "Horogothgar cooking pot": {
         "img_src": "Horogothgar_cooking_pot.png",
@@ -4082,7 +4404,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Soapstone": 40
         },
         "xp": 45000.0,
-        "individual_chronotes": 1204
+        "individual_chronotes": 1204,
+        "other_uses_total": 0
     },
     "'Da Boss Man' sculpture": {
         "img_src": "'Da_Boss_Man'_sculpture.png",
@@ -4104,7 +4427,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Soapstone": 44
         },
         "xp": 45000.0,
-        "individual_chronotes": 1204
+        "individual_chronotes": 1204,
+        "other_uses_total": 0
     },
     "Gold dish": {
         "img_src": "Gold_dish.png",
@@ -4113,7 +4437,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin IV (Velucia)",
             "Dragonkin IV (Sharrigan)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Mysterious City"
+        ],
         "dig_sites": [
             "Saurthen debris"
         ],
@@ -4123,7 +4449,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragon metal": 54
         },
         "xp": 46666.7,
-        "individual_chronotes": 1220
+        "individual_chronotes": 1220,
+        "other_uses_total": 1
     },
     "'Raksha' idol": {
         "img_src": "'Raksha'_idol.png",
@@ -4132,7 +4459,9 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin IV (Velucia)",
             "Dragonkin IV (Sharrigan)"
         ],
-        "other_uses": [],
+        "other_uses": [
+            "Mysterious City"
+        ],
         "dig_sites": [
             "Saurthen debris"
         ],
@@ -4143,7 +4472,8 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Goldrune": 40
         },
         "xp": 46666.7,
-        "individual_chronotes": 1220
+        "individual_chronotes": 1220,
+        "other_uses_total": 1
     }
 };
 
