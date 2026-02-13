@@ -11,6 +11,7 @@ interface CollectionSidebarProps {
 }
 
 type ViewMode = 'az' | 'collector' | 'other';
+type SortOrder = 'az' | 'level';
 
 const getCollectorImage = (collectorName: string) => {
   if (collectorName === 'Other Uses') return null; // Or a specific icon for Other Uses
@@ -32,6 +33,7 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
 }) => {
   const [viewMode, setViewMode] = useState<ViewMode>('collector');
   const [expandedCollectors, setExpandedCollectors] = useState<Record<string, boolean>>({});
+  const [sortOrder, setSortOrder] = useState<SortOrder>('az');
 
   const toggleCollector = (collectorName: string) => {
     setExpandedCollectors(prev => ({
@@ -57,36 +59,47 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
     });
   }, [collections, hideCompleted, checkedCollections]);
 
+  // Standard A-Z View (Flat List)
   const sortedCollectionsAZ = useMemo(() => {
-    // Only show "normal" collections or both? Typically A-Z shows regular collections
     return [...filteredCollections]
       .filter(c => c.collector !== 'Other Uses')
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [filteredCollections]);
 
+  // Other Uses View
   const otherUsesCollections = useMemo(() => {
-    return [...filteredCollections]
-      .filter(c => c.collector === 'Other Uses')
-      .sort((a, b) => a.name.localeCompare(b.name));
-  }, [filteredCollections]);
+    const list = [...filteredCollections].filter(c => c.collector === 'Other Uses');
+    
+    if (sortOrder === 'level') {
+        return list.sort((a, b) => getCollectionMaxLevel(a) - getCollectionMaxLevel(b));
+    }
+    return list.sort((a, b) => a.name.localeCompare(b.name));
+  }, [filteredCollections, sortOrder, artefacts]);
 
+  // Collector View (Grouped)
   const collectionsByCollector = useMemo(() => {
     const groups: Record<string, Collection[]> = {};
     filteredCollections.forEach(col => {
-      if (col.collector === 'Other Uses') return; // Exclude from 'collector' view if we have separate tab
+      if (col.collector === 'Other Uses') return;
       if (!groups[col.collector]) groups[col.collector] = [];
       groups[col.collector].push(col);
     });
 
-    // Sort collections alphabetically within each group
+    // Sort collections inside each group based on SortOrder
     Object.keys(groups).forEach(key => {
-        groups[key].sort((a, b) => a.name.localeCompare(b.name));
+        groups[key].sort((a, b) => {
+            if (sortOrder === 'level') {
+                return getCollectionMaxLevel(a) - getCollectionMaxLevel(b);
+            }
+            return a.name.localeCompare(b.name);
+        });
     });
 
     return groups;
-  }, [filteredCollections]);
+  }, [filteredCollections, sortOrder, artefacts]);
 
   const sortedCollectorNames = useMemo(() => {
+    // Collectors always A-Z
     return Object.keys(collectionsByCollector).sort((a, b) => a.localeCompare(b));
   }, [collectionsByCollector]);
 
@@ -98,19 +111,34 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
             <h2 className="text-xl font-bold text-white">Collections</h2>
         </div>
         
-        <label className="flex items-center gap-2 mb-3 cursor-pointer select-none">
-            <div className="relative">
-                <input 
-                    type="checkbox" 
-                    className="sr-only peer"
-                    checked={hideCompleted}
-                    onChange={(e) => onHideCompletedChange(e.target.checked)}
-                />
-                <div className="w-9 h-5 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
-            </div>
-            <span className="text-sm text-gray-300">Hide Completed</span>
-        </label>
+        {/* Controls Row 1: Hide Completed & Sort Toggle */}
+        <div className="flex justify-between items-center mb-3">
+            <label className="flex items-center gap-2 cursor-pointer select-none">
+                <div className="relative">
+                    <input 
+                        type="checkbox" 
+                        className="sr-only peer"
+                        checked={hideCompleted}
+                        onChange={(e) => onHideCompletedChange(e.target.checked)}
+                    />
+                    <div className="w-8 h-4 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                </div>
+                <span className="text-xs text-gray-300">Hide Done</span>
+            </label>
 
+            {viewMode !== 'az' && (
+                <button 
+                    onClick={() => setSortOrder(prev => prev === 'az' ? 'level' : 'az')}
+                    className="text-xs bg-gray-700 hover:bg-gray-600 px-2 py-1 rounded text-gray-300 flex items-center gap-1 transition-colors"
+                    title="Sort Items inside groups"
+                >
+                    <span className="opacity-70">Sort:</span>
+                    <span className="font-bold text-white">{sortOrder === 'az' ? 'A-Z' : 'Lvl'}</span>
+                </button>
+            )}
+        </div>
+
+        {/* View Mode Tabs */}
         <div className="flex bg-gray-800 p-1 rounded-lg border border-gray-700">
           <button
             onClick={() => setViewMode('az')}
