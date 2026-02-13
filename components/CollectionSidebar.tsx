@@ -17,12 +17,18 @@ const getCollectorImage = (collectorName: string) => {
   return `/img/${baseName}_chathead.png`;
 };
 
+// Helper to clean collection name (remove parenthesized collector name)
+const cleanCollectionName = (name: string) => {
+  return name.replace(/\s*\(.*?\)\s*$/, '');
+};
+
 export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
   collections,
   checkedCollections,
   onCheckChange,
 }) => {
-  const [viewMode, setViewMode] = useState<ViewMode>('az');
+  // Default to 'collector' view as requested
+  const [viewMode, setViewMode] = useState<ViewMode>('collector');
   const [expandedCollectors, setExpandedCollectors] = useState<Record<string, boolean>>({});
 
   // Toggle accordion section
@@ -136,12 +142,11 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
                     className="w-full flex items-center p-3 hover:bg-gray-700/50 transition-colors text-left"
                   >
                     {/* Collector Image */}
-                    <div className="relative mr-3 shrink-0">
+                    <div className="relative mr-3 shrink-0 w-10 h-10">
                         <img 
                             src={getCollectorImage(collectorName)} 
                             alt={collectorName}
-                            className="w-10 h-10 object-contain drop-shadow-md" 
-                            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                            className="w-full h-full object-contain drop-shadow-md"
                         />
                         {isFullyCompleted && (
                             <div className="absolute -top-1 -right-1 bg-green-500 rounded-full p-0.5 border border-gray-900">
@@ -189,7 +194,7 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
                                         ? 'text-green-400 line-through decoration-green-600/50' 
                                         : 'text-gray-300 group-hover:text-white'
                                 }`}>
-                                    {col.name}
+                                    {cleanCollectionName(col.name)}
                                 </span>
                             </label>
                         ))}
