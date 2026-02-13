@@ -166,7 +166,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian I (Isaura)",
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: A Study in Aether"],
         "dig_sites": [
             "Lodge art storage"
         ],
@@ -251,7 +251,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian I (Soran, Emissary of Zaros)",
             "Museum - Zarosian I (Velucia)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: The Spy Master"],
         "dig_sites": [
             "Administratum debris"
         ],
@@ -336,7 +336,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zamorakian I (Velucia)",
             "Zamorakian I (Isaura)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Eyes in their Stars"],
         "dig_sites": [
             "Sacrificial altar"
         ],
@@ -456,7 +456,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Blingy Fings (Chief Tess)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: The Spy Master"],
         "dig_sites": [
             "Praesidio remains"
         ],
@@ -477,7 +477,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Blingy Fings (Chief Tess)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: The Spy Master"],
         "dig_sites": [
             "Praesidio remains"
         ],
@@ -637,7 +637,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Blingy Fings (Chief Tess)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: The Spy Master"],
         "dig_sites": [
             "Carcerem debris"
         ],
@@ -659,7 +659,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Vault of Shadows"],
         "dig_sites": [
             "Carcerem debris"
         ],
@@ -1003,7 +1003,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)",
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: A Study in Aether"],
         "dig_sites": [
             "Infernal art"
         ],
@@ -1443,7 +1443,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian II (Velucia)",
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: The Spy Master"],
         "dig_sites": [
             "Kharid-et chapel debris"
         ],
@@ -1484,7 +1484,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)",
             "Wise Am the Music Man (Wise Old Man)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Breaking the Seal"],
         "dig_sites": [
             "Keshik ger"
         ],
@@ -2047,7 +2047,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Vault of Shadows"],
         "dig_sites": [
             "Orcus altar"
         ],
@@ -2144,7 +2144,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)",
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: A Study in Aether"],
         "dig_sites": [
             "Dis overspill"
         ],
@@ -2786,7 +2786,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Vault of Shadows"],
         "dig_sites": [
             "Culinarum debris"
         ],
@@ -3244,7 +3244,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian III (Velucia)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Vault of Shadows"],
         "dig_sites": [
             "Ancient magick munitions"
         ],
@@ -3264,7 +3264,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Vault of Shadows"],
         "dig_sites": [
             "Ancient magick munitions"
         ],
@@ -3286,7 +3286,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Magic Man (Wise Old Man)",
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: Vault of Shadows"],
         "dig_sites": [
             "Ancient magick munitions"
         ],
@@ -3949,7 +3949,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian IV (Velucia)",
             "Zarosian IV (Soran, Emissary of Zaros)"
         ],
-        "other_uses": [],
+        "other_uses": ["Mystery: The Spy Master"],
         "dig_sites": [
             "War table debris"
         ],
@@ -4148,6 +4148,7 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
 };
 
 export const COLLECTIONS_JSON: Record<string, CollectionData> = {
+    // ... existing collections ...
     "Zarosian I (Soran, Emissary of Zaros)": {
         "collector": "Soran, Emissary of Zaros",
         "items": [
