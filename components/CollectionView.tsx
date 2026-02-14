@@ -14,7 +14,7 @@ export interface CollectionStatus {
 
 interface CollectionViewProps {
   collectionsStatus: CollectionStatus[];
-  onCheckChange: (name: string, checked: boolean) => void;
+  onCollectionComplete: (collection: Collection) => void;
 }
 
 const getCollectorImage = (collectorName: string) => {
@@ -27,7 +27,7 @@ const cleanCollectionName = (name: string) => {
   return name.replace(/\s*\(.*?\)\s*$/, '');
 };
 
-const CollectionCard: React.FC<{ statusData: CollectionStatus, onCheckChange: (name: string, checked: boolean) => void }> = ({ statusData, onCheckChange }) => {
+const CollectionCard: React.FC<{ statusData: CollectionStatus, onCollectionComplete: (collection: Collection) => void }> = ({ statusData, onCollectionComplete }) => {
     const { collection, itemsStatus, isReady } = statusData;
     const collectorImg = getCollectorImage(collection.collector);
     const displayName = cleanCollectionName(collection.name);
@@ -70,9 +70,9 @@ const CollectionCard: React.FC<{ statusData: CollectionStatus, onCheckChange: (n
 
                 {isReady && (
                     <button 
-                        onClick={() => onCheckChange(collection.name, true)}
+                        onClick={() => onCollectionComplete(collection)}
                         className="bg-green-600 hover:bg-green-500 text-white p-1.5 rounded-full shadow-lg transition-transform active:scale-95 flex-shrink-0"
-                        title="Mark Complete"
+                        title="Mark Complete & Remove Items"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                     </button>
@@ -119,7 +119,7 @@ const CollectionCard: React.FC<{ statusData: CollectionStatus, onCheckChange: (n
 
 export const CollectionView: React.FC<CollectionViewProps> = ({
   collectionsStatus,
-  onCheckChange,
+  onCollectionComplete,
 }) => {
   if (collectionsStatus.length === 0) {
     return (
@@ -143,7 +143,7 @@ export const CollectionView: React.FC<CollectionViewProps> = ({
                         <CollectionCard 
                             key={status.collection.name} 
                             statusData={status} 
-                            onCheckChange={onCheckChange} 
+                            onCollectionComplete={onCollectionComplete} 
                         />
                     ))}
                 </div>
@@ -159,7 +159,7 @@ export const CollectionView: React.FC<CollectionViewProps> = ({
                         <CollectionCard 
                             key={status.collection.name} 
                             statusData={status} 
-                            onCheckChange={onCheckChange} 
+                            onCollectionComplete={onCollectionComplete} 
                         />
                     ))}
                 </div>

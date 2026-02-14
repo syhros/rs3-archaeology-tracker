@@ -128,6 +128,25 @@ function App() {
     setCheckedCollections(prev => ({ ...prev, [name]: checked }));
   };
 
+  const handleCollectionComplete = (collection: Collection) => {
+    // 1. Mark as checked
+    setCheckedCollections(prev => ({ ...prev, [collection.name]: true }));
+
+    // 2. Consume items (decrement repaired count)
+    setArtefactCounts(prev => {
+        const next = { ...prev };
+        collection.items.forEach(itemName => {
+            if (next[itemName] && next[itemName].repaired > 0) {
+                next[itemName] = {
+                    ...next[itemName],
+                    repaired: next[itemName].repaired - 1
+                };
+            }
+        });
+        return next;
+    });
+  };
+
   const handleMaterialBankedChange = (matName: string, val: number) => {
     setBankedMaterials(prev => ({ ...prev, [matName]: val }));
   };
@@ -583,7 +602,7 @@ function App() {
               // COLLECTIONS VIEW
               <CollectionView 
                 collectionsStatus={sortedCollectionStatuses}
-                onCheckChange={handleCheckChange}
+                onCollectionComplete={handleCollectionComplete}
               />
           )}
         </main>
