@@ -9,9 +9,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Venator remains"
-        ],
         "level": 5,
         "materials": {
             "Third Age iron": 16,
@@ -19,7 +16,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 305.1,
         "individual_chronotes": 206,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Venator remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Exterior excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Venator light crossbow": {
         "img_src": "Venator_light_crossbow.png",
@@ -29,9 +35,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Venator remains"
-        ],
         "level": 5,
         "materials": {
             "Third Age iron": 12,
@@ -39,7 +42,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 305.1,
         "individual_chronotes": 206,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Venator remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Exterior excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Primis Elementis standard": {
         "img_src": "Primis_Elementis_standard.png",
@@ -49,9 +61,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Legionary remains"
-        ],
         "level": 12,
         "materials": {
             "Samite silk": 16,
@@ -59,7 +68,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 430.8,
         "individual_chronotes": 220,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Legionary remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Legionary gladius": {
         "img_src": "Legionary_gladius.png",
@@ -69,9 +87,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Legionary remains"
-        ],
         "level": 12,
         "materials": {
             "Third Age iron": 10,
@@ -80,7 +95,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 430.8,
         "individual_chronotes": 220,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Legionary remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Legionary square shield": {
         "img_src": "Legionary_square_shield.png",
@@ -90,9 +114,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Legionary remains"
-        ],
         "level": 12,
         "materials": {
             "Third Age iron": 8,
@@ -101,7 +122,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 430.8,
         "individual_chronotes": 220,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Legionary remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Zaros effigy": {
         "img_src": "Zaros_effigy.png",
@@ -111,9 +141,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Castra debris"
-        ],
         "level": 17,
         "materials": {
             "Samite silk": 8,
@@ -122,7 +149,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 520.5,
         "individual_chronotes": 244,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Castra debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Zarosian training dummy": {
         "img_src": "Zarosian_training_dummy.png",
@@ -134,9 +170,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Katarina"
         ],
-        "dig_sites": [
-            "Castra debris"
-        ],
         "level": 17,
         "materials": {
             "Third Age iron": 16,
@@ -144,7 +177,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 520.5,
         "individual_chronotes": 244,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Castra debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Crest of Dagon": {
         "img_src": "Crest_of_Dagon.png",
@@ -158,9 +200,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Eyes in Their Stars"
         ],
-        "dig_sites": [
-            "Lodge art storage"
-        ],
         "level": 24,
         "materials": {
             "Goldrune": 14,
@@ -168,7 +207,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 646.2,
         "individual_chronotes": 272,
-        "other_uses_total": 3
+        "other_uses_total": 3,
+        "excavation_hotspot": [
+            "Lodge art storage"
+        ],
+        "excavation_site": [
+            "Infernal Source - Star Lodge cellar excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "'Disorder' painting": {
         "img_src": "'Disorder'_painting.png",
@@ -179,9 +227,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Lodge art storage"
-        ],
         "level": 24,
         "materials": {
             "Samite silk": 6,
@@ -191,7 +236,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 646.2,
         "individual_chronotes": 272,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Lodge art storage"
+        ],
+        "excavation_site": [
+            "Infernal Source - Star Lodge cellar excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Hookah pipe": {
         "img_src": "Hookah_pipe.png",
@@ -202,9 +256,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian I (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Lodge bar storage"
-        ],
         "level": 20,
         "materials": {
             "Third Age iron": 10,
@@ -213,7 +264,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 574.4,
         "individual_chronotes": 250,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Lodge bar storage"
+        ],
+        "excavation_site": [
+            "Infernal Source - Star Lodge cellar excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Opulent wine goblet": {
         "img_src": "Opulent_wine_goblet.png",
@@ -226,9 +286,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Dorian"
         ],
-        "dig_sites": [
-            "Lodge bar storage"
-        ],
         "level": 20,
         "materials": {
             "Third Age iron": 14,
@@ -236,7 +293,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 574.4,
         "individual_chronotes": 250,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Lodge bar storage"
+        ],
+        "excavation_site": [
+            "Infernal Source - Star Lodge cellar excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Legatus Maximus figurine": {
         "img_src": "Legatus_Maximus_figurine.png",
@@ -248,9 +314,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian I (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Administratum debris"
-        ],
         "level": 25,
         "materials": {
             "Goldrune": 8,
@@ -259,7 +322,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 664.1,
         "individual_chronotes": 274,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Administratum debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "'Solem in Umbra' painting": {
         "img_src": "'Solem_in_Umbra'_painting.png",
@@ -270,9 +342,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Administratum debris"
-        ],
         "level": 25,
         "materials": {
             "Samite silk": 8,
@@ -281,7 +350,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 664.1,
         "individual_chronotes": 274,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Administratum debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Barracks excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Imp mask": {
         "img_src": "Imp_mask.png",
@@ -292,9 +370,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Problem (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Cultist footlocker"
-        ],
         "level": 29,
         "materials": {
             "Leather scraps": 10,
@@ -303,7 +378,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 735.9,
         "individual_chronotes": 282,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Cultist footlocker"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Lesser demon mask": {
         "img_src": "Lesser_demon_mask.png",
@@ -314,9 +398,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Hoarder (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Cultist footlocker"
-        ],
         "level": 29,
         "materials": {
             "Leather scraps": 6,
@@ -326,7 +407,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 735.9,
         "individual_chronotes": 282,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Cultist footlocker"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Greater demon mask": {
         "img_src": "Greater_demon_mask.png",
@@ -339,9 +429,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "How Do You Do, Fellow Demon"
         ],
-        "dig_sites": [
-            "Cultist footlocker"
-        ],
         "level": 29,
         "materials": {
             "Third Age iron": 6,
@@ -351,7 +438,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 735.9,
         "individual_chronotes": 282,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Cultist footlocker"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Order of Dis robes": {
         "img_src": "Order_of_Dis_robes.png",
@@ -361,9 +457,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian I (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Sacrificial altar"
-        ],
         "level": 36,
         "materials": {
             "Samite silk": 16,
@@ -372,7 +465,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 861.5,
         "individual_chronotes": 352,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Sacrificial altar"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Ritual dagger": {
         "img_src": "Ritual_dagger.png",
@@ -385,9 +487,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "I Made Dis"
         ],
-        "dig_sites": [
-            "Sacrificial altar"
-        ],
         "level": 36,
         "materials": {
             "Goldrune": 16,
@@ -395,7 +494,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 861.5,
         "individual_chronotes": 352,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Sacrificial altar"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "'Frying pan'": {
         "img_src": "'Frying_pan'.png",
@@ -407,9 +515,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Fallen Angels"
         ],
-        "dig_sites": [
-            "Prodromoi remains"
-        ],
         "level": 42,
         "materials": {
             "Third Age iron": 20,
@@ -417,7 +522,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1073.3,
         "individual_chronotes": 392,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Prodromoi remains"
+        ],
+        "excavation_site": [
+            "Everlight - Mass grave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Hallowed lantern": {
         "img_src": "Hallowed_lantern.png",
@@ -430,9 +544,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Statue of Hebe",
             "'The Epic of Hebe'"
         ],
-        "dig_sites": [
-            "Prodromoi remains"
-        ],
         "level": 42,
         "materials": {
             "Third Age iron": 20,
@@ -440,7 +551,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1073.3,
         "individual_chronotes": 392,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Prodromoi remains"
+        ],
+        "excavation_site": [
+            "Everlight - Mass grave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Branding iron": {
         "img_src": "Branding_iron.png",
@@ -450,9 +570,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dis dungeon debris"
-        ],
         "level": 45,
         "materials": {
             "Third Age iron": 14,
@@ -461,7 +578,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1283.3,
         "individual_chronotes": 412,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dis dungeon debris"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Manacles": {
         "img_src": "Manacles.png",
@@ -471,9 +597,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dis dungeon debris"
-        ],
         "level": 45,
         "materials": {
             "Third Age iron": 14,
@@ -482,7 +605,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1283.3,
         "individual_chronotes": 412,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dis dungeon debris"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dungeon of Disorder excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Ancient timepiece": {
         "img_src": "Ancient_timepiece.png",
@@ -496,9 +628,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Time Served"
         ],
-        "dig_sites": [
-            "Praesidio remains"
-        ],
         "level": 47,
         "materials": {
             "Goldrune": 12,
@@ -507,7 +636,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1423.3,
         "individual_chronotes": 416,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Praesidio remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Carcerem excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Legatus pendant": {
         "img_src": "Legatus_pendant.png",
@@ -521,9 +659,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Legatus barrier",
             "The Vault of Shadows"
         ],
-        "dig_sites": [
-            "Praesidio remains"
-        ],
         "level": 47,
         "materials": {
             "Third Age iron": 16,
@@ -532,7 +667,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1423.3,
         "individual_chronotes": 416,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Praesidio remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Carcerem excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Ceremonial unicorn ornament": {
         "img_src": "Ceremonial_unicorn_ornament.png",
@@ -545,9 +689,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Eduardo"
         ],
-        "dig_sites": [
-            "Monoceros remains"
-        ],
         "level": 48,
         "materials": {
             "Keramos": 26,
@@ -555,7 +696,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1493.3,
         "individual_chronotes": 418,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Monoceros remains"
+        ],
+        "excavation_site": [
+            "Everlight - Mass grave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Ceremonial unicorn saddle": {
         "img_src": "Ceremonial_unicorn_saddle.png",
@@ -565,9 +715,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Monoceros remains"
-        ],
         "level": 48,
         "materials": {
             "Leather scraps": 24,
@@ -575,7 +722,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1493.3,
         "individual_chronotes": 418,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Monoceros remains"
+        ],
+        "excavation_site": [
+            "Everlight - Mass grave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Everlight harp": {
         "img_src": "Everlight_harp.png",
@@ -588,9 +744,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Statue of Mesomedes"
         ],
-        "dig_sites": [
-            "Amphitheatre debris"
-        ],
         "level": 51,
         "materials": {
             "Everlight silvthril": 30,
@@ -598,7 +751,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1703.3,
         "individual_chronotes": 466,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Amphitheatre debris"
+        ],
+        "excavation_site": [
+            "Everlight - Amphitheatre excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Everlight trumpet": {
         "img_src": "Everlight_trumpet.png",
@@ -612,9 +774,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "That Old Black Magic: Skelly By Everlight"
         ],
-        "dig_sites": [
-            "Amphitheatre debris"
-        ],
         "level": 51,
         "materials": {
             "Everlight silvthril": 28,
@@ -622,7 +781,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1703.3,
         "individual_chronotes": 466,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Amphitheatre debris"
+        ],
+        "excavation_site": [
+            "Everlight - Amphitheatre excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Everlight violin": {
         "img_src": "Everlight_violin.png",
@@ -633,9 +801,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Amphitheatre debris"
-        ],
         "level": 51,
         "materials": {
             "Star of Saradomin": 16,
@@ -644,7 +809,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 1703.3,
         "individual_chronotes": 466,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Amphitheatre debris"
+        ],
+        "excavation_site": [
+            "Everlight - Amphitheatre excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Folded-arm figurine (female)": {
         "img_src": "Folded-arm_figurine_(female).png",
@@ -654,9 +828,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ceramics studio debris"
-        ],
         "level": 56,
         "materials": {
             "White marble": 30,
@@ -664,7 +835,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2053.3,
         "individual_chronotes": 490,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ceramics studio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Amphitheatre excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Folded-arm figurine (male)": {
         "img_src": "Folded-arm_figurine_(male).png",
@@ -674,9 +854,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ceramics studio debris"
-        ],
         "level": 56,
         "materials": {
             "White marble": 30,
@@ -684,7 +861,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2053.3,
         "individual_chronotes": 490,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ceramics studio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Amphitheatre excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Pontifex signet ring": {
         "img_src": "Pontifex_signet_ring.png",
@@ -699,9 +885,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "The Vault of Shadows",
             "Pontifex observation ring"
         ],
-        "dig_sites": [
-            "Carcerem debris"
-        ],
         "level": 58,
         "materials": {
             "Third Age iron": 16,
@@ -710,7 +893,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2193.3,
         "individual_chronotes": 508,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Carcerem debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Carcerem excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "'Incite Fear' spell scroll": {
         "img_src": "'Incite_Fear'_spell_scroll.png",
@@ -724,9 +916,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Vault of Shadows"
         ],
-        "dig_sites": [
-            "Carcerem debris"
-        ],
         "level": 58,
         "materials": {
             "Vellum": 20,
@@ -735,7 +924,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2193.3,
         "individual_chronotes": 508,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Carcerem debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Carcerem excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Apex cap": {
         "img_src": "Apex_cap.png",
@@ -745,9 +943,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian V (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ministry remains"
-        ],
         "level": 60,
         "materials": {
             "Samite silk": 28,
@@ -756,7 +951,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2193.3,
         "individual_chronotes": 540,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ministry remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Cathedral excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Curse tablet": {
         "img_src": "Curse_tablet.png",
@@ -766,9 +970,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian V (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ministry remains"
-        ],
         "level": 60,
         "materials": {
             "Imperial steel": 16,
@@ -778,7 +979,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2333.3,
         "individual_chronotes": 540,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ministry remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Cathedral excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Funerary urn of shadow": {
         "img_src": "Funerary_urn_of_shadow.png",
@@ -790,9 +1000,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Secrets of the Inquisition"
         ],
-        "dig_sites": [
-            "Ministry remains"
-        ],
         "level": 60,
         "materials": {
             "Soapstone": 26,
@@ -801,7 +1008,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2333.3,
         "individual_chronotes": 540,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Ministry remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Cathedral excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Dominion discus": {
         "img_src": "Dominion_discus.png",
@@ -811,9 +1027,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Stadio debris"
-        ],
         "level": 61,
         "materials": {
             "Keramos": 34,
@@ -821,7 +1034,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2566.7,
         "individual_chronotes": 556,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Stadio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Dominion javelin": {
         "img_src": "Dominion_javelin.png",
@@ -831,9 +1053,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Stadio debris"
-        ],
         "level": 61,
         "materials": {
             "Keramos": 32,
@@ -841,7 +1060,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2566.7,
         "individual_chronotes": 556,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Stadio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Dominion pelte shield": {
         "img_src": "Dominion_pelte_shield.png",
@@ -851,9 +1079,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Stadio debris"
-        ],
         "level": 61,
         "materials": {
             "Star of Saradomin": 34,
@@ -861,7 +1086,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2566.7,
         "individual_chronotes": 556,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Stadio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Infula robes": {
         "img_src": "Infula_robes.png",
@@ -871,9 +1105,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian V (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Cathedral debris"
-        ],
         "level": 62,
         "materials": {
             "Samite silk": 26,
@@ -883,7 +1114,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2800.0,
         "individual_chronotes": 558,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Cathedral debris"
+        ],
+        "excavation_site": [
+            "Senntisten - Cathedral excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Funerary urn of smoke": {
         "img_src": "Funerary_urn_of_smoke.png",
@@ -895,9 +1135,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Secrets of the Inquisition"
         ],
-        "dig_sites": [
-            "Cathedral debris"
-        ],
         "level": 62,
         "materials": {
             "Soapstone": 28,
@@ -906,7 +1143,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2800.0,
         "individual_chronotes": 558,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Cathedral debris"
+        ],
+        "excavation_site": [
+            "Senntisten - Cathedral excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Hand of the Ancients": {
         "img_src": "Hand_of_the_Ancients.png",
@@ -916,9 +1162,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian V (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Cathedral debris"
-        ],
         "level": 62,
         "materials": {
             "Blood of Orcus": 12,
@@ -928,7 +1171,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 2800.0,
         "individual_chronotes": 558,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Cathedral debris"
+        ],
+        "excavation_site": [
+            "Senntisten - Cathedral excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Decorative amphora": {
         "img_src": "Decorative_amphora.png",
@@ -938,9 +1190,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Marketplace debris"
-        ],
         "level": 63,
         "materials": {
             "Tyrian purple": 16,
@@ -949,7 +1198,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3033.3,
         "individual_chronotes": 560,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Marketplace debris"
+        ],
+        "excavation_site": [
+            "Senntisten - Marketplace excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Funerary urn of ice": {
         "img_src": "Funerary_urn_of_ice.png",
@@ -961,9 +1219,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Secrets of the Inquisition"
         ],
-        "dig_sites": [
-            "Marketplace debris"
-        ],
         "level": 63,
         "materials": {
             "Soapstone": 28,
@@ -972,7 +1227,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3033.3,
         "individual_chronotes": 560,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Marketplace debris"
+        ],
+        "excavation_site": [
+            "Senntisten - Marketplace excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Loarnab rod": {
         "img_src": "Loarnab_rod.png",
@@ -982,9 +1246,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Marketplace debris"
-        ],
         "level": 63,
         "materials": {
             "White oak": 28,
@@ -993,7 +1254,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3033.3,
         "individual_chronotes": 560,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Marketplace debris"
+        ],
+        "excavation_site": [
+            "Senntisten - Marketplace excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Inquisitor's seal": {
         "img_src": "Inquisitor's_seal.png",
@@ -1003,9 +1273,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Finery of the Inquisition (Eblis)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Inquisitor remains"
-        ],
         "level": 64,
         "materials": {
             "Tyrian purple": 14,
@@ -1015,7 +1282,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3266.7,
         "individual_chronotes": 562,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Inquisitor remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Marketplace excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Inquisitor's ceremonial mask": {
         "img_src": "Inquisitor's_ceremonial_mask.png",
@@ -1025,9 +1301,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Finery of the Inquisition (Eblis)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Inquisitor remains"
-        ],
         "level": 64,
         "materials": {
             "Ancient vis": 14,
@@ -1037,7 +1310,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3266.7,
         "individual_chronotes": 562,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Inquisitor remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Marketplace excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Inquisitor's ceremonial armour": {
         "img_src": "Inquisitor's_ceremonial_armour.png",
@@ -1047,9 +1329,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Finery of the Inquisition (Eblis)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Inquisitor remains"
-        ],
         "level": 64,
         "materials": {
             "Leather scraps": 14,
@@ -1058,7 +1337,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3266.7,
         "individual_chronotes": 562,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Inquisitor remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Marketplace excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "'Lust' metal sculpture": {
         "img_src": "'Lust'_metal_sculpture.png",
@@ -1069,9 +1357,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Infernal art"
-        ],
         "level": 65,
         "materials": {
             "Third Age iron": 16,
@@ -1080,7 +1365,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3500.0,
         "individual_chronotes": 578,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Infernal art"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility south excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "'The Lake of Fire' painting": {
         "img_src": "'The_Lake_of_Fire'_painting.png",
@@ -1091,9 +1385,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Infernal art"
-        ],
         "level": 65,
         "materials": {
             "Samite silk": 10,
@@ -1103,7 +1394,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3500.0,
         "individual_chronotes": 578,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Infernal art"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility south excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Gladiator sword": {
         "img_src": "Gladiator_sword.png",
@@ -1113,9 +1413,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gladiator remains"
-        ],
         "level": 66,
         "materials": {
             "Imperial steel": 30,
@@ -1124,7 +1421,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3773.3,
         "individual_chronotes": 580,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gladiator remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Colosseum excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Gladiator helmet": {
         "img_src": "Gladiator_helmet.png",
@@ -1134,9 +1440,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gladiator remains"
-        ],
         "level": 66,
         "materials": {
             "Imperial steel": 30,
@@ -1145,7 +1448,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3773.3,
         "individual_chronotes": 580,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gladiator remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Colosseum excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Funerary urn of blood": {
         "img_src": "Funerary_urn_of_blood.png",
@@ -1157,9 +1469,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Secrets of the Inquisition"
         ],
-        "dig_sites": [
-            "Gladiator remains"
-        ],
         "level": 66,
         "materials": {
             "Soapstone": 30,
@@ -1168,7 +1477,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3773.3,
         "individual_chronotes": 580,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Gladiator remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Colosseum excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "'The Serpent's Fall' carving": {
         "img_src": "'The_Serpent's_Fall'_carving.png",
@@ -1178,9 +1496,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Citizen remains"
-        ],
         "level": 67,
         "materials": {
             "Vellum": 16,
@@ -1190,7 +1505,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3966.7,
         "individual_chronotes": 582,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Citizen remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Bridge excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Model chariot": {
         "img_src": "Model_chariot.png",
@@ -1200,9 +1524,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Citizen remains"
-        ],
         "level": 67,
         "materials": {
             "Vellum": 12,
@@ -1212,7 +1533,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3966.7,
         "individual_chronotes": 582,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Citizen remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Bridge excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Funerary urn of miasma": {
         "img_src": "Funerary_urn_of_miasma.png",
@@ -1222,9 +1552,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Citizen remains"
-        ],
         "level": 67,
         "materials": {
             "Soapstone": 30,
@@ -1233,7 +1560,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 3966.7,
         "individual_chronotes": 582,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Citizen remains"
+        ],
+        "excavation_site": [
+            "Senntisten - Bridge excavation site"
+        ],
+        "dig_site": [
+            "Senntisten Dig Site"
+        ]
     },
     "Chaos star": {
         "img_src": "Chaos_star.png",
@@ -1246,9 +1582,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dagon Bye",
             "Abyssal Gatestone"
         ],
-        "dig_sites": [
-            "Shakroth remains"
-        ],
         "level": 68,
         "materials": {
             "Chaotic brimstone": 28,
@@ -1256,7 +1589,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4200.0,
         "individual_chronotes": 584,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Shakroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility north-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Spiked dog collar": {
         "img_src": "Spiked_dog_collar.png",
@@ -1268,9 +1610,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Who's a Bad Boy?"
         ],
-        "dig_sites": [
-            "Shakroth remains"
-        ],
         "level": 68,
         "materials": {
             "Third Age iron": 24,
@@ -1279,7 +1618,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4200.0,
         "individual_chronotes": 584,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Shakroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility north-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Bronze Dominion medal": {
         "img_src": "Bronze_Dominion_medal.png",
@@ -1290,9 +1638,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blingy Fings (Chief Tess)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dominion Games podium"
-        ],
         "level": 69,
         "materials": {
             "Everlight silvthril": 36,
@@ -1300,7 +1645,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4433.3,
         "individual_chronotes": 572,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dominion Games podium"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Silver Dominion medal": {
         "img_src": "Silver_Dominion_medal.png",
@@ -1311,9 +1665,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Blingy Fings (Chief Tess)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dominion Games podium"
-        ],
         "level": 69,
         "materials": {
             "Everlight silvthril": 36,
@@ -1321,7 +1672,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4433.3,
         "individual_chronotes": 572,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dominion Games podium"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Dominion torch": {
         "img_src": "Dominion_torch.png",
@@ -1335,9 +1695,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Statue of Padosan",
             "Hallowed Be..."
         ],
-        "dig_sites": [
-            "Dominion Games podium"
-        ],
         "level": 69,
         "materials": {
             "Goldrune": 12,
@@ -1347,7 +1704,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4433.3,
         "individual_chronotes": 572,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Dominion Games podium"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Ikovian gerege": {
         "img_src": "Ikovian_gerege.png",
@@ -1360,9 +1726,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Stormguard portal"
         ],
-        "dig_sites": [
-            "Ikovian memorial"
-        ],
         "level": 70,
         "materials": {
             "Third Age iron": 36,
@@ -1370,7 +1733,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4666.7,
         "individual_chronotes": 602,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Ikovian memorial"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Welcome area excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Toy glider": {
         "img_src": "Toy_glider.png",
@@ -1380,9 +1752,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ikovian memorial"
-        ],
         "level": 70,
         "materials": {
             "Stormguard steel": 36,
@@ -1390,7 +1759,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4666.7,
         "individual_chronotes": 602,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ikovian memorial"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Welcome area excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Toy war golem": {
         "img_src": "Toy_war_golem.png",
@@ -1400,9 +1778,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ikovian memorial"
-        ],
         "level": 70,
         "materials": {
             "Third Age iron": 36,
@@ -1410,7 +1785,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 4666.7,
         "individual_chronotes": 602,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ikovian memorial"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Welcome area excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Decorative vase": {
         "img_src": "Decorative_vase.png",
@@ -1420,9 +1804,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Oikos studio debris"
-        ],
         "level": 72,
         "materials": {
             "White marble": 36,
@@ -1430,7 +1811,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5133.3,
         "individual_chronotes": 606,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Oikos studio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Oikoi excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Patera bowl": {
         "img_src": "Patera_bowl.png",
@@ -1440,9 +1830,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Oikos studio debris"
-        ],
         "level": 72,
         "materials": {
             "Keramos": 36,
@@ -1450,7 +1837,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5133.3,
         "individual_chronotes": 606,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Oikos studio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Oikoi excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Kantharos cup": {
         "img_src": "Kantharos_cup.png",
@@ -1462,9 +1858,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Everlight"
         ],
-        "dig_sites": [
-            "Oikos studio debris"
-        ],
         "level": 72,
         "materials": {
             "Everlight silvthril": 30,
@@ -1472,7 +1865,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5133.3,
         "individual_chronotes": 606,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Oikos studio debris"
+        ],
+        "excavation_site": [
+            "Everlight - Oikoi excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Castle gatestone": {
         "img_src": "Castle_gatestone.png",
@@ -1482,9 +1884,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin V (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Castle hall rubble"
-        ],
         "level": 73,
         "materials": {
             "Orgone": 36,
@@ -1492,7 +1891,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5366.7,
         "individual_chronotes": 622,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Castle hall rubble"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Engraved ring of kinship": {
         "img_src": "Engraved_ring_of_kinship.png",
@@ -1502,9 +1910,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin V (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Castle hall rubble"
-        ],
         "level": 73,
         "materials": {
             "Goldrune": 28,
@@ -1512,7 +1917,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5366.7,
         "individual_chronotes": 622,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Castle hall rubble"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Ceremonial mace": {
         "img_src": "Ceremonial_mace.png",
@@ -1523,9 +1937,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Kharid-et chapel debris"
-        ],
         "level": 74,
         "materials": {
             "Imperial steel": 20,
@@ -1534,7 +1945,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5600.0,
         "individual_chronotes": 624,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Kharid-et chapel debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Pontifex Maximus figurine": {
         "img_src": "Pontifex_Maximus_figurine.png",
@@ -1547,9 +1967,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "City of Senntisten"
         ],
-        "dig_sites": [
-            "Kharid-et chapel debris"
-        ],
         "level": 74,
         "materials": {
             "Zarosian insignia": 24,
@@ -1558,7 +1975,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5600.0,
         "individual_chronotes": 624,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Kharid-et chapel debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "'Consensus ad Idem' painting": {
         "img_src": "'Consensus_ad_Idem'_painting.png",
@@ -1569,9 +1995,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Kharid-et chapel debris"
-        ],
         "level": 74,
         "materials": {
             "White oak": 10,
@@ -1580,7 +2003,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5600.0,
         "individual_chronotes": 624,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Kharid-et chapel debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Avian song-egg player": {
         "img_src": "Avian_song-egg_player.png",
@@ -1591,9 +2023,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wise Am the Music Man (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Keshik ger"
-        ],
         "level": 76,
         "materials": {
             "Stormguard steel": 36,
@@ -1601,7 +2030,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6066.7,
         "individual_chronotes": 628,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Keshik ger"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Keshik memorial excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Keshik drum": {
         "img_src": "Keshik_drum.png",
@@ -1612,9 +2050,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wise Am the Music Man (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Keshik ger"
-        ],
         "level": 76,
         "materials": {
             "Wings of War": 16,
@@ -1624,7 +2059,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6066.7,
         "individual_chronotes": 628,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Keshik ger"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Keshik memorial excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Morin khuur": {
         "img_src": "Morin_khuur.png",
@@ -1635,9 +2079,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Wise Am the Music Man (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Keshik ger"
-        ],
         "level": 76,
         "materials": {
             "Armadylean yellow": 36,
@@ -1645,7 +2086,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6066.7,
         "individual_chronotes": 628,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Keshik ger"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Keshik memorial excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Ekeleshuun blinder mask": {
         "img_src": "Ekeleshuun_blinder_mask.png",
@@ -1656,9 +2106,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Problem (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gladiatorial goblin remains"
-        ],
         "level": 76,
         "materials": {
             "Vulcanised rubber": 24,
@@ -1667,7 +2114,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6066.7,
         "individual_chronotes": 628,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gladiatorial goblin remains"
+        ],
+        "excavation_site": [
+            "Warforge - Crucible arena excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Narogoshuun 'Hob-da-Gob' ball": {
         "img_src": "Narogoshuun_'Hob-da-Gob'_ball.png",
@@ -1677,9 +2133,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gladiatorial goblin remains"
-        ],
         "level": 76,
         "materials": {
             "Vulcanised rubber": 36,
@@ -1687,7 +2140,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6066.7,
         "individual_chronotes": 628,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gladiatorial goblin remains"
+        ],
+        "excavation_site": [
+            "Warforge - Crucible arena excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Rekeshuun war tether": {
         "img_src": "Rekeshuun_war_tether.png",
@@ -1697,9 +2159,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gladiatorial goblin remains"
-        ],
         "level": 76,
         "materials": {
             "Warforged bronze": 20,
@@ -1708,7 +2167,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6066.7,
         "individual_chronotes": 628,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gladiatorial goblin remains"
+        ],
+        "excavation_site": [
+            "Warforge - Crucible arena excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Exploratory totem": {
         "img_src": "Exploratory_totem.png",
@@ -1718,9 +2186,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin V (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tunnelling equipment repository"
-        ],
         "level": 77,
         "materials": {
             "Dragon metal": 34,
@@ -1728,7 +2193,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6300.0,
         "individual_chronotes": 644,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tunnelling equipment repository"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Excavator portal mine": {
         "img_src": "Excavator_portal_mine.png",
@@ -1738,9 +2212,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin V (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tunnelling equipment repository"
-        ],
         "level": 77,
         "materials": {
             "Orgone": 36,
@@ -1748,7 +2219,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 5366.7,
         "individual_chronotes": 644,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tunnelling equipment repository"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Storage totem": {
         "img_src": "Storage_totem.png",
@@ -1758,9 +2238,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Botanical reserve"
-        ],
         "level": 78,
         "materials": {
             "Dragon metal": 36,
@@ -1768,7 +2245,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6533.3,
         "individual_chronotes": 646,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Botanical reserve"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Plant seed satchel": {
         "img_src": "Plant_seed_satchel.png",
@@ -1778,9 +2264,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Botanical reserve"
-        ],
         "level": 78,
         "materials": {
             "Felt": 28,
@@ -1789,7 +2272,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6533.3,
         "individual_chronotes": 646,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Botanical reserve"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Snuff box": {
         "img_src": "Snuff_box.png",
@@ -1799,9 +2291,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Botanical reserve"
-        ],
         "level": 78,
         "materials": {
             "Soapstone": 20,
@@ -1810,7 +2299,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 6533.3,
         "individual_chronotes": 646,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Botanical reserve"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Ogre Kyzaj axe": {
         "img_src": "Ogre_Kyzaj_axe.png",
@@ -1820,9 +2318,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Red Rum Relics I (General Bentnoze)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Crucible stands debris"
-        ],
         "level": 81,
         "materials": {
             "Warforged bronze": 28,
@@ -1831,7 +2326,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Crucible stands debris"
+        ],
+        "excavation_site": [
+            "Warforge - Crucible stands excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Ork cleaver sword": {
         "img_src": "Ork_cleaver_sword.png",
@@ -1841,9 +2345,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Red Rum Relics I (General Bentnoze)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Crucible stands debris"
-        ],
         "level": 81,
         "materials": {
             "Warforged bronze": 36,
@@ -1851,7 +2352,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Crucible stands debris"
+        ],
+        "excavation_site": [
+            "Warforge - Crucible stands excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Larupia trophy": {
         "img_src": "Larupia_trophy.png",
@@ -1861,9 +2371,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Animal trophies"
-        ],
         "level": 81,
         "materials": {
             "Cadmium red": 18,
@@ -1872,7 +2379,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Animal trophies"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility south-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Lion trophy": {
         "img_src": "Lion_trophy.png",
@@ -1882,9 +2398,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Animal trophies"
-        ],
         "level": 81,
         "materials": {
             "Cadmium red": 18,
@@ -1893,7 +2406,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Animal trophies"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility south-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "She-wolf trophy": {
         "img_src": "She-wolf_trophy.png",
@@ -1903,9 +2425,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian II (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Animal trophies"
-        ],
         "level": 81,
         "materials": {
             "Chaotic brimstone": 26,
@@ -1914,7 +2433,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Animal trophies"
+        ],
+        "excavation_site": [
+            "Infernal Source - Vestibule of Futility south-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Aviansie dreamcoat": {
         "img_src": "Aviansie_dreamcoat.png",
@@ -1926,9 +2454,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Ring of Solomon"
         ],
-        "dig_sites": [
-            "Tailory debris"
-        ],
         "level": 81,
         "materials": {
             "Armadylean yellow": 20,
@@ -1937,7 +2462,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Tailory debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Relay station excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Ceremonial plume": {
         "img_src": "Ceremonial_plume.png",
@@ -1948,9 +2482,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tailory debris"
-        ],
         "level": 81,
         "materials": {
             "Armadylean yellow": 38,
@@ -1958,7 +2489,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tailory debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Relay station excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Peacocking parasol": {
         "img_src": "Peacocking_parasol.png",
@@ -1968,9 +2508,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean I (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tailory debris"
-        ],
         "level": 81,
         "materials": {
             "Armadylean yellow": 22,
@@ -1979,7 +2516,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tailory debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Relay station excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Pontifex censer": {
         "img_src": "Pontifex_censer.png",
@@ -1990,9 +2536,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Pontifex remains"
-        ],
         "level": 81,
         "materials": {
             "Third Age iron": 20,
@@ -2001,7 +2544,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Pontifex remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Pontifex crozier": {
         "img_src": "Pontifex_crozier.png",
@@ -2012,9 +2564,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian II (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Pontifex remains"
-        ],
         "level": 81,
         "materials": {
             "Imperial steel": 20,
@@ -2023,7 +2572,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Pontifex remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Pontifex mitre": {
         "img_src": "Pontifex_mitre.png",
@@ -2034,9 +2592,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Hoarder (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Pontifex remains"
-        ],
         "level": 81,
         "materials": {
             "Samite silk": 32,
@@ -2045,7 +2600,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 7388.9,
         "individual_chronotes": 666,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Pontifex remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Thorobshuun battle standard": {
         "img_src": "Thorobshuun_battle_standard.png",
@@ -2057,9 +2621,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Red hand cave painting"
         ],
-        "dig_sites": [
-            "Goblin dorm debris"
-        ],
         "level": 83,
         "materials": {
             "Mark of the Kyzaj": 16,
@@ -2069,7 +2630,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 8166.7,
         "individual_chronotes": 684,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Goblin dorm debris"
+        ],
+        "excavation_site": [
+            "Warforge - South goblin tunnels excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Yurkolgokh stink grenade": {
         "img_src": "Yurkolgokh_stink_grenade.png",
@@ -2079,9 +2649,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian I (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Goblin dorm debris"
-        ],
         "level": 83,
         "materials": {
             "Yu'biusk clay": 38,
@@ -2089,7 +2656,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 8166.7,
         "individual_chronotes": 684,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Goblin dorm debris"
+        ],
+        "excavation_site": [
+            "Warforge - South goblin tunnels excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Dominarian device": {
         "img_src": "Dominarian_device.png",
@@ -2101,9 +2677,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Andvaranaut"
         ],
-        "dig_sites": [
-            "Oikos fishing hut remnants"
-        ],
         "level": 84,
         "materials": {
             "Everlight silvthril": 30,
@@ -2112,7 +2685,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 8555.6,
         "individual_chronotes": 686,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Oikos fishing hut remnants"
+        ],
+        "excavation_site": [
+            "Everlight - Oikoi excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Fishing trident": {
         "img_src": "Fishing_trident.png",
@@ -2123,9 +2705,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hitty Fings (Chief Tess)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Oikos fishing hut remnants"
-        ],
         "level": 84,
         "materials": {
             "Star of Saradomin": 22,
@@ -2134,7 +2713,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 8555.6,
         "individual_chronotes": 686,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Oikos fishing hut remnants"
+        ],
+        "excavation_site": [
+            "Everlight - Oikoi excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Hawkeye lens multi-vision scope": {
         "img_src": "Hawkeye_lens_multi-vision_scope.png",
@@ -2144,9 +2732,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean II (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Weapons research debris"
-        ],
         "level": 85,
         "materials": {
             "Stormguard steel": 40,
@@ -2154,7 +2739,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 8944.4,
         "individual_chronotes": 688,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Weapons research debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development north-west excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Talon-3 razor wing": {
         "img_src": "Talon-3_razor_wing.png",
@@ -2164,9 +2758,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean II (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Weapons research debris"
-        ],
         "level": 85,
         "materials": {
             "Aetherium alloy": 40,
@@ -2174,7 +2765,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 8944.4,
         "individual_chronotes": 688,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Weapons research debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development north-west excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Necromantic focus": {
         "img_src": "Necromantic_focus.png",
@@ -2188,9 +2788,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Tomes of the Warlock"
         ],
-        "dig_sites": [
-            "Orcus altar"
-        ],
         "level": 86,
         "materials": {
             "Imperial steel": 20,
@@ -2199,7 +2796,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 9333.3,
         "individual_chronotes": 704,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Orcus altar"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "'Exsanguinate' spell scroll": {
         "img_src": "'Exsanguinate'_spell_scroll.png",
@@ -2213,9 +2819,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Vault of Shadows"
         ],
-        "dig_sites": [
-            "Orcus altar"
-        ],
         "level": 86,
         "materials": {
             "Vellum": 40,
@@ -2223,7 +2826,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 9333.3,
         "individual_chronotes": 704,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Orcus altar"
+        ],
+        "excavation_site": [
+            "Kharid-et - Chapel excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Spent summoning charm": {
         "img_src": "Spent_summoning_charm.png",
@@ -2233,9 +2845,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Communal space"
-        ],
         "level": 87,
         "materials": {
             "Orgone": 46,
@@ -2243,7 +2852,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 9722.2,
         "individual_chronotes": 706,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Communal space"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "'Friendship bracelet'": {
         "img_src": "'Friendship_bracelet'.png",
@@ -2255,9 +2873,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Daemonheim - Depths excavation site"
         ],
-        "dig_sites": [
-            "Communal space"
-        ],
         "level": 87,
         "materials": {
             "Soapstone": 30,
@@ -2265,7 +2880,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 9722.2,
         "individual_chronotes": 706,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Communal space"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Homely totem": {
         "img_src": "Homely_totem.png",
@@ -2275,9 +2899,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VI (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Communal space"
-        ],
         "level": 87,
         "materials": {
             "Soapstone": 36,
@@ -2285,7 +2906,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 9722.2,
         "individual_chronotes": 706,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Communal space"
+        ],
+        "excavation_site": [
+            "Daemonheim - Castle excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "'Torment' metal sculpture": {
         "img_src": "'Torment'_metal_sculpture.png",
@@ -2295,9 +2925,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dis overspill"
-        ],
         "level": 89,
         "materials": {
             "Eye of Dagon": 20,
@@ -2306,7 +2933,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10500.0,
         "individual_chronotes": 724,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dis overspill"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing south-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "'Pandemonium' tapestry": {
         "img_src": "'Pandemonium'_tapestry.png",
@@ -2317,9 +2953,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Anarchic Abstraction (Art Critic Jacques)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dis overspill"
-        ],
         "level": 89,
         "materials": {
             "White oak": 12,
@@ -2329,7 +2962,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10500.0,
         "individual_chronotes": 724,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dis overspill"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing south-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "High priest crozier": {
         "img_src": "High_priest_crozier.png",
@@ -2340,9 +2982,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Green Gobbo Goodies II (General Wartface)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Big High War God shrine"
-        ],
         "level": 89,
         "materials": {
             "Mark of the Kyzaj": 26,
@@ -2351,7 +2990,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10500.0,
         "individual_chronotes": 724,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Big High War God shrine"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "High priest mitre": {
         "img_src": "High_priest_mitre.png",
@@ -2363,9 +3011,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Problem (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Big High War God shrine"
-        ],
         "level": 89,
         "materials": {
             "Mark of the Kyzaj": 26,
@@ -2374,7 +3019,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10500.0,
         "individual_chronotes": 724,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Big High War God shrine"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "High priest orb": {
         "img_src": "High_priest_orb.png",
@@ -2385,9 +3039,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Green Gobbo Goodies II (General Wartface)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Big High War God shrine"
-        ],
         "level": 89,
         "materials": {
             "Mark of the Kyzaj": 26,
@@ -2396,7 +3047,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10500.0,
         "individual_chronotes": 724,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Big High War God shrine"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Pasaha": {
         "img_src": "Pasaha.png",
@@ -2408,9 +3068,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Artificer's measure"
         ],
-        "dig_sites": [
-            "Varanusaur remains"
-        ],
         "level": 90,
         "materials": {
             "Felt": 40,
@@ -2418,7 +3075,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10888.9,
         "individual_chronotes": 726,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Varanusaur remains"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Ritual bell": {
         "img_src": "Ritual_bell.png",
@@ -2428,9 +3094,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin I (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Varanusaur remains"
-        ],
         "level": 90,
         "materials": {
             "Goldrune": 40,
@@ -2438,7 +3101,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 10888.9,
         "individual_chronotes": 726,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Varanusaur remains"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Prototype gravimeter": {
         "img_src": "Prototype_gravimeter.png",
@@ -2448,9 +3120,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean II (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gravitron research debris"
-        ],
         "level": 91,
         "materials": {
             "Quintessence": 34,
@@ -2459,7 +3128,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 11277.8,
         "individual_chronotes": 742,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gravitron research debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development north-west excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Songbird recorder": {
         "img_src": "Songbird_recorder.png",
@@ -2470,9 +3148,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean II (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Gravitron research debris"
-        ],
         "level": 91,
         "materials": {
             "Stormguard steel": 44,
@@ -2480,7 +3155,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 11277.8,
         "individual_chronotes": 742,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Gravitron research debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development north-west excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Amphora": {
         "img_src": "Amphora.png",
@@ -2490,9 +3174,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Acropolis debris"
-        ],
         "level": 92,
         "materials": {
             "Everlight silvthril": 34,
@@ -2500,7 +3181,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 11666.7,
         "individual_chronotes": 742,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Acropolis debris"
+        ],
+        "excavation_site": [
+            "Everlight - Acropolis excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Rod of Asclepius": {
         "img_src": "Rod_of_Asclepius.png",
@@ -2513,9 +3203,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Statue of Tromple"
         ],
-        "dig_sites": [
-            "Acropolis debris"
-        ],
         "level": 92,
         "materials": {
             "White marble": 30,
@@ -2524,7 +3211,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 11666.7,
         "individual_chronotes": 742,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Acropolis debris"
+        ],
+        "excavation_site": [
+            "Everlight - Acropolis excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Zarosian ewer": {
         "img_src": "Zarosian_ewer.png",
@@ -2534,9 +3230,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Armarium debris"
-        ],
         "level": 93,
         "materials": {
             "Third Age iron": 52,
@@ -2544,7 +3237,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 12500.0,
         "individual_chronotes": 760,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Armarium debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Culinarum excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Zarosian stein": {
         "img_src": "Zarosian_stein.png",
@@ -2554,9 +3256,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Armarium debris"
-        ],
         "level": 93,
         "materials": {
             "Third Age iron": 16,
@@ -2565,7 +3264,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 12500.0,
         "individual_chronotes": 760,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Armarium debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Culinarum excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Beastkeeper helm": {
         "img_src": "Beastkeeper_helm.png",
@@ -2576,9 +3284,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Yu'biusk animal pen"
-        ],
         "level": 94,
         "materials": {
             "Warforged bronze": 16,
@@ -2588,7 +3293,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 13333.3,
         "individual_chronotes": 776,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Yu'biusk animal pen"
+        ],
+        "excavation_site": [
+            "Warforge - Animal pens excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Idithuun horn ring": {
         "img_src": "Idithuun_horn_ring.png",
@@ -2598,9 +3312,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Yu'biusk animal pen"
-        ],
         "level": 94,
         "materials": {
             "Yu'biusk clay": 40,
@@ -2608,7 +3319,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 13333.3,
         "individual_chronotes": 776,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Yu'biusk animal pen"
+        ],
+        "excavation_site": [
+            "Warforge - Animal pens excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "'Nosorog!' sculpture": {
         "img_src": "'Nosorog!'_sculpture.png",
@@ -2618,9 +3338,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Yu'biusk animal pen"
-        ],
         "level": 94,
         "materials": {
             "Yu'biusk clay": 30,
@@ -2629,7 +3346,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 13333.3,
         "individual_chronotes": 776,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Yu'biusk animal pen"
+        ],
+        "excavation_site": [
+            "Warforge - Animal pens excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Dayguard shield": {
         "img_src": "Dayguard_shield.png",
@@ -2639,9 +3365,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean II (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Keshik tower debris"
-        ],
         "level": 95,
         "materials": {
             "Stormguard steel": 36,
@@ -2650,7 +3373,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 14166.7,
         "individual_chronotes": 778,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Keshik tower debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Dayguard tower excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Stormguard gerege": {
         "img_src": "Stormguard_gerege.png",
@@ -2662,9 +3394,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Howl's Floating Workshop"
         ],
-        "dig_sites": [
-            "Keshik tower debris"
-        ],
         "level": 95,
         "materials": {
             "Stormguard steel": 36,
@@ -2673,7 +3402,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 14166.7,
         "individual_chronotes": 778,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Keshik tower debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Dayguard tower excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Vazara": {
         "img_src": "Vazara.png",
@@ -2683,9 +3421,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin I (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dragonkin reliquary"
-        ],
         "level": 96,
         "materials": {
             "Dragon metal": 30,
@@ -2694,7 +3429,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 15000.0,
         "individual_chronotes": 794,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dragonkin reliquary"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Kilaya": {
         "img_src": "Kilaya.png",
@@ -2704,9 +3448,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin I (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dragonkin reliquary"
-        ],
         "level": 96,
         "materials": {
             "Dragon metal": 46,
@@ -2714,7 +3455,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 15000.0,
         "individual_chronotes": 794,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dragonkin reliquary"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Garagorshuun anchor": {
         "img_src": "Garagorshuun_anchor.png",
@@ -2726,9 +3476,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Green skull cave painting"
         ],
-        "dig_sites": [
-            "Goblin trainee remains"
-        ],
         "level": 97,
         "materials": {
             "Warforged bronze": 32,
@@ -2737,7 +3484,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 15833.3,
         "individual_chronotes": 810,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Goblin trainee remains"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Ourg megahitter": {
         "img_src": "Ourg_megahitter.png",
@@ -2749,9 +3505,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Asgarnia Smith"
         ],
-        "dig_sites": [
-            "Goblin trainee remains"
-        ],
         "level": 97,
         "materials": {
             "White oak": 20,
@@ -2761,7 +3514,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 15833.3,
         "individual_chronotes": 810,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Goblin trainee remains"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Ourg tower/goblin cower shield": {
         "img_src": "Ourg_tower-goblin_cower_shield.png",
@@ -2771,9 +3533,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian II (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Goblin trainee remains"
-        ],
         "level": 97,
         "materials": {
             "Mark of the Kyzaj": 20,
@@ -2783,7 +3542,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 15833.3,
         "individual_chronotes": 810,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Goblin trainee remains"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Hellfire haladie": {
         "img_src": "Hellfire_haladie.png",
@@ -2793,9 +3561,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Byzroth remains"
-        ],
         "level": 98,
         "materials": {
             "Hellfire metal": 44,
@@ -2804,7 +3569,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 16666.7,
         "individual_chronotes": 826,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Byzroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing north-west excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Hellfire katar": {
         "img_src": "Hellfire_katar.png",
@@ -2816,9 +3590,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Rings of Razulei"
         ],
-        "dig_sites": [
-            "Byzroth remains"
-        ],
         "level": 98,
         "materials": {
             "Hellfire metal": 50,
@@ -2826,7 +3597,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 16666.7,
         "individual_chronotes": 826,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Byzroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing north-west excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Hellfire zaghnal": {
         "img_src": "Hellfire_zaghnal.png",
@@ -2836,9 +3616,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Byzroth remains"
-        ],
         "level": 98,
         "materials": {
             "Hellfire metal": 38,
@@ -2847,7 +3624,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 16666.7,
         "individual_chronotes": 826,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Byzroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing north-west excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Golem heart": {
         "img_src": "Golem_heart.png",
@@ -2859,9 +3645,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Golem framework"
         ],
-        "dig_sites": [
-            "Destroyed golem"
-        ],
         "level": 98,
         "materials": {
             "Aetherium alloy": 34,
@@ -2871,7 +3654,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 16666.7,
         "individual_chronotes": 826,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Destroyed golem"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development south-west excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Golem instruction": {
         "img_src": "Golem_instruction.png",
@@ -2885,9 +3677,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Golem framework",
             "Elissa Giovanni"
         ],
-        "dig_sites": [
-            "Destroyed golem"
-        ],
         "level": 98,
         "materials": {
             "Quintessence": 46,
@@ -2895,7 +3684,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 16666.7,
         "individual_chronotes": 826,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Destroyed golem"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development south-west excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Death mask": {
         "img_src": "Death_mask.png",
@@ -2907,9 +3705,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Evil Bob's Catspaw"
         ],
-        "dig_sites": [
-            "Dragonkin coffin"
-        ],
         "level": 99,
         "materials": {
             "Orgone": 56,
@@ -2917,7 +3712,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 17500.0,
         "individual_chronotes": 828,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Dragonkin coffin"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Dragonkin calendar": {
         "img_src": "Dragonkin_calendar.png",
@@ -2927,9 +3731,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin I (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dragonkin coffin"
-        ],
         "level": 99,
         "materials": {
             "Orgone": 34,
@@ -2938,7 +3739,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 17500.0,
         "individual_chronotes": 828,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dragonkin coffin"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Dragonkin staff": {
         "img_src": "Dragonkin_staff.png",
@@ -2948,9 +3758,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin I (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Dragonkin coffin"
-        ],
         "level": 99,
         "materials": {
             "Orgone": 56,
@@ -2958,7 +3765,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 17500.0,
         "individual_chronotes": 828,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Dragonkin coffin"
+        ],
+        "excavation_site": [
+            "Orthen - Crypt of Varanus excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Dorgeshuun spear": {
         "img_src": "Dorgeshuun_spear.png",
@@ -2971,9 +3787,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Stick It to Da Boss Man",
             "You Have Chosen..."
         ],
-        "dig_sites": [
-            "Kyzaj champion's boudoir"
-        ],
         "level": 100,
         "materials": {
             "Warforged bronze": 50,
@@ -2981,7 +3794,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 18666.7,
         "individual_chronotes": 844,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Kyzaj champion's boudoir"
+        ],
+        "excavation_site": [
+            "Warforge - South goblin tunnels excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "'Forged in War' sculpture": {
         "img_src": "'Forged_in_War'_sculpture.png",
@@ -2993,9 +3815,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "You Have Chosen..."
         ],
-        "dig_sites": [
-            "Kyzaj champion's boudoir"
-        ],
         "level": 100,
         "materials": {
             "Warforged bronze": 50,
@@ -3003,7 +3822,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 18666.7,
         "individual_chronotes": 844,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Kyzaj champion's boudoir"
+        ],
+        "excavation_site": [
+            "Warforge - South goblin tunnels excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "'Smoke Cloud' spell scroll": {
         "img_src": "'Smoke_Cloud'_spell_scroll.png",
@@ -3017,9 +3845,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Vault of Shadows"
         ],
-        "dig_sites": [
-            "Culinarum debris"
-        ],
         "level": 100,
         "materials": {
             "Vellum": 40,
@@ -3028,7 +3853,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 18666.7,
         "individual_chronotes": 844,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Culinarum debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Culinarum excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Vigorem vial": {
         "img_src": "Vigorem_vial.png",
@@ -3038,9 +3872,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Culinarum debris"
-        ],
         "level": 100,
         "materials": {
             "Imperial steel": 54,
@@ -3048,7 +3879,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 18666.7,
         "individual_chronotes": 844,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Culinarum debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Culinarum excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Kopis dagger": {
         "img_src": "Kopis_dagger.png",
@@ -3058,9 +3898,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Icyene weapon rack"
-        ],
         "level": 100,
         "materials": {
             "Everlight silvthril": 50,
@@ -3068,7 +3905,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 18666.7,
         "individual_chronotes": 844,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Icyene weapon rack"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Xiphos short sword": {
         "img_src": "Xiphos_short_sword.png",
@@ -3078,9 +3924,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Saradominist III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Icyene weapon rack"
-        ],
         "level": 100,
         "materials": {
             "Everlight silvthril": 46,
@@ -3088,7 +3931,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 18666.7,
         "individual_chronotes": 844,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Icyene weapon rack"
+        ],
+        "excavation_site": [
+            "Everlight - Dominion Games stadium excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Dragon scalpel": {
         "img_src": "Dragon_scalpel.png",
@@ -3100,9 +3952,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Artificer's measure"
         ],
-        "dig_sites": [
-            "Autopsy table"
-        ],
         "level": 101,
         "materials": {
             "Dragon metal": 52,
@@ -3110,7 +3959,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 19833.3,
         "individual_chronotes": 860,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Autopsy table"
+        ],
+        "excavation_site": [
+            "Orthen - Observation outpost excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Protective goggles": {
         "img_src": "Protective_goggles.png",
@@ -3122,9 +3980,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Artificer's measure"
         ],
-        "dig_sites": [
-            "Autopsy table"
-        ],
         "level": 101,
         "materials": {
             "Felt": 42,
@@ -3132,7 +3987,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 19833.3,
         "individual_chronotes": 860,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Autopsy table"
+        ],
+        "excavation_site": [
+            "Orthen - Observation outpost excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Dragon burner": {
         "img_src": "Dragon_burner.png",
@@ -3144,9 +4008,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Orthen furnace core"
         ],
-        "dig_sites": [
-            "Experiment workbench"
-        ],
         "level": 102,
         "materials": {
             "Dragon metal": 52,
@@ -3154,7 +4015,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 21000.0,
         "individual_chronotes": 862,
-        "other_uses_total": 4
+        "other_uses_total": 4,
+        "excavation_hotspot": [
+            "Experiment workbench"
+        ],
+        "excavation_site": [
+            "Orthen - Observation outpost excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Orthenglass flask": {
         "img_src": "Orthenglass_flask.png",
@@ -3167,9 +4037,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Soma",
             "Artificer's measure"
         ],
-        "dig_sites": [
-            "Experiment workbench"
-        ],
         "level": 102,
         "materials": {
             "Dragon metal": 34,
@@ -3177,7 +4044,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 21000.0,
         "individual_chronotes": 862,
-        "other_uses_total": 2
+        "other_uses_total": 2,
+        "excavation_hotspot": [
+            "Experiment workbench"
+        ],
+        "excavation_site": [
+            "Orthen - Observation outpost excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Blackfire lance": {
         "img_src": "Blackfire_lance.png",
@@ -3187,9 +4063,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Keshik weapon rack"
-        ],
         "level": 103,
         "materials": {
             "Aetherium alloy": 50,
@@ -3197,7 +4070,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 22166.7,
         "individual_chronotes": 878,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Keshik weapon rack"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Nightguard tower excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Nightguard shield": {
         "img_src": "Nightguard_shield.png",
@@ -3207,9 +4089,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Keshik weapon rack"
-        ],
         "level": 103,
         "materials": {
             "Stormguard steel": 30,
@@ -3218,7 +4097,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 22166.7,
         "individual_chronotes": 878,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Keshik weapon rack"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Nightguard tower excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Projection attuner": {
         "img_src": "Projection_attuner.png",
@@ -3228,9 +4116,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Projection space"
-        ],
         "level": 103,
         "materials": {
             "Goldrune": 28,
@@ -3239,7 +4124,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 22166.7,
         "individual_chronotes": 878,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Projection space"
+        ],
+        "excavation_site": [
+            "Daemonheim - Depths excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Golden projection 'needle'": {
         "img_src": "Golden_projection_'needle'.png",
@@ -3249,9 +4143,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Projection space"
-        ],
         "level": 103,
         "materials": {
             "Goldrune": 36,
@@ -3259,7 +4150,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 22166.7,
         "individual_chronotes": 878,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Projection space"
+        ],
+        "excavation_site": [
+            "Daemonheim - Depths excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "'Possession' metal sculpture": {
         "img_src": "'Possession'_metal_sculpture.png",
@@ -3269,9 +4169,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Hellfire forge"
-        ],
         "level": 104,
         "materials": {
             "Eye of Dagon": 24,
@@ -3280,7 +4177,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 23333.3,
         "individual_chronotes": 894,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Hellfire forge"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing north-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Trishula": {
         "img_src": "Trishula.png",
@@ -3290,9 +4196,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Hellfire forge"
-        ],
         "level": 104,
         "materials": {
             "Hellfire metal": 48,
@@ -3301,7 +4204,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 23333.3,
         "individual_chronotes": 894,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Hellfire forge"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing north-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Tsutsaroth piercing": {
         "img_src": "Tsutsaroth_piercing.png",
@@ -3311,9 +4223,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian III (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Hellfire forge"
-        ],
         "level": 104,
         "materials": {
             "Hellfire metal": 44,
@@ -3322,7 +4231,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 23333.3,
         "individual_chronotes": 894,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Hellfire forge"
+        ],
+        "excavation_site": [
+            "Infernal Source - The Harrowing north-east excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Huzamogaarb chaos crown": {
         "img_src": "Huzamogaarb_chaos_crown.png",
@@ -3333,9 +4251,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Problem (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Warforge scrap pile"
-        ],
         "level": 104,
         "materials": {
             "Warforged bronze": 44,
@@ -3344,7 +4259,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 23333.3,
         "individual_chronotes": 894,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Warforge scrap pile"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Saragorgak star crown": {
         "img_src": "Saragorgak_star_crown.png",
@@ -3355,9 +4279,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Hoarder (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Warforge scrap pile"
-        ],
         "level": 104,
         "materials": {
             "Warforged bronze": 44,
@@ -3366,7 +4287,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 23333.3,
         "individual_chronotes": 894,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Warforge scrap pile"
+        ],
+        "excavation_site": [
+            "Warforge - North goblin tunnels"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "'The Pride of Padosan' painting": {
         "img_src": "'The_Pride_of_Padosan'_painting.png",
@@ -3377,9 +4307,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Radiant Renaissance (Art Critic Jacques)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Stockpiled art"
-        ],
         "level": 105,
         "materials": {
             "Cobalt blue": 52,
@@ -3389,7 +4316,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 24500.0,
         "individual_chronotes": 910,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Stockpiled art"
+        ],
+        "excavation_site": [
+            "Everlight - Underwater cave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "'Hallowed Be the Everlight' painting": {
         "img_src": "'Hallowed_Be_the_Everlight'_painting.png",
@@ -3402,9 +4338,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Hallowed Be..."
         ],
-        "dig_sites": [
-            "Stockpiled art"
-        ],
         "level": 105,
         "materials": {
             "Cobalt blue": 52,
@@ -3414,7 +4347,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 24500.0,
         "individual_chronotes": 910,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Stockpiled art"
+        ],
+        "excavation_site": [
+            "Everlight - Underwater cave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "'The Lord of Light' painting": {
         "img_src": "'The_Lord_of_Light'_painting.png",
@@ -3425,9 +4367,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Radiant Renaissance (Art Critic Jacques)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Stockpiled art"
-        ],
         "level": 105,
         "materials": {
             "Cobalt blue": 52,
@@ -3437,7 +4376,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 24500.0,
         "individual_chronotes": 910,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Stockpiled art"
+        ],
+        "excavation_site": [
+            "Everlight - Underwater cave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Meditation pipe": {
         "img_src": "Meditation_pipe.png",
@@ -3447,9 +4395,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Aughra remains"
-        ],
         "level": 106,
         "materials": {
             "Orgone": 60,
@@ -3457,7 +4402,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 25666.7,
         "individual_chronotes": 912,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Aughra remains"
+        ],
+        "excavation_site": [
+            "Orthen - Moksha ritual site excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Singing bowl": {
         "img_src": "Singing_bowl.png",
@@ -3469,9 +4423,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Fragmented Memories"
         ],
-        "dig_sites": [
-            "Aughra remains"
-        ],
         "level": 106,
         "materials": {
             "Orgone": 60,
@@ -3479,7 +4430,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 25666.7,
         "individual_chronotes": 912,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Aughra remains"
+        ],
+        "excavation_site": [
+            "Orthen - Moksha ritual site excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Personal totem": {
         "img_src": "Personal_totem.png",
@@ -3489,9 +4449,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Aughra remains"
-        ],
         "level": 106,
         "materials": {
             "Orgone": 48,
@@ -3500,7 +4457,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 25666.7,
         "individual_chronotes": 912,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Aughra remains"
+        ],
+        "excavation_site": [
+            "Orthen - Moksha ritual site excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Ancient magic tablet": {
         "img_src": "Ancient_magic_tablet.png",
@@ -3511,9 +4477,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian III (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Ancient magick munitions"
-        ],
         "level": 107,
         "materials": {
             "Ancient vis": 40,
@@ -3521,7 +4484,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 27000.0,
         "individual_chronotes": 942,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Ancient magick munitions"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Portable phylactery": {
         "img_src": "Portable_phylactery.png",
@@ -3534,9 +4506,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Forgotten Prisoner"
         ],
-        "dig_sites": [
-            "Ancient magick munitions"
-        ],
         "level": 107,
         "materials": {
             "Imperial steel": 48,
@@ -3545,7 +4514,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 27000.0,
         "individual_chronotes": 942,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Ancient magick munitions"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "'Animate Dead' spell scroll": {
         "img_src": "'Animate_Dead'_spell_scroll.png",
@@ -3559,9 +4537,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "The Vault of Shadows"
         ],
-        "dig_sites": [
-            "Ancient magick munitions"
-        ],
         "level": 107,
         "materials": {
             "Vellum": 40,
@@ -3570,7 +4545,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 27000.0,
         "individual_chronotes": 942,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Ancient magick munitions"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Comfort gatestone": {
         "img_src": "Comfort_gatestone.png",
@@ -3580,9 +4564,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Security booth"
-        ],
         "level": 107,
         "materials": {
             "Orthenglass": 40,
@@ -3591,7 +4572,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 27000.0,
         "individual_chronotes": 942,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Security booth"
+        ],
+        "excavation_site": [
+            "Daemonheim - Depths excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Halak's cube": {
         "img_src": "Halak's_cube.png",
@@ -3601,9 +4591,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Security booth"
-        ],
         "level": 107,
         "materials": {
             "Compass rose": 36,
@@ -3612,7 +4599,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 27000.0,
         "individual_chronotes": 942,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Security booth"
+        ],
+        "excavation_site": [
+            "Daemonheim - Depths excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Lingam stone": {
         "img_src": "Lingam_stone.png",
@@ -3624,9 +4620,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Xolo City"
         ],
-        "dig_sites": [
-            "Moksha device"
-        ],
         "level": 108,
         "materials": {
             "Orgone": 44,
@@ -3635,7 +4628,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 28333.3,
         "individual_chronotes": 958,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Moksha device"
+        ],
+        "excavation_site": [
+            "Orthen - Moksha ritual site excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Master control": {
         "img_src": "Master_control.png",
@@ -3647,9 +4649,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Fragmented Memories"
         ],
-        "dig_sites": [
-            "Moksha device"
-        ],
         "level": 108,
         "materials": {
             "Orgone": 30,
@@ -3658,7 +4657,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 28333.3,
         "individual_chronotes": 958,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Moksha device"
+        ],
+        "excavation_site": [
+            "Orthen - Moksha ritual site excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "'The Enlightened Soul' scroll": {
         "img_src": "'The_Enlightened_Soul'_scroll.png",
@@ -3669,9 +4677,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Knowledge is Power (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Bibliotheke debris"
-        ],
         "level": 109,
         "materials": {
             "Star of Saradomin": 50,
@@ -3679,7 +4684,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 29666.7,
         "individual_chronotes": 988,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Bibliotheke debris"
+        ],
+        "excavation_site": [
+            "Everlight - Acropolis excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "'The Eudoxian Elements' tablet": {
         "img_src": "'The_Eudoxian_Elements'_tablet.png",
@@ -3690,9 +4704,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Knowledge is Power (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Bibliotheke debris"
-        ],
         "level": 109,
         "materials": {
             "White marble": 60,
@@ -3700,7 +4711,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 29666.7,
         "individual_chronotes": 988,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Bibliotheke debris"
+        ],
+        "excavation_site": [
+            "Everlight - Acropolis excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Drogokishuun hook sword": {
         "img_src": "Drogokishuun_hook_sword.png",
@@ -3710,9 +4730,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Warforge weapon rack"
-        ],
         "level": 110,
         "materials": {
             "Warforged bronze": 44,
@@ -3721,7 +4738,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 31000.0,
         "individual_chronotes": 1004,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Warforge weapon rack"
+        ],
+        "excavation_site": [
+            "Warforge - Thalmund's forge excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Hobgoblin mansticker": {
         "img_src": "Hobgoblin_mansticker.png",
@@ -3731,9 +4757,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Warforge weapon rack"
-        ],
         "level": 110,
         "materials": {
             "Warforged bronze": 66,
@@ -3741,7 +4764,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 31000.0,
         "individual_chronotes": 1004,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Warforge weapon rack"
+        ],
+        "excavation_site": [
+            "Warforge - Thalmund's forge excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Chaos Elemental trophy": {
         "img_src": "Chaos_Elemental_trophy.png",
@@ -3751,9 +4783,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian IV (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Chthonian trophies"
-        ],
         "level": 110,
         "materials": {
             "Chaotic brimstone": 52,
@@ -3762,7 +4791,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 31000.0,
         "individual_chronotes": 1004,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Chthonian trophies"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dagon Overlook north excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Virius trophy": {
         "img_src": "Virius_trophy.png",
@@ -3772,9 +4810,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian IV (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Chthonian trophies"
-        ],
         "level": 110,
         "materials": {
             "Demonhide": 44,
@@ -3783,7 +4818,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 31000.0,
         "individual_chronotes": 1004,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Chthonian trophies"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dagon Overlook north excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Flat cap": {
         "img_src": "Flat_cap.png",
@@ -3794,9 +4838,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Flight research debris"
-        ],
         "level": 111,
         "materials": {
             "Armadylean yellow": 60,
@@ -3804,7 +4845,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 32333.3,
         "individual_chronotes": 1004,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Flight research debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development south-east excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Night owl flight goggles": {
         "img_src": "Night_owl_flight_goggles.png",
@@ -3814,9 +4864,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Flight research debris"
-        ],
         "level": 111,
         "materials": {
             "Armadylean yellow": 44,
@@ -3825,7 +4872,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 32333.3,
         "individual_chronotes": 1004,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Flight research debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Research & Development south-east excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Prototype godbow": {
         "img_src": "Prototype_godbow.png",
@@ -3835,9 +4891,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Aetherium forge"
-        ],
         "level": 112,
         "materials": {
             "Aetherium alloy": 50,
@@ -3846,7 +4899,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 33666.7,
         "individual_chronotes": 1050,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Aetherium forge"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Howl's workshop excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Prototype godsword": {
         "img_src": "Prototype_godsword.png",
@@ -3859,9 +4921,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "That's Not How it Works",
             "The Subtle Blade"
         ],
-        "dig_sites": [
-            "Aetherium forge"
-        ],
         "level": 112,
         "materials": {
             "Aetherium alloy": 50,
@@ -3870,7 +4929,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 33666.7,
         "individual_chronotes": 1050,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Aetherium forge"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Howl's workshop excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Prototype godstaff": {
         "img_src": "Prototype_godstaff.png",
@@ -3880,9 +4948,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Aetherium forge"
-        ],
         "level": 112,
         "materials": {
             "Aetherium alloy": 50,
@@ -3891,7 +4956,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 33666.7,
         "individual_chronotes": 1050,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Aetherium forge"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Howl's workshop excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Xolo hard hat": {
         "img_src": "Xolo_hard_hat.png",
@@ -3901,9 +4975,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin IV (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Xolo mine"
-        ],
         "level": 113,
         "materials": {
             "Goldrune": 54,
@@ -3911,7 +4982,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 35000.0,
         "individual_chronotes": 1066,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Xolo mine"
+        ],
+        "excavation_site": [
+            "Orthen - Xolo city excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Xolo pickaxe": {
         "img_src": "Xolo_pickaxe.png",
@@ -3921,9 +5001,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin IV (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Xolo mine"
-        ],
         "level": 113,
         "materials": {
             "Goldrune": 36,
@@ -3932,7 +5009,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 35000.0,
         "individual_chronotes": 1066,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Xolo mine"
+        ],
+        "excavation_site": [
+            "Orthen - Xolo city excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Portable portal generator": {
         "img_src": "Portable_portal_generator.png",
@@ -3942,9 +5028,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Traveller's station"
-        ],
         "level": 113,
         "materials": {
             "Dragon metal": 50,
@@ -3953,7 +5036,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 35000.0,
         "individual_chronotes": 1066,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Traveller's station"
+        ],
+        "excavation_site": [
+            "Daemonheim - Depths excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Warped trinket": {
         "img_src": "Warped_trinket.png",
@@ -3963,9 +5055,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Dragonkin VII (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Traveller's station"
-        ],
         "level": 113,
         "materials": {
             "Dragon metal": 30,
@@ -3975,7 +5064,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 35000.0,
         "individual_chronotes": 1066,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Traveller's station"
+        ],
+        "excavation_site": [
+            "Daemonheim - Depths excavation site"
+        ],
+        "dig_site": [
+            "Daemonheim Dig Site"
+        ]
     },
     "Praetorian hood": {
         "img_src": "Praetorian_hood.png",
@@ -3986,9 +5084,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Problem (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Praetorian remains"
-        ],
         "level": 114,
         "materials": {
             "Ancient vis": 36,
@@ -3998,7 +5093,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 36666.7,
         "individual_chronotes": 1096,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Praetorian remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Praetorian robes": {
         "img_src": "Praetorian_robes.png",
@@ -4008,9 +5112,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian IV (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Praetorian remains"
-        ],
         "level": 114,
         "materials": {
             "Ancient vis": 30,
@@ -4020,7 +5121,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 36666.7,
         "individual_chronotes": 1096,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Praetorian remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Praetorian staff": {
         "img_src": "Praetorian_staff.png",
@@ -4032,9 +5142,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Inquisitor staff"
         ],
-        "dig_sites": [
-            "Praetorian remains"
-        ],
         "level": 114,
         "materials": {
             "Imperial steel": 36,
@@ -4044,7 +5151,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 36666.7,
         "individual_chronotes": 1096,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Praetorian remains"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Kal-i-kra chieftain crown": {
         "img_src": "Kal-i-kra_chieftain_crown.png",
@@ -4055,9 +5171,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Hoarder (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Bandos's sanctum debris"
-        ],
         "level": 115,
         "materials": {
             "Yu'biusk clay": 66,
@@ -4065,7 +5178,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 38333.3,
         "individual_chronotes": 1112,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Bandos's sanctum debris"
+        ],
+        "excavation_site": [
+            "Warforge - Bandos's sanctum excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Kal-i-kra mace": {
         "img_src": "Kal-i-kra_mace.png",
@@ -4075,9 +5197,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Red Rum Relics III (General Bentnoze)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Bandos's sanctum debris"
-        ],
         "level": 115,
         "materials": {
             "Vulcanised rubber": 42,
@@ -4086,7 +5205,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 38333.3,
         "individual_chronotes": 1112,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Bandos's sanctum debris"
+        ],
+        "excavation_site": [
+            "Warforge - Bandos's sanctum excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Kal-i-kra warhorn": {
         "img_src": "Kal-i-kra_warhorn.png",
@@ -4096,9 +5224,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Red Rum Relics III (General Bentnoze)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Bandos's sanctum debris"
-        ],
         "level": 115,
         "materials": {
             "Vulcanised rubber": 44,
@@ -4107,7 +5232,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 38333.3,
         "individual_chronotes": 1112,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Bandos's sanctum debris"
+        ],
+        "excavation_site": [
+            "Warforge - Bandos's sanctum excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Tsutsaroth helm": {
         "img_src": "Tsutsaroth_helm.png",
@@ -4118,9 +5252,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Hat Hoarder (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tsutsaroth remains"
-        ],
         "level": 116,
         "materials": {
             "Hellfire metal": 50,
@@ -4129,7 +5260,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 40000.0,
         "individual_chronotes": 1142,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tsutsaroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dagon Overlook south-west excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Tsutsaroth pauldron": {
         "img_src": "Tsutsaroth_pauldron.png",
@@ -4139,9 +5279,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian IV (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tsutsaroth remains"
-        ],
         "level": 116,
         "materials": {
             "Hellfire metal": 40,
@@ -4150,7 +5287,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 40000.0,
         "individual_chronotes": 1142,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tsutsaroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dagon Overlook south-west excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Tsutsaroth urumi": {
         "img_src": "Tsutsaroth_urumi.png",
@@ -4160,9 +5306,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zamorakian IV (Isaura)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Tsutsaroth remains"
-        ],
         "level": 116,
         "materials": {
             "Hellfire metal": 50,
@@ -4171,7 +5314,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 40000.0,
         "individual_chronotes": 1142,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Tsutsaroth remains"
+        ],
+        "excavation_site": [
+            "Infernal Source - Dagon Overlook south-west excavation site"
+        ],
+        "dig_site": [
+            "Infernal Source Dig Site"
+        ]
     },
     "Kontos lance": {
         "img_src": "Kontos_lance.png",
@@ -4181,9 +5333,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist IV (Sir Atcha)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Optimatoi remains"
-        ],
         "level": 117,
         "materials": {
             "Everlight silvthril": 70,
@@ -4191,7 +5340,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 41666.7,
         "individual_chronotes": 1158,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Optimatoi remains"
+        ],
+        "excavation_site": [
+            "Everlight - Underwater cave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Doru spear": {
         "img_src": "Doru_spear.png",
@@ -4201,9 +5359,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Saradominist IV (Sir Atcha)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Optimatoi remains"
-        ],
         "level": 117,
         "materials": {
             "Everlight silvthril": 70,
@@ -4211,7 +5366,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 41666.7,
         "individual_chronotes": 1158,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Optimatoi remains"
+        ],
+        "excavation_site": [
+            "Everlight - Underwater cave excavation site"
+        ],
+        "dig_site": [
+            "Everlight Dig Site"
+        ]
     },
     "Ancient globe": {
         "img_src": "Ancient_globe.png",
@@ -4221,9 +5385,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian IV (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "War table debris"
-        ],
         "level": 118,
         "materials": {
             "White oak": 20,
@@ -4232,7 +5393,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 43333.3,
         "individual_chronotes": 1174,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "War table debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Battle plans": {
         "img_src": "Battle_plans.png",
@@ -4242,9 +5412,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Zarosian IV (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "War table debris"
-        ],
         "level": 118,
         "materials": {
             "Vellum": 40,
@@ -4253,7 +5420,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 43333.3,
         "individual_chronotes": 1174,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "War table debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "'Prima Legio' painting": {
         "img_src": "'Prima_Legio'_painting.png",
@@ -4264,9 +5440,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Zarosian IV (Soran, Emissary of Zaros)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "War table debris"
-        ],
         "level": 118,
         "materials": {
             "White oak": 20,
@@ -4276,7 +5449,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 43333.3,
         "individual_chronotes": 1174,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "War table debris"
+        ],
+        "excavation_site": [
+            "Kharid-et - Praetorium excavation site"
+        ],
+        "dig_site": [
+            "Kharid-et Dig Site"
+        ]
     },
     "Chuluu stone": {
         "img_src": "Chuluu_stone.png",
@@ -4289,9 +5471,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Experimental Aether Reactor"
         ],
-        "dig_sites": [
-            "Howl's workshop debris"
-        ],
         "level": 118,
         "materials": {
             "Aetherium alloy": 40,
@@ -4301,7 +5480,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 43333.3,
         "individual_chronotes": 1174,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Howl's workshop debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Howl's workshop excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Quintessence counter": {
         "img_src": "Quintessence_counter.png",
@@ -4311,9 +5499,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Howl's workshop debris"
-        ],
         "level": 118,
         "materials": {
             "Quintessence": 54,
@@ -4322,7 +5507,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 43333.3,
         "individual_chronotes": 1174,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Howl's workshop debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Howl's workshop excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Spherical astrolabe": {
         "img_src": "Spherical_astrolabe.png",
@@ -4332,9 +5526,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Armadylean III (Lowse)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Howl's workshop debris"
-        ],
         "level": 118,
         "materials": {
             "Aetherium alloy": 46,
@@ -4343,7 +5534,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 43333.3,
         "individual_chronotes": 1174,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Howl's workshop debris"
+        ],
+        "excavation_site": [
+            "Stormguard Citadel - Howl's workshop excavation site"
+        ],
+        "dig_site": [
+            "Stormguard Citadel Dig Site"
+        ]
     },
     "Xolo shield": {
         "img_src": "Xolo_shield.png",
@@ -4353,9 +5553,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin IV (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Xolo remains"
-        ],
         "level": 119,
         "materials": {
             "Goldrune": 52,
@@ -4364,7 +5561,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 45000.0,
         "individual_chronotes": 1204,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Xolo remains"
+        ],
+        "excavation_site": [
+            "Orthen - Xolo city excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Xolo spear": {
         "img_src": "Xolo_spear.png",
@@ -4374,9 +5580,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Dragonkin IV (Sharrigan)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Xolo remains"
-        ],
         "level": 119,
         "materials": {
             "Dragon metal": 74,
@@ -4384,7 +5587,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 45000.0,
         "individual_chronotes": 1204,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Xolo remains"
+        ],
+        "excavation_site": [
+            "Orthen - Xolo city excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "Horogothgar cooking pot": {
         "img_src": "Horogothgar_cooking_pot.png",
@@ -4394,9 +5606,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Museum - Bandosian III (Velucia)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Makeshift pie oven"
-        ],
         "level": 119,
         "materials": {
             "Yu'biusk clay": 60,
@@ -4405,7 +5614,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 45000.0,
         "individual_chronotes": 1204,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Makeshift pie oven"
+        ],
+        "excavation_site": [
+            "Warforge - Thalmund's forge excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "'Da Boss Man' sculpture": {
         "img_src": "'Da_Boss_Man'_sculpture.png",
@@ -4417,9 +5635,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
             "Knowledge is Power (Wise Old Man)"
         ],
         "other_uses": [],
-        "dig_sites": [
-            "Makeshift pie oven"
-        ],
         "level": 119,
         "materials": {
             "Yu'biusk clay": 50,
@@ -4428,7 +5643,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 45000.0,
         "individual_chronotes": 1204,
-        "other_uses_total": 0
+        "other_uses_total": 0,
+        "excavation_hotspot": [
+            "Makeshift pie oven"
+        ],
+        "excavation_site": [
+            "Warforge - Thalmund's forge excavation site"
+        ],
+        "dig_site": [
+            "Warforge Dig Site"
+        ]
     },
     "Gold dish": {
         "img_src": "Gold_dish.png",
@@ -4440,9 +5664,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Mysterious City"
         ],
-        "dig_sites": [
-            "Saurthen debris"
-        ],
         "level": 120,
         "materials": {
             "Goldrune": 86,
@@ -4450,7 +5671,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 46666.7,
         "individual_chronotes": 1220,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Saurthen debris"
+        ],
+        "excavation_site": [
+            "Orthen - Xolo city excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     },
     "'Raksha' idol": {
         "img_src": "'Raksha'_idol.png",
@@ -4462,9 +5692,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         "other_uses": [
             "Mysterious City"
         ],
-        "dig_sites": [
-            "Saurthen debris"
-        ],
         "level": 120,
         "materials": {
             "Orgone": 56,
@@ -4473,7 +5700,16 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
         },
         "xp": 46666.7,
         "individual_chronotes": 1220,
-        "other_uses_total": 1
+        "other_uses_total": 1,
+        "excavation_hotspot": [
+            "Saurthen debris"
+        ],
+        "excavation_site": [
+            "Orthen - Xolo city excavation site"
+        ],
+        "dig_site": [
+            "Orthen Dig Site"
+        ]
     }
 };
 
