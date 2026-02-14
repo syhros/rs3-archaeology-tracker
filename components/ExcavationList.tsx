@@ -134,9 +134,9 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
 
   if (!isOpen) return null;
 
-  const completedCount = allItems.filter(({ count }) => {
-    const edit = editCounts[count.toString()];
-    const current = edit || artefactCounts[count.toString()] || { damaged: 0, repaired: 0 };
+  const completedCount = allItems.filter(({ artefact, count }) => {
+    const edit = editCounts[artefact.name];
+    const current = edit || artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
     return (current.damaged + current.repaired) >= count;
   }).length;
 

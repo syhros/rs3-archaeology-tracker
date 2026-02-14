@@ -453,11 +453,12 @@ function App() {
     const grouped: Record<string, { artefact: Artefact, count: number }[]> = {};
 
     artefactsArray.forEach(art => {
+        const totalNeeded = art.total_needed || 0;
         const counts = artefactCounts[art.name];
         const donated = getDonatedCount(art.name);
 
         const totalHave = (counts?.damaged || 0) + (counts?.repaired || 0) + donated;
-        const remaining = Math.max(0, art.total_needed - totalHave);
+        const remaining = Math.max(0, totalNeeded - totalHave);
 
         const neededCount = Math.ceil(remaining);
 
