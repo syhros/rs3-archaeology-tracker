@@ -451,18 +451,18 @@ function App() {
   // --- Excavation List Logic ---
   const excavationData = useMemo(() => {
     const grouped: Record<string, { artefact: Artefact, count: number }[]> = {};
-    
+
     artefactsArray.forEach(art => {
         const counts = artefactCounts[art.name];
         const donated = getDonatedCount(art.name);
-        
+
         const totalHave = (counts?.damaged || 0) + (counts?.repaired || 0) + donated;
         const remaining = Math.max(0, art.total_needed - totalHave);
-        
+
         const neededCount = Math.ceil(remaining);
 
         if (neededCount > 0) {
-            const digSite = art.dig_sites[0] || 'Unknown';
+            const digSite = art.dig_site?.[0] || art.dig_sites?.[0] || 'Unknown';
             if (!grouped[digSite]) {
                 grouped[digSite] = [];
             }
@@ -481,7 +481,7 @@ function App() {
     });
 
     return sortedSites.map(site => ({
-        siteName: site,
+        label: site,
         items: grouped[site]
     }));
   }, [artefactCounts, checkedCollections]);
@@ -527,7 +527,7 @@ function App() {
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                  </svg>
                </button>
-               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent truncate hidden sm:block">
+               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent truncate hidden sm:block">
                  Archaeology Tracker
                </h1>
              </div>

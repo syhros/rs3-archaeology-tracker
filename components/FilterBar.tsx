@@ -87,8 +87,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 onClick={onToggleDonatable}
                 className={`
                     px-3 h-9 text-xs font-semibold rounded border transition-colors flex items-center gap-2
-                    ${currentView === 'donatable' 
-                        ? 'bg-purple-600 text-white border-purple-500 shadow-sm' 
+                    ${currentView === 'donatable'
+                        ? 'bg-blue-600 text-white border-blue-500 shadow-sm'
                         : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600 hover:text-white'
                     }
                 `}

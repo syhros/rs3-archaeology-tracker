@@ -8,7 +8,10 @@ export interface ArtefactData {
   total_needed: number;
   collections: string[];
   other_uses: string[];
-  dig_sites: string[];
+  dig_sites?: string[];
+  excavation_hotspot?: string[];
+  excavation_site?: string[];
+  dig_site?: string[];
   level: number;
   materials: Materials;
   xp: number;
@@ -32,6 +35,7 @@ export interface Collection extends CollectionData {
 }
 
 export type SortMethod = 'level' | 'name' | 'remaining';
+export type ExcavationSortMethod = 'level' | 'dig_site' | 'excavation_site' | 'excavation_hotspot';
 
 export interface UserArtefactCounts {
   [artefactName: string]: {
