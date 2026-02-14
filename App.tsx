@@ -455,8 +455,9 @@ function App() {
     artefactsArray.forEach(art => {
         const totalNeeded = art.total_needed || 0;
         const counts = artefactCounts[art.name];
+        const donatedCount = getDonatedCount(art.name);
 
-        const totalHave = (counts?.damaged || 0) + (counts?.repaired || 0);
+        const totalHave = (counts?.damaged || 0) + (counts?.repaired || 0) + donatedCount;
         const remaining = Math.max(0, totalNeeded - totalHave);
 
         const neededCount = Math.ceil(remaining);
