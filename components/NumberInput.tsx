@@ -63,7 +63,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
   return (
     <div className={`flex flex-col ${className}`}>
       {label && (
-        <label className={`text-[9px] uppercase tracking-wide mb-0.5 text-center ${labelClassName || 'text-gray-500'}`}>
+        <label className={`text-[9px] tracking-wide mb-0.5 text-center ${labelClassName || 'text-gray-500'}`}>
           {label}
         </label>
       )}

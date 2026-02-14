@@ -26,10 +26,11 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
   const [imgError, setImgError] = useState(false);
   
   const remaining = Math.max(0, artefact.total_needed - (damagedCount + repairedCount + donatedCount));
+  const hasAnyCount = damagedCount > 0 || repairedCount > 0 || donatedCount > 0;
 
   let cardStyleClass = 'bg-gray-800 border-gray-700 hover:border-blue-500';
   let leftTextColorClass = 'text-red-400';
-  let labelColorClass = 'text-red-300 font-semibold';
+  let labelColorClass = hasAnyCount ? 'text-red-300 font-semibold' : 'text-gray-500';
   let bottomSectionClass = 'border-gray-700 bg-gray-900/30';
 
   if (remaining === 0) {
@@ -134,7 +135,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
 
             {/* Total */}
             <div className="flex flex-col w-8">
-                <span className={`text-[9px] uppercase tracking-wide ${labelColorClass}`}>Total</span>
+                <span className={`text-[9px] tracking-wide ${labelColorClass}`}>Total</span>
                 <span className="font-bold text-sm text-white">{artefact.total_needed}</span>
             </div>
 
@@ -189,7 +190,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
 
             {/* Left */}
             <div className="flex flex-col w-8">
-                <span className={`text-[9px] uppercase tracking-wide ${labelColorClass}`}>Left</span>
+                <span className={`text-[9px] tracking-wide ${labelColorClass}`}>Left</span>
                 <span className={`font-bold text-sm ${leftTextColorClass}`}>
                     {remaining}
                 </span>
