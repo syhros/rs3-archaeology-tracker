@@ -265,7 +265,7 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
                               value={current.damaged}
                               onChange={(val) => handleEditChange(artefact.name, 'damaged', val)}
                               min={0}
-                              max={Math.max(count, current.damaged)}
+                              max={999}
                               className="w-16"
                               showButtons={true}
                             />
@@ -278,7 +278,7 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
                               value={current.repaired}
                               onChange={(val) => handleEditChange(artefact.name, 'repaired', val)}
                               min={0}
-                              max={Math.max(count, current.repaired)}
+                              max={999}
                               className="w-16"
                               showButtons={true}
                             />
