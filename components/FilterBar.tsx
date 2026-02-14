@@ -39,33 +39,33 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         {/* Bottom Row: Stats & Sort */}
         <div className="flex items-center gap-2 md:gap-3 justify-between">
             {/* Compact Totals */}
-            <div className="flex items-center gap-2 bg-gray-900/50 border border-gray-700 rounded px-2 md:px-3 h-8 md:h-9 text-xs md:text-sm">
-                <div className="flex items-center gap-1" title={`Total XP: ${totalXP.toLocaleString()}`}>
+            <div className="flex items-center gap-3 bg-gray-900/50 border border-gray-700 rounded px-3 h-8 md:h-9 text-xs md:text-sm">
+                <div className="flex items-center gap-1.5" title={`Total XP: ${totalXP.toLocaleString()}`}>
                     <img
                         src="/img/XP_tracker_icon.png"
                         alt="XP"
                         className="w-4 h-4 md:w-5 md:h-5 object-contain"
                     />
-                    <span className="font-mono font-bold text-gray-100 hidden sm:inline">
+                    <span className="font-mono font-bold text-gray-100">
                         {totalXP >= 1000000
-                            ? `${(totalXP / 1000000).toFixed(1)}M`
+                            ? `${(totalXP / 1000000).toFixed(2)}M`
                             : totalXP >= 1000
-                                ? `${(totalXP / 1000).toFixed(0)}k`
+                                ? `${(totalXP / 1000).toFixed(1)}k`
                                 : totalXP.toFixed(0)}
                     </span>
                 </div>
-                <div className="w-px h-3 bg-gray-600 hidden sm:block"></div>
-                <div className="flex items-center gap-1" title={`Total Chronotes: ${totalChronotes.toLocaleString()}`}>
+                <div className="w-px h-4 bg-gray-600"></div>
+                <div className="flex items-center gap-1.5" title={`Total Chronotes: ${totalChronotes.toLocaleString()}`}>
                     <img
                         src="/img/100px-Chronotes_10000_detail.png"
                         alt="Chronotes"
                         className="w-4 h-4 md:w-5 md:h-5 object-contain"
                     />
-                    <span className="font-mono font-bold text-gray-100 hidden sm:inline">
+                    <span className="font-mono font-bold text-gray-100">
                         {totalChronotes >= 1000000
-                            ? `${(totalChronotes / 1000000).toFixed(1)}M`
+                            ? `${(totalChronotes / 1000000).toFixed(2)}M`
                             : totalChronotes >= 1000
-                                ? `${(totalChronotes / 1000).toFixed(0)}k`
+                                ? `${(totalChronotes / 1000).toFixed(1)}k`
                                 : totalChronotes.toLocaleString()}
                     </span>
                 </div>
@@ -73,7 +73,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
             {/* Sort Dropdown */}
             <div className="flex items-center bg-gray-700 rounded border border-gray-600 h-8 md:h-9 px-2 relative hover:border-gray-500 transition-colors">
-                <span className="hidden md:inline text-xs text-gray-400 font-medium mr-1">Sort</span>
+                <span className="text-xs text-gray-400 font-medium mr-2">Sort By</span>
                 <select
                   value={sortMethod}
                   onChange={(e) => onSortChange(e.target.value as SortMethod)}

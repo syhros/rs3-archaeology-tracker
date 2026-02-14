@@ -635,7 +635,7 @@ function App() {
               />
           ) : currentView === 'artefacts' ? (
               // ARTEFACTS VIEW
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-3 sm:gap-4 md:gap-6 justify-items-center mx-auto max-w-[1800px]">
+              <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-3 sm:gap-4 md:gap-6 justify-items-center mx-auto max-w-[1800px]">
                 {processedArtefacts.map((artefact) => {
                   const counts = artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
                   return (
