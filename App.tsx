@@ -237,6 +237,48 @@ function App() {
 
   }, [artefactCounts, checkedCollections]);
 
+  // --- Sorting Logic for Collection View ---
+  const sortedCollectionStatuses = useMemo(() => {
+    // Clone to avoid mutating original
+    const sorted = [...collectionStatuses];
+    
+    sorted.sort((a, b) => {
+      if (sortMethod === 'name') {
+        return a.collection.name.localeCompare(b.collection.name);
+      } else if (sortMethod === 'level') {
+        return a.maxLevel - b.maxLevel;
+      } else if (sortMethod === 'remaining') {
+        // "Collected" sort: 
+        // 1. Ready collections first (Level order if multiple ready)
+        // 2. Then by % ready items (Descending)
+        // 3. Then by Level
+        
+        if (a.isReady && !b.isReady) return -1;
+        if (!a.isReady && b.isReady) return 1;
+        
+        if (a.isReady && b.isReady) {
+            return a.maxLevel - b.maxLevel;
+        }
+
+        // Both not ready: Sort by % complete descending
+        const aReady = a.itemsStatus.filter(i => i.status === 'ready').length;
+        const bReady = b.itemsStatus.filter(i => i.status === 'ready').length;
+        const aPct = a.itemsStatus.length > 0 ? aReady / a.itemsStatus.length : 0;
+        const bPct = b.itemsStatus.length > 0 ? bReady / b.itemsStatus.length : 0;
+        
+        if (Math.abs(aPct - bPct) > 0.0001) {
+            return bPct - aPct; // Higher % first
+        }
+        
+        // Fallback to level
+        return a.maxLevel - b.maxLevel;
+      }
+      return 0;
+    });
+    
+    return sorted;
+  }, [collectionStatuses, sortMethod]);
+
 
   const bankedTotals = useMemo(() => {
     let xp = 0;
@@ -459,6 +501,7 @@ function App() {
              onSortChange={setSortMethod}
              totalXP={bankedTotals.xp}
              totalChronotes={bankedTotals.chronotes}
+             currentView={currentView}
            />
         </header>
 
@@ -492,7 +535,7 @@ function App() {
           ) : (
               // COLLECTIONS VIEW
               <CollectionView 
-                collectionsStatus={collectionStatuses}
+                collectionsStatus={sortedCollectionStatuses}
                 onCheckChange={handleCheckChange}
               />
           )}

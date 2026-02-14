@@ -8,6 +8,7 @@ interface FilterBarProps {
   onSortChange: (val: SortMethod) => void;
   totalXP: number;
   totalChronotes: number;
+  currentView?: 'artefacts' | 'collections';
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({
@@ -17,6 +18,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onSortChange,
   totalXP,
   totalChronotes,
+  currentView = 'artefacts',
 }) => {
   return (
     <div className="bg-gray-800 p-2 border-b border-gray-700 sticky top-0 z-20 shadow-md">
@@ -31,7 +33,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     type="text"
                     value={searchTerm}
                     onChange={(e) => onSearchChange(e.target.value)}
-                    placeholder="Search artefacts..."
+                    placeholder="Search..."
                     className="w-full h-9 bg-gray-700 text-white text-sm rounded px-3 border border-gray-600 focus:outline-none focus:border-blue-500 pl-8"
                 />
                 <svg className="w-4 h-4 absolute left-2.5 top-2.5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,11 +85,15 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             <select
               value={sortMethod}
               onChange={(e) => onSortChange(e.target.value as SortMethod)}
-              className="bg-transparent text-white text-sm font-semibold focus:outline-none appearance-none pr-4 cursor-pointer"
+              className="bg-transparent text-white text-sm font-semibold focus:outline-none appearance-none pr-4 cursor-pointer min-w-[80px]"
             >
               <option value="level">Level</option>
               <option value="name">Name</option>
-              <option value="remaining">Remaining</option>
+              {currentView === 'collections' ? (
+                  <option value="remaining">Collected</option>
+              ) : (
+                  <option value="remaining">Remaining</option>
+              )}
             </select>
             {/* Custom Arrow */}
             <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
