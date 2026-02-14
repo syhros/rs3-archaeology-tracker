@@ -77,7 +77,7 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
       const remaining = Math.max(0, (artefact.total_needed || 0) - total);
       const isCompleted = remaining === 0;
       return { artefact, count, current, total, remaining, isCompleted };
-    });
+    }).filter(item => item.remaining > 0);
 
     const grouped = new Map<string, typeof itemsWithLocalCounts>();
 
