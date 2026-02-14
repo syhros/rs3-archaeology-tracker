@@ -517,77 +517,102 @@ function App() {
       <div className="flex-1 flex flex-col min-w-0">
         
         <header className="bg-gray-800 border-b border-gray-700">
-           <div className="p-4 flex flex-wrap items-center justify-between gap-4">
-             <div className="flex items-center gap-3">
-               <button 
+           <div className="px-3 py-2 md:p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+             {/* Top Row: Menu, Title, Action Buttons */}
+             <div className="flex items-center justify-between gap-2">
+               <button
                  onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                 className="md:hidden p-2 rounded hover:bg-gray-700 text-gray-300"
+                 className="md:hidden p-2 -ml-2 rounded hover:bg-gray-700 text-gray-300"
                >
-                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                  </svg>
                </button>
-               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent truncate hidden sm:block">
-                 Archaeology Tracker
+               <h1 className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent truncate">
+                 Archaeology
                </h1>
-             </div>
-             
-             {/* View Toggle */}
-             <div className="flex bg-gray-700 p-1 rounded-lg border border-gray-600">
-                <button
-                    onClick={() => setCurrentView('artefacts')}
-                    className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
-                        currentView === 'artefacts'
-                            ? 'bg-blue-600 text-white shadow-sm'
-                            : 'text-gray-300 hover:text-white hover:bg-gray-600'
-                    }`}
-                >
-                    Artefacts
-                </button>
-                <button
-                    onClick={() => setCurrentView('collections')}
-                    className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
-                        currentView === 'collections'
-                            ? 'bg-blue-600 text-white shadow-sm'
-                            : 'text-gray-300 hover:text-white hover:bg-gray-600'
-                    }`}
-                >
-                    Collections
-                </button>
-                <button
-                    onClick={() => setCurrentView(prev => prev === 'donatable' ? 'artefacts' : 'donatable')}
-                    className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
-                        currentView === 'donatable'
-                            ? 'bg-blue-600 text-white shadow-sm'
-                            : 'text-gray-300 hover:text-white hover:bg-gray-600'
-                    }`}
-                >
-                    Completed
-                </button>
+               <div className="flex gap-1.5 md:hidden">
+                  <button
+                      onClick={() => setIsExcavationListOpen(true)}
+                      className="p-2 bg-yellow-700 hover:bg-yellow-600 rounded text-xs font-semibold transition-colors"
+                      title="Excavation List"
+                  >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                      </svg>
+                  </button>
+                  <button
+                      onClick={() => setIsShoppingListOpen(true)}
+                      className="p-2 bg-blue-600 hover:bg-blue-700 rounded text-xs font-semibold transition-colors"
+                      title="Material List"
+                  >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                  </button>
+               </div>
              </div>
 
-             <div className="flex gap-2">
-                <button
-                    onClick={() => setIsExcavationListOpen(true)}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-yellow-700 hover:bg-yellow-600 rounded text-xs md:text-sm font-semibold shadow-lg transition-transform active:scale-95"
-                    title="Excavation List"
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                    </svg>
-                    <span className="hidden lg:inline">Excavation</span>
-                </button>
+             {/* View Toggle & Action Buttons (Desktop) */}
+             <div className="flex items-center gap-2 md:gap-4">
+                {/* View Toggle */}
+                <div className="flex bg-gray-700 p-1 rounded-lg border border-gray-600 gap-0.5">
+                   <button
+                       onClick={() => setCurrentView('artefacts')}
+                       className={`px-2 md:px-3 py-1 text-xs md:text-sm font-semibold rounded transition-colors ${
+                           currentView === 'artefacts'
+                               ? 'bg-blue-600 text-white shadow-sm'
+                               : 'text-gray-300 hover:text-white hover:bg-gray-600'
+                       }`}
+                   >
+                       Artefacts
+                   </button>
+                   <button
+                       onClick={() => setCurrentView('collections')}
+                       className={`px-2 md:px-3 py-1 text-xs md:text-sm font-semibold rounded transition-colors ${
+                           currentView === 'collections'
+                               ? 'bg-blue-600 text-white shadow-sm'
+                               : 'text-gray-300 hover:text-white hover:bg-gray-600'
+                       }`}
+                   >
+                       Collections
+                   </button>
+                   <button
+                       onClick={() => setCurrentView(prev => prev === 'donatable' ? 'artefacts' : 'donatable')}
+                       className={`px-2 md:px-3 py-1 text-xs md:text-sm font-semibold rounded transition-colors ${
+                           currentView === 'donatable'
+                               ? 'bg-blue-600 text-white shadow-sm'
+                               : 'text-gray-300 hover:text-white hover:bg-gray-600'
+                       }`}
+                   >
+                       Completed
+                   </button>
+                </div>
 
-                <button
-                    onClick={() => setIsShoppingListOpen(true)}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded text-xs md:text-sm font-semibold shadow-lg transition-transform active:scale-95"
-                    title="Material List"
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    <span className="hidden lg:inline">Materials</span>
-                </button>
+                {/* Desktop Action Buttons */}
+                <div className="hidden md:flex gap-2">
+                   <button
+                       onClick={() => setIsExcavationListOpen(true)}
+                       className="flex items-center gap-2 px-3 py-1.5 bg-yellow-700 hover:bg-yellow-600 rounded text-xs md:text-sm font-semibold transition-transform active:scale-95"
+                       title="Excavation List"
+                   >
+                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                       </svg>
+                       <span>Excavation</span>
+                   </button>
+
+                   <button
+                       onClick={() => setIsShoppingListOpen(true)}
+                       className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded text-xs md:text-sm font-semibold transition-transform active:scale-95"
+                       title="Material List"
+                   >
+                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                       </svg>
+                       <span>Materials</span>
+                   </button>
+                </div>
              </div>
            </div>
            
@@ -602,15 +627,15 @@ function App() {
         </header>
 
         {/* Scrollable Content Area */}
-        <main className="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-900 scroll-smooth">
+        <main className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 bg-gray-900 scroll-smooth">
           {currentView === 'donatable' ? (
-              <DonationView 
+              <DonationView
                 repeatableStatus={repeatableCollectionStatuses}
                 onDonate={handleDonate}
               />
           ) : currentView === 'artefacts' ? (
               // ARTEFACTS VIEW
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-6 justify-items-center mx-auto max-w-[1800px]">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-3 sm:gap-4 md:gap-6 justify-items-center mx-auto max-w-[1800px]">
                 {processedArtefacts.map((artefact) => {
                   const counts = artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
                   return (
