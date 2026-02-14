@@ -131,7 +131,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
 
             {/* Total */}
             <div className="flex flex-col w-8">
-                <span className="text-[9px] text-gray-500 uppercase tracking-wide">Tot</span>
+                <span className="text-[9px] text-gray-500 tracking-wide">Total</span>
                 <span className="font-bold text-sm text-white">{artefact.total_needed}</span>
             </div>
 
@@ -139,7 +139,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
             <NumberInput
               value={damagedCount}
               onChange={(val) => onCountChange(artefact.name, 'damaged', val)}
-              label="Dmg"
+              label="Damaged"
               max={999}
               showButtons={true}
             />
@@ -177,7 +177,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
             <NumberInput
               value={repairedCount}
               onChange={(val) => onCountChange(artefact.name, 'repaired', val)}
-              label="Rep"
+              label="Restored"
               max={999}
               showButtons={true}
             />
