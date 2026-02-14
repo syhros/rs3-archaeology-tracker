@@ -18,10 +18,10 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
 }) => {
   if (!isOpen) return null;
 
-  const sortedMaterials = Object.entries(materials).sort((a, b) => a[0].localeCompare(b[0]));
+  const sortedMaterials = Object.entries(materials).sort((a, b) => a[0].localeCompare(b[0])) as [string, number][];
   
   // Calculate Totals
-  const totalNeeded = Object.values(materials).reduce((acc, curr) => acc + curr, 0);
+  const totalNeeded = (Object.values(materials) as number[]).reduce((acc, curr) => acc + curr, 0);
   const totalBanked = sortedMaterials.reduce((acc, [name]) => acc + (bankedMaterials[name] || 0), 0);
   const totalRemaining = sortedMaterials.reduce((acc, [name, needed]) => {
       const banked = bankedMaterials[name] || 0;
@@ -36,7 +36,7 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
         <div className="flex justify-between items-center p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg">
           <div>
               <h2 className="text-xl font-bold text-white">Restoration Materials</h2>
-              <p className="text-sm text-gray-400">Required for current Banked artefacts</p>
+              <p className="text-sm text-gray-400">Required for currently <span className="text-blue-400 font-semibold">Damaged</span> artefacts</p>
           </div>
           <button 
             onClick={onClose}
@@ -52,7 +52,7 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
         <div className="flex-1 overflow-y-auto p-0">
           {sortedMaterials.length === 0 ? (
             <div className="text-center text-gray-500 py-12">
-              No artefacts banked, or banked artefacts require no materials.
+              No damaged artefacts banked, or banked artefacts require no materials.
             </div>
           ) : (
             <table className="w-full text-left text-sm border-collapse">
@@ -69,16 +69,29 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
                   const banked = bankedMaterials[name] || 0;
                   const remaining = Math.max(0, needed - banked);
                   const isComplete = remaining === 0;
+                  const materialImg = `/img/${name.replace(/ /g, '_')}.png`;
 
                   return (
                     <tr key={name} className="hover:bg-gray-700/50 transition-colors">
-                      <td className="px-4 py-2 font-medium text-gray-200">{name}</td>
+                      <td className="px-4 py-2 font-medium text-gray-200">
+                        <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 flex-shrink-0 bg-gray-900/50 rounded border border-gray-600 flex items-center justify-center p-0.5">
+                                <img 
+                                    src={materialImg} 
+                                    alt={name} 
+                                    className="max-w-full max-h-full object-contain"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} 
+                                />
+                            </div>
+                            <span>{name}</span>
+                        </div>
+                      </td>
                       
-                      <td className="px-4 py-2 text-center font-mono text-gray-300">
+                      <td className="px-4 py-2 text-center font-mono text-gray-300 align-middle">
                         {needed}
                       </td>
                       
-                      <td className="px-4 py-2 text-center">
+                      <td className="px-4 py-2 text-center align-middle">
                         <input 
                             type="number" 
                             min="0"
@@ -89,7 +102,7 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
                         />
                       </td>
                       
-                      <td className={`px-4 py-2 text-center font-mono font-bold ${isComplete ? 'text-green-500' : 'text-red-400'}`}>
+                      <td className={`px-4 py-2 text-center font-mono font-bold align-middle ${isComplete ? 'text-green-500' : 'text-red-400'}`}>
                         {isComplete ? (
                             <span className="flex items-center justify-center gap-1">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
