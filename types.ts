@@ -1,3 +1,4 @@
+
 export interface Materials {
   [materialName: string]: number;
 }
@@ -23,6 +24,7 @@ export interface CollectionData {
   collector: string;
   items: string[];
   collection_bonus_chronotes?: number;
+  recurring_reward?: string;
 }
 
 export interface Collection extends CollectionData {

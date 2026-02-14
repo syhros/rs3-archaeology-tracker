@@ -7,7 +7,7 @@ import { FilterBar } from './components/FilterBar';
 import { MaterialShoppingList } from './components/MaterialShoppingList';
 import { ExcavationList } from './components/ExcavationList';
 import { CollectionView, CollectionStatus } from './components/CollectionView';
-import { DonationView } from './components/DonationView';
+import { DonationView, RepeatableCollectionStatus } from './components/DonationView';
 
 // --- Data Transformation ---
 const artefactsArray: Artefact[] = Object.entries(ARTEFACTS_JSON).map(([key, value]) => ({
@@ -63,11 +63,6 @@ function App() {
     return saved ? JSON.parse(saved) : {};
   });
 
-  const [donationCounts, setDonationCounts] = useState<Record<string, number>>(() => {
-    const saved = localStorage.getItem('rs3-arch-donation-counts');
-    return saved ? JSON.parse(saved) : {};
-  });
-
   const [checkedCollections, setCheckedCollections] = useState<CheckedCollections>(() => {
     const saved = localStorage.getItem('rs3-arch-checked');
     return saved ? JSON.parse(saved) : {};
@@ -95,10 +90,6 @@ function App() {
   }, [artefactCounts]);
 
   useEffect(() => {
-    localStorage.setItem('rs3-arch-donation-counts', JSON.stringify(donationCounts));
-  }, [donationCounts]);
-
-  useEffect(() => {
     localStorage.setItem('rs3-arch-checked', JSON.stringify(checkedCollections));
   }, [checkedCollections]);
 
@@ -117,22 +108,33 @@ function App() {
     }));
   };
 
-  const handleDonationCountChange = (name: string, val: number) => {
-    setDonationCounts(prev => ({
-      ...prev,
-      [name]: val
-    }));
-  };
-
   const handleCheckChange = (name: string, checked: boolean) => {
     setCheckedCollections(prev => ({ ...prev, [name]: checked }));
   };
 
+  // Used for First-time completion (Collections View)
   const handleCollectionComplete = (collection: Collection) => {
     // 1. Mark as checked
     setCheckedCollections(prev => ({ ...prev, [collection.name]: true }));
 
     // 2. Consume items (decrement repaired count)
+    setArtefactCounts(prev => {
+        const next = { ...prev };
+        collection.items.forEach(itemName => {
+            if (next[itemName] && next[itemName].repaired > 0) {
+                next[itemName] = {
+                    ...next[itemName],
+                    repaired: next[itemName].repaired - 1
+                };
+            }
+        });
+        return next;
+    });
+  };
+
+  // Used for Repeat donations (Donatable View)
+  const handleDonate = (collection: Collection) => {
+    // Consume 1 of each item in the collection
     setArtefactCounts(prev => {
         const next = { ...prev };
         collection.items.forEach(itemName => {
@@ -177,8 +179,6 @@ function App() {
         const remainingForOther = Math.max(0, totalNeeded - standardCount);
         
         // Distribute remainder evenly among other uses
-        // Usually there is only 1 other use, so it takes the full remainder.
-        // If there are multiple, we split it.
         const perOtherUseRequirement = remainingForOther / otherUseNames.length;
 
         otherUseNames.forEach(name => {
@@ -191,9 +191,7 @@ function App() {
     return count;
   };
 
-  // --- Complex Allocation Logic ---
-  // Calculates which collections can be fulfilled by the current banked artefacts,
-  // prioritizing collections with the lowest max-level artefact requirement.
+  // --- Complex Allocation Logic (Collections View) ---
   const { collectionStatuses, bonusChronotesTotal } = useMemo(() => {
     // 1. Filter incomplete collections
     const incompleteCollections = allCollectionsArray.filter(col => !checkedCollections[col.name]);
@@ -234,7 +232,8 @@ function App() {
 
         for (const itemName of sortedItems) {
             const counts = availableCounts[itemName];
-            const artefact = ARTEFACTS_JSON[itemName];
+            const artefactData = ARTEFACTS_JSON[itemName];
+            const artefact: Artefact = { ...artefactData, name: itemName };
             
             let status: 'ready' | 'damaged' | 'missing' = 'missing';
 
@@ -273,7 +272,76 @@ function App() {
 
   }, [artefactCounts, checkedCollections]);
 
-  // --- Sorting Logic for Collection View ---
+  // --- Repeatable / Donatable Logic (Donation View) ---
+  const repeatableCollectionStatuses = useMemo(() => {
+    // Only show completed collections
+    const completedCollections = allCollectionsArray.filter(col => checkedCollections[col.name] && col.collector !== 'Other Uses');
+
+    // Helper to get collection max level
+    const getMaxLvl = (col: Collection) => {
+        let max = 0;
+        col.items.forEach(i => {
+            const l = ARTEFACTS_JSON[i]?.level || 0;
+            if (l > max) max = l;
+        });
+        return max;
+    };
+
+    const results: RepeatableCollectionStatus[] = completedCollections.map(col => {
+        const sortedItems = [...col.items].sort((a, b) => (ARTEFACTS_JSON[a]?.level || 0) - (ARTEFACTS_JSON[b]?.level || 0));
+        
+        // Calculate items status based on current bank (no strict allocation logic between collections here, simpler view)
+        // Check if any *incomplete* collections need these items? 
+        // For simplicity in this view, we just show what you HAVE. The user decides where to put it.
+        
+        let minAvailable = Infinity;
+        let completionCount = 0; // Items ready
+        
+        const itemsStatus = sortedItems.map(itemName => {
+            const counts = artefactCounts[itemName] || { repaired: 0, damaged: 0 };
+            const artefactData = ARTEFACTS_JSON[itemName];
+            const artefact: Artefact = { ...artefactData, name: itemName };
+            const banked = counts.repaired || 0;
+            
+            if (banked < minAvailable) minAvailable = banked;
+            if (banked > 0) completionCount++;
+
+            return {
+                name: itemName,
+                artefact,
+                banked
+            };
+        });
+
+        if (sortedItems.length === 0) minAvailable = 0;
+
+        return {
+            collection: col,
+            maxLevel: getMaxLvl(col),
+            itemsStatus,
+            setsAvailable: minAvailable,
+            completionPercentage: sortedItems.length > 0 ? (completionCount / sortedItems.length) : 0
+        };
+    });
+
+    // Filter out collections that match the search term
+    const searchedResults = results.filter(r => r.collection.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    // Sort: 
+    // 1. Sets Available (Desc)
+    // 2. Completion % (Desc)
+    // 3. Level (Desc) (Higher level usually more relevant for farming)
+    searchedResults.sort((a, b) => {
+        if (a.setsAvailable !== b.setsAvailable) return b.setsAvailable - a.setsAvailable;
+        if (Math.abs(a.completionPercentage - b.completionPercentage) > 0.01) return b.completionPercentage - a.completionPercentage;
+        return b.maxLevel - a.maxLevel;
+    });
+
+    return searchedResults;
+  }, [artefactCounts, checkedCollections, searchTerm]);
+
+
+  // --- Sorting Logic for Collections View (Incomplete) ---
   const sortedCollectionStatuses = useMemo(() => {
     // Clone to avoid mutating original
     const sorted = [...collectionStatuses];
@@ -284,29 +352,16 @@ function App() {
       } else if (sortMethod === 'level') {
         return a.maxLevel - b.maxLevel;
       } else if (sortMethod === 'remaining') {
-        // "Collected" sort: 
-        // 1. Ready collections first (Level order if multiple ready)
-        // 2. Then by % ready items (Descending)
-        // 3. Then by Level
-        
         if (a.isReady && !b.isReady) return -1;
         if (!a.isReady && b.isReady) return 1;
-        
-        if (a.isReady && b.isReady) {
-            return a.maxLevel - b.maxLevel;
-        }
+        if (a.isReady && b.isReady) return a.maxLevel - b.maxLevel;
 
-        // Both not ready: Sort by % complete descending
         const aReady = a.itemsStatus.filter(i => i.status === 'ready').length;
         const bReady = b.itemsStatus.filter(i => i.status === 'ready').length;
         const aPct = a.itemsStatus.length > 0 ? aReady / a.itemsStatus.length : 0;
         const bPct = b.itemsStatus.length > 0 ? bReady / b.itemsStatus.length : 0;
         
-        if (Math.abs(aPct - bPct) > 0.0001) {
-            return bPct - aPct; // Higher % first
-        }
-        
-        // Fallback to level
+        if (Math.abs(aPct - bPct) > 0.0001) return bPct - aPct;
         return a.maxLevel - b.maxLevel;
       }
       return 0;
@@ -379,28 +434,6 @@ function App() {
     });
   }, [searchTerm, sortMethod, hideCompleted, artefactCounts, checkedCollections]);
 
-  // --- Donation View Logic ---
-  const donatableArtefacts = useMemo(() => {
-    return artefactsArray.filter(art => {
-        const matchesSearch = art.name.toLowerCase().includes(searchTerm.toLowerCase());
-        if (!matchesSearch) return false;
-
-        const myCollections = artefactCollectionsMap[art.name] || [];
-        
-        // It is donatable if ALL collections/uses are checked.
-        // If it belongs to no collections (rare), it's also donatable.
-        if (myCollections.length === 0) return true;
-        
-        return myCollections.every(colName => checkedCollections[colName]);
-    }).sort((a, b) => {
-        if (sortMethod === 'name') return a.name.localeCompare(b.name);
-        if (sortMethod === 'level') return a.level - b.level;
-        // For donation, 'remaining' sort doesn't make much sense in the same way,
-        // but we can sort by 'value' or just default to level.
-        return a.level - b.level;
-    });
-  }, [searchTerm, sortMethod, checkedCollections]);
-
 
   const shoppingListMaterials = useMemo(() => {
     const totals: Materials = {};
@@ -428,7 +461,6 @@ function App() {
         const totalHave = (counts?.damaged || 0) + (counts?.repaired || 0) + donated;
         const remaining = Math.max(0, art.total_needed - totalHave);
         
-        // If remaining is 0.5, we effectively need 1 artefact to cover it.
         const neededCount = Math.ceil(remaining);
 
         if (neededCount > 0) {
@@ -440,12 +472,10 @@ function App() {
         }
     });
 
-    // Sort artefacts within groups by level
     Object.values(grouped).forEach(list => {
         list.sort((a, b) => a.artefact.level - b.artefact.level);
     });
 
-    // Sort groups by min level of artefacts in them
     const sortedSites = Object.keys(grouped).sort((a, b) => {
         const minLevelA = Math.min(...grouped[a].map(i => i.artefact.level));
         const minLevelB = Math.min(...grouped[b].map(i => i.artefact.level));
@@ -569,9 +599,8 @@ function App() {
         <main className="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-900 scroll-smooth">
           {currentView === 'donatable' ? (
               <DonationView 
-                artefacts={donatableArtefacts}
-                donationCounts={donationCounts}
-                onDonationCountChange={handleDonationCountChange}
+                repeatableStatus={repeatableCollectionStatuses}
+                onDonate={handleDonate}
               />
           ) : currentView === 'artefacts' ? (
               // ARTEFACTS VIEW
