@@ -47,12 +47,14 @@ export const NumberInput: React.FC<NumberInputProps> = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      handleIncrement();
-    } else if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      handleDecrement();
+    if (!showButtons) {
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        handleIncrement();
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        handleDecrement();
+      }
     }
   };
 

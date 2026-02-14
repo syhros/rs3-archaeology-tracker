@@ -35,7 +35,7 @@ export interface Collection extends CollectionData {
 }
 
 export type SortMethod = 'level' | 'name' | 'remaining';
-export type ExcavationSortMethod = 'level' | 'dig_site' | 'excavation_site' | 'excavation_hotspot';
+export type ExcavationSortMethod = 'excavation_hotspot' | 'excavation_site' | 'dig_site';
 
 export interface UserArtefactCounts {
   [artefactName: string]: {

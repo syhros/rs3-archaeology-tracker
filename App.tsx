@@ -537,8 +537,8 @@ function App() {
                 <button
                     onClick={() => setCurrentView('artefacts')}
                     className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
-                        currentView === 'artefacts' 
-                            ? 'bg-blue-600 text-white shadow-sm' 
+                        currentView === 'artefacts'
+                            ? 'bg-blue-600 text-white shadow-sm'
                             : 'text-gray-300 hover:text-white hover:bg-gray-600'
                     }`}
                 >
@@ -547,12 +547,22 @@ function App() {
                 <button
                     onClick={() => setCurrentView('collections')}
                     className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
-                        currentView === 'collections' 
-                            ? 'bg-blue-600 text-white shadow-sm' 
+                        currentView === 'collections'
+                            ? 'bg-blue-600 text-white shadow-sm'
                             : 'text-gray-300 hover:text-white hover:bg-gray-600'
                     }`}
                 >
                     Collections
+                </button>
+                <button
+                    onClick={() => setCurrentView(prev => prev === 'donatable' ? 'artefacts' : 'donatable')}
+                    className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
+                        currentView === 'donatable'
+                            ? 'bg-blue-600 text-white shadow-sm'
+                            : 'text-gray-300 hover:text-white hover:bg-gray-600'
+                    }`}
+                >
+                    Completed
                 </button>
              </div>
 
@@ -588,8 +598,6 @@ function App() {
              onSortChange={setSortMethod}
              totalXP={bankedTotals.xp}
              totalChronotes={bankedTotals.chronotes}
-             currentView={currentView}
-             onToggleDonatable={() => setCurrentView(prev => prev === 'donatable' ? 'artefacts' : 'donatable')}
            />
         </header>
 

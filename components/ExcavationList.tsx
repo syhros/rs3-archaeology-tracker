@@ -20,6 +20,17 @@ interface ExcavationListProps {
   onCountChange: (name: string, type: 'damaged' | 'repaired', val: number) => void;
 }
 
+const DIG_SITE_ORDER: Record<string, number> = {
+  'Kharid-et Dig Site': 0,
+  'Infernal Source': 1,
+  'Everlight': 2,
+  'Senntisten': 3,
+  'Stormguard Citadel': 4,
+  'Daemonheim': 5,
+  'Warforge': 6,
+  'Orthen': 7,
+};
+
 export const ExcavationList: React.FC<ExcavationListProps> = ({
   groups,
   isOpen,
@@ -27,30 +38,41 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
   artefactCounts,
   onCountChange,
 }) => {
-  const [sortMethod, setSortMethod] = useState<ExcavationSortMethod>('level');
-  const [localCounts, setLocalCounts] = useState<UserArtefactCounts>({});
+  const [sortMethod, setSortMethod] = useState<ExcavationSortMethod>('excavation_hotspot');
+  const [editCounts, setEditCounts] = useState<UserArtefactCounts>({});
 
   const allItems = useMemo(() => {
     return groups.flatMap(g => g.items);
   }, [groups]);
 
-  const handleLocalCountChange = (name: string, type: 'damaged' | 'repaired', val: number) => {
-    setLocalCounts(prev => ({
+  const handleEditChange = (name: string, type: 'damaged' | 'repaired', val: number) => {
+    setEditCounts(prev => ({
       ...prev,
       [name]: {
-        ...(prev[name] || { damaged: 0, repaired: 0 }),
+        ...(prev[name] || artefactCounts[name] || { damaged: 0, repaired: 0 }),
         [type]: Math.max(0, val),
       },
     }));
-    onCountChange(name, type, val);
+  };
+
+  const handleSaveChanges = () => {
+    Object.entries(editCounts).forEach(([name, counts]) => {
+      onCountChange(name, 'damaged', counts.damaged);
+      onCountChange(name, 'repaired', counts.repaired);
+    });
+    setEditCounts({});
+  };
+
+  const getWikiLink = (text: string) => {
+    return `https://runescape.wiki/w/${text.replace(/ /g, '_')}`;
   };
 
   const groupedItems = useMemo(() => {
     if (allItems.length === 0) return [];
 
     const itemsWithLocalCounts = allItems.map(({ artefact, count }) => {
-      const local = localCounts[artefact.name];
-      const current = local || artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
+      const edit = editCounts[artefact.name];
+      const current = edit || artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
       const total = current.damaged + current.repaired;
       const remaining = Math.max(0, count - total);
       const isCompleted = remaining === 0;
@@ -71,9 +93,6 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
         case 'dig_site':
           groupKey = item.artefact.dig_site?.[0] || 'Unknown';
           break;
-        case 'level':
-          groupKey = `Level ${item.artefact.level}`;
-          break;
       }
 
       if (!grouped.has(groupKey)) {
@@ -85,38 +104,47 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
     const sortedGroups: ExcavationGroup[] = [];
     const groupArray = Array.from(grouped.entries());
 
-    if (sortMethod === 'level') {
+    if (sortMethod === 'dig_site') {
       groupArray.sort((a, b) => {
-        const levelA = parseInt(a[0].replace('Level ', ''));
-        const levelB = parseInt(b[0].replace('Level ', ''));
-        return levelA - levelB;
+        const orderA = DIG_SITE_ORDER[a[0]] ?? 999;
+        const orderB = DIG_SITE_ORDER[b[0]] ?? 999;
+        return orderA - orderB;
+      });
+    } else if (sortMethod === 'excavation_site') {
+      groupArray.sort((a, b) => {
+        const minLevelA = Math.min(...a[1].map(i => i.artefact.level));
+        const minLevelB = Math.min(...b[1].map(i => i.artefact.level));
+        return minLevelA - minLevelB;
       });
     } else {
-      groupArray.sort((a, b) => a[0].localeCompare(b[0]));
+      groupArray.sort((a, b) => {
+        const levelA = parseInt(a[0].match(/\d+/)?.[0] || '0');
+        const levelB = parseInt(b[0].match(/\d+/)?.[0] || '0');
+        return levelA - levelB;
+      });
     }
 
     groupArray.forEach(([label, items]) => {
-      items.sort((a, b) => {
-        if (a.remaining !== b.remaining) return b.remaining - a.remaining;
-        return a.artefact.name.localeCompare(b.artefact.name);
-      });
+      items.sort((a, b) => a.artefact.level - b.artefact.level);
       sortedGroups.push({ label, items });
     });
 
     return sortedGroups;
-  }, [allItems, sortMethod, localCounts, artefactCounts]);
+  }, [allItems, sortMethod, editCounts, artefactCounts]);
 
   if (!isOpen) return null;
 
   const completedCount = allItems.filter(({ count }) => {
-    const local = localCounts[count.toString()];
-    const current = local || artefactCounts[count.toString()] || { damaged: 0, repaired: 0 };
+    const edit = editCounts[count.toString()];
+    const current = edit || artefactCounts[count.toString()] || { damaged: 0, repaired: 0 };
     return (current.damaged + current.repaired) >= count;
   }).length;
 
+  const hasChanges = Object.keys(editCounts).length > 0;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-      <div className="bg-gray-800 rounded-lg shadow-2xl w-full max-w-5xl flex flex-col max-h-[90vh] border border-gray-700">
+      <div className="bg-gray-800 rounded-lg shadow-2xl w-full max-w-6xl flex flex-col max-h-[90vh] border border-gray-700">
 
         {/* Header */}
         <div className="flex justify-between items-center p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg">
@@ -136,14 +164,13 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
         </div>
 
         {/* Sort Controls */}
-        <div className="px-4 py-3 border-b border-gray-700 bg-gray-800/50 flex items-center gap-3">
+        <div className="px-4 py-3 border-b border-gray-700 bg-gray-800/50 flex items-center gap-3 flex-wrap">
           <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">Group by:</span>
           <div className="flex gap-2">
             {[
-              { value: 'level' as ExcavationSortMethod, label: 'Level' },
-              { value: 'dig_site' as ExcavationSortMethod, label: 'Dig Site' },
+              { value: 'excavation_hotspot' as ExcavationSortMethod, label: 'Hotspot (Default)' },
               { value: 'excavation_site' as ExcavationSortMethod, label: 'Location' },
-              { value: 'excavation_hotspot' as ExcavationSortMethod, label: 'Hotspot' },
+              { value: 'dig_site' as ExcavationSortMethod, label: 'Dig Site' },
             ].map(option => (
               <button
                 key={option.value}
@@ -170,9 +197,19 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
             <div className="space-y-6">
               {groupedItems.map((group) => (
                 <div key={group.label} className="bg-gray-900/50 rounded-lg border border-gray-700 overflow-hidden">
-                  <div className="bg-gray-800/80 px-4 py-2 border-b border-gray-700 sticky top-0 z-10">
+                  <div className="bg-gray-800/80 px-4 py-3 border-b border-gray-700 sticky top-0 z-10">
                     <h3 className="font-bold text-blue-400">
-                      {group.label}
+                      <a
+                        href={getWikiLink(group.label)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline flex items-center gap-2"
+                      >
+                        {group.label}
+                        <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
                     </h3>
                   </div>
 
@@ -197,43 +234,53 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
                           </div>
 
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-baseline gap-2">
+                            <div className="flex items-baseline gap-2 flex-wrap">
                               <span className={`font-bold truncate ${isCompleted ? 'text-green-400' : 'text-gray-200'}`}>
                                 {artefact.name}
                               </span>
                               <span className="text-xs text-gray-500 font-mono">Lvl {artefact.level}</span>
                             </div>
+                            <div className="text-xs text-blue-400 truncate hidden sm:block mt-0.5">
+                              <a
+                                href={getWikiLink(artefact.excavation_hotspot?.[0] || '')}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline"
+                              >
+                                {artefact.excavation_hotspot?.[0] || 'Unknown hotspot'}
+                              </a>
+                            </div>
                             <div className="text-xs text-gray-500 truncate hidden sm:block">
-                              {artefact.xp} XP &bull; {artefact.individual_chronotes} Chronotes
+                              {artefact.xp} XP • {artefact.individual_chronotes} Chronotes
                             </div>
                           </div>
                         </div>
 
                         {/* Controls */}
-                        <div className="flex items-center gap-4 w-full md:w-auto justify-end flex-wrap">
+                        <div className="flex items-center gap-3 w-full md:w-auto justify-end flex-wrap">
                           {/* Damaged Input */}
                           <div className="flex flex-col">
-                            <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5">Damaged</label>
+                            <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5 text-center">Damaged</label>
                             <NumberInput
                               value={current.damaged}
-                              onChange={(val) => handleLocalCountChange(artefact.name, 'damaged', val)}
+                              onChange={(val) => handleEditChange(artefact.name, 'damaged', val)}
                               min={0}
-                              max={count}
-                              className="w-14"
-                              showButtons={false}
+                              max={Math.max(count, current.damaged)}
+                              className="w-16"
+                              showButtons={true}
                             />
                           </div>
 
                           {/* Repaired Input */}
                           <div className="flex flex-col">
-                            <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5">Repaired</label>
+                            <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5 text-center">Repaired</label>
                             <NumberInput
                               value={current.repaired}
-                              onChange={(val) => handleLocalCountChange(artefact.name, 'repaired', val)}
+                              onChange={(val) => handleEditChange(artefact.name, 'repaired', val)}
                               min={0}
-                              max={count}
-                              className="w-14"
-                              showButtons={false}
+                              max={Math.max(count, current.repaired)}
+                              className="w-16"
+                              showButtons={true}
                             />
                           </div>
 
@@ -244,7 +291,7 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
                               : 'bg-yellow-900/30 border-yellow-700 text-yellow-400'
                           }`}>
                             <span className="text-[9px] text-gray-400 uppercase tracking-wide">Need</span>
-                            <span className={`text-xl font-bold leading-none ${isCompleted ? 'text-green-400' : 'text-yellow-400'}`}>
+                            <span className={`text-lg font-bold leading-none ${isCompleted ? 'text-green-400' : 'text-yellow-400'}`}>
                               {Math.max(0, remaining)}
                             </span>
                           </div>
@@ -266,6 +313,14 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
           >
             Close
           </button>
+          {hasChanges && (
+            <button
+              onClick={handleSaveChanges}
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition-colors shadow-lg"
+            >
+              Save Changes
+            </button>
+          )}
         </div>
 
       </div>
