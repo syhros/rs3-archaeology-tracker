@@ -18,6 +18,7 @@ interface ExcavationListProps {
   onClose: () => void;
   artefactCounts: UserArtefactCounts;
   onCountChange: (name: string, type: 'damaged' | 'repaired', val: number) => void;
+  getDonatedCount: (artefactName: string) => number;
 }
 
 const DIG_SITE_ORDER: Record<string, number> = {
@@ -37,6 +38,7 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
   onClose,
   artefactCounts,
   onCountChange,
+  getDonatedCount,
 }) => {
   const [sortMethod, setSortMethod] = useState<ExcavationSortMethod>('excavation_hotspot');
   const [editCounts, setEditCounts] = useState<UserArtefactCounts>({});
@@ -73,8 +75,9 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
     const itemsWithLocalCounts = allItems.map(({ artefact, count }) => {
       const edit = editCounts[artefact.name];
       const current = edit || artefactCounts[artefact.name] || { damaged: 0, repaired: 0 };
-      const total = current.damaged + current.repaired;
-      const remaining = Math.max(0, count - total);
+      const donated = getDonatedCount(artefact.name);
+      const total = current.damaged + current.repaired + donated;
+      const remaining = Math.max(0, (artefact.total_needed || 0) - total);
       const isCompleted = remaining === 0;
       return { artefact, count, current, total, remaining, isCompleted };
     });
@@ -130,7 +133,7 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
     });
 
     return sortedGroups;
-  }, [allItems, sortMethod, editCounts, artefactCounts]);
+  }, [allItems, sortMethod, editCounts, artefactCounts, getDonatedCount]);
 
   if (!isOpen) return null;
 

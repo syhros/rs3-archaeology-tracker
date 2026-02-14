@@ -684,6 +684,7 @@ function App() {
         onClose={() => setIsExcavationListOpen(false)}
         artefactCounts={artefactCounts}
         onCountChange={handleCountChange}
+        getDonatedCount={getDonatedCount}
       />
 
     </div>
