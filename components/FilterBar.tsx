@@ -8,7 +8,8 @@ interface FilterBarProps {
   onSortChange: (val: SortMethod) => void;
   totalXP: number;
   totalChronotes: number;
-  currentView?: 'artefacts' | 'collections';
+  currentView?: 'artefacts' | 'collections' | 'donatable';
+  onToggleDonatable?: () => void;
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({
@@ -19,6 +20,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   totalXP,
   totalChronotes,
   currentView = 'artefacts',
+  onToggleDonatable,
 }) => {
   return (
     <div className="bg-gray-800 p-2 border-b border-gray-700 sticky top-0 z-20 shadow-md">
@@ -76,9 +78,29 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
         </div>
 
-        {/* Right: Slim Sort */}
+        {/* Right: Slim Sort & Donatable Toggle */}
         <div className="flex items-center gap-2">
           
+          {/* Donatable Toggle */}
+          {onToggleDonatable && (
+              <button
+                onClick={onToggleDonatable}
+                className={`
+                    px-3 h-9 text-xs font-semibold rounded border transition-colors flex items-center gap-2
+                    ${currentView === 'donatable' 
+                        ? 'bg-purple-600 text-white border-purple-500 shadow-sm' 
+                        : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600 hover:text-white'
+                    }
+                `}
+                title="View fully completed artefacts available for donation"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="hidden sm:inline">Donatable</span>
+              </button>
+          )}
+
           {/* Sort Dropdown Group */}
           <div className="flex items-center bg-gray-700 rounded border border-gray-600 h-9 px-2 relative group hover:border-gray-500 transition-colors">
             <span className="text-xs text-gray-400 font-medium mr-2 whitespace-nowrap">Sort by</span>
@@ -91,6 +113,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               <option value="name">Name</option>
               {currentView === 'collections' ? (
                   <option value="remaining">Collected</option>
+              ) : currentView === 'donatable' ? (
+                  <option value="level">Level</option> 
               ) : (
                   <option value="remaining">Remaining</option>
               )}

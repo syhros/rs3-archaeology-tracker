@@ -7,6 +7,7 @@ import { FilterBar } from './components/FilterBar';
 import { MaterialShoppingList } from './components/MaterialShoppingList';
 import { ExcavationList } from './components/ExcavationList';
 import { CollectionView, CollectionStatus } from './components/CollectionView';
+import { DonationView } from './components/DonationView';
 
 // --- Data Transformation ---
 const artefactsArray: Artefact[] = Object.entries(ARTEFACTS_JSON).map(([key, value]) => ({
@@ -53,12 +54,17 @@ allCollectionsArray.forEach(col => {
   });
 });
 
-type AppView = 'artefacts' | 'collections';
+type AppView = 'artefacts' | 'collections' | 'donatable';
 
 function App() {
   // --- State ---
   const [artefactCounts, setArtefactCounts] = useState<UserArtefactCounts>(() => {
     const saved = localStorage.getItem('rs3-arch-counts-v2');
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  const [donationCounts, setDonationCounts] = useState<Record<string, number>>(() => {
+    const saved = localStorage.getItem('rs3-arch-donation-counts');
     return saved ? JSON.parse(saved) : {};
   });
 
@@ -89,6 +95,10 @@ function App() {
   }, [artefactCounts]);
 
   useEffect(() => {
+    localStorage.setItem('rs3-arch-donation-counts', JSON.stringify(donationCounts));
+  }, [donationCounts]);
+
+  useEffect(() => {
     localStorage.setItem('rs3-arch-checked', JSON.stringify(checkedCollections));
   }, [checkedCollections]);
 
@@ -104,6 +114,13 @@ function App() {
         ...prev[name],
         [type]: val
       }
+    }));
+  };
+
+  const handleDonationCountChange = (name: string, val: number) => {
+    setDonationCounts(prev => ({
+      ...prev,
+      [name]: val
     }));
   };
 
@@ -343,6 +360,29 @@ function App() {
     });
   }, [searchTerm, sortMethod, hideCompleted, artefactCounts, checkedCollections]);
 
+  // --- Donation View Logic ---
+  const donatableArtefacts = useMemo(() => {
+    return artefactsArray.filter(art => {
+        const matchesSearch = art.name.toLowerCase().includes(searchTerm.toLowerCase());
+        if (!matchesSearch) return false;
+
+        const myCollections = artefactCollectionsMap[art.name] || [];
+        
+        // It is donatable if ALL collections/uses are checked.
+        // If it belongs to no collections (rare), it's also donatable.
+        if (myCollections.length === 0) return true;
+        
+        return myCollections.every(colName => checkedCollections[colName]);
+    }).sort((a, b) => {
+        if (sortMethod === 'name') return a.name.localeCompare(b.name);
+        if (sortMethod === 'level') return a.level - b.level;
+        // For donation, 'remaining' sort doesn't make much sense in the same way,
+        // but we can sort by 'value' or just default to level.
+        return a.level - b.level;
+    });
+  }, [searchTerm, sortMethod, checkedCollections]);
+
+
   const shoppingListMaterials = useMemo(() => {
     const totals: Materials = {};
     artefactsArray.forEach(art => {
@@ -502,12 +542,19 @@ function App() {
              totalXP={bankedTotals.xp}
              totalChronotes={bankedTotals.chronotes}
              currentView={currentView}
+             onToggleDonatable={() => setCurrentView(prev => prev === 'donatable' ? 'artefacts' : 'donatable')}
            />
         </header>
 
         {/* Scrollable Content Area */}
         <main className="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-900 scroll-smooth">
-          {currentView === 'artefacts' ? (
+          {currentView === 'donatable' ? (
+              <DonationView 
+                artefacts={donatableArtefacts}
+                donationCounts={donationCounts}
+                onDonationCountChange={handleDonationCountChange}
+              />
+          ) : currentView === 'artefacts' ? (
               // ARTEFACTS VIEW
               <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-6 justify-items-center mx-auto max-w-[1800px]">
                 {processedArtefacts.map((artefact) => {
