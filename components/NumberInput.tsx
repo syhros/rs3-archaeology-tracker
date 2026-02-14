@@ -89,8 +89,11 @@ export const NumberInput: React.FC<NumberInputProps> = ({
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           className={`
-            w-full bg-gray-700 border border-gray-600 rounded text-center text-white text-sm
+            w-full bg-gray-700 border border-gray-600 rounded text-center text-white text-sm font-semibold
             focus:border-blue-500 focus:outline-none transition-colors
+            [&::-webkit-outer-spin-button]:appearance-none
+            [&::-webkit-inner-spin-button]:appearance-none
+            [&]:appearance-none
             ${showButtons ? 'px-6 py-0.5' : 'px-1 py-0.5'}
           `}
           onClick={(e) => (e.target as HTMLInputElement).select()}
