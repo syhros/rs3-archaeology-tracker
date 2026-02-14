@@ -10,7 +10,7 @@ interface CollectionSidebarProps {
   onHideCompletedChange: (val: boolean) => void;
 }
 
-type ViewMode = 'az' | 'collector' | 'other';
+type ViewMode = 'collector' | 'other';
 type SortOrder = 'az' | 'level';
 
 const getCollectorImage = (collectorName: string) => {
@@ -58,13 +58,6 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
       return true;
     });
   }, [collections, hideCompleted, checkedCollections]);
-
-  // Standard A-Z View (Flat List)
-  const sortedCollectionsAZ = useMemo(() => {
-    return [...filteredCollections]
-      .filter(c => c.collector !== 'Other Uses')
-      .sort((a, b) => a.name.localeCompare(b.name));
-  }, [filteredCollections]);
 
   // Other Uses View
   const otherUsesCollections = useMemo(() => {
@@ -126,30 +119,18 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
                 <span className="text-xs text-gray-300">Hide Done</span>
             </label>
 
-            {viewMode !== 'az' && (
-                <button 
-                    onClick={() => setSortOrder(prev => prev === 'az' ? 'level' : 'az')}
-                    className="text-xs bg-gray-700 hover:bg-gray-600 px-2 py-1 rounded text-gray-300 flex items-center gap-1 transition-colors"
-                    title="Sort Items inside groups"
-                >
-                    <span className="opacity-70">Sort:</span>
-                    <span className="font-bold text-white">{sortOrder === 'az' ? 'A-Z' : 'Lvl'}</span>
-                </button>
-            )}
+            <button 
+                onClick={() => setSortOrder(prev => prev === 'az' ? 'level' : 'az')}
+                className="text-xs bg-gray-700 hover:bg-gray-600 px-2 py-1 rounded text-gray-300 flex items-center gap-1 transition-colors"
+                title="Sort Items inside groups"
+            >
+                <span className="opacity-70">Sort:</span>
+                <span className="font-bold text-white">{sortOrder === 'az' ? 'A-Z' : 'Lvl'}</span>
+            </button>
         </div>
 
         {/* View Mode Tabs */}
         <div className="flex bg-gray-800 p-1 rounded-lg border border-gray-700">
-          <button
-            onClick={() => setViewMode('az')}
-            className={`flex-1 py-1 text-[10px] font-semibold rounded-md transition-colors ${
-              viewMode === 'az' 
-                ? 'bg-blue-600 text-white shadow-sm' 
-                : 'text-gray-400 hover:text-white hover:bg-gray-700'
-            }`}
-          >
-            A-Z
-          </button>
           <button
             onClick={() => setViewMode('collector')}
             className={`flex-1 py-1 text-[10px] font-semibold rounded-md transition-colors ${
@@ -175,42 +156,6 @@ export const CollectionSidebar: React.FC<CollectionSidebarProps> = ({
 
       <div className="flex-1 overflow-y-auto p-0 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
         
-        {viewMode === 'az' && (
-          <div className="p-2 space-y-1">
-            {sortedCollectionsAZ.map((col) => (
-              <label
-                key={col.name}
-                className="flex items-start gap-3 p-2 rounded hover:bg-gray-700/50 cursor-pointer transition-colors group"
-              >
-                <div className="pt-0.5">
-                    <input
-                    type="checkbox"
-                    className="w-4 h-4 rounded border-gray-500 text-blue-600 focus:ring-offset-gray-800 focus:ring-blue-500 bg-gray-700"
-                    checked={!!checkedCollections[col.name]}
-                    onChange={(e) => onCheckChange(col.name, e.target.checked)}
-                    />
-                </div>
-                <div className="text-sm select-none w-full">
-                    <div className="flex justify-between items-start w-full">
-                        <div className={`font-medium leading-tight transition-colors ${checkedCollections[col.name] ? 'text-green-400 line-through decoration-green-600/50' : 'text-gray-200 group-hover:text-white'}`}>
-                            {col.name}
-                        </div>
-                        <span className="text-[10px] text-gray-500 font-mono bg-gray-900/50 px-1 rounded ml-1 whitespace-nowrap">
-                            Lvl {getCollectionMaxLevel(col)}
-                        </span>
-                    </div>
-                    <div className="text-gray-500 text-xs mt-0.5">{col.collector}</div>
-                </div>
-              </label>
-            ))}
-            {sortedCollectionsAZ.length === 0 && (
-                <div className="text-center py-4 text-gray-500 text-sm">
-                    No collections found.
-                </div>
-            )}
-          </div>
-        )}
-
         {viewMode === 'collector' && (
           <div className="divide-y divide-gray-700/50">
             {sortedCollectorNames.map((collectorName) => {

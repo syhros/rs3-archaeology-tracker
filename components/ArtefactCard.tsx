@@ -53,6 +53,13 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
   // Dig Site Info
   const primaryDigSite = artefact.dig_sites && artefact.dig_sites.length > 0 ? artefact.dig_sites[0] : null;
 
+  const handleRepairClick = () => {
+    if (damagedCount > 0) {
+        onCountChange(artefact.name, 'damaged', damagedCount - 1);
+        onCountChange(artefact.name, 'repaired', repairedCount + 1);
+    }
+  };
+
   return (
     <div
       className={`
@@ -106,15 +113,17 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
         </div>
       </div>
 
-      {/* Grid: Total / Damaged / Repaired / Left */}
+      {/* Grid: Total / Damaged / Arrow / Repaired / Left */}
       <div className={`p-2 border-t border-b ${bottomSectionClass}`}>
-        <div className="grid grid-cols-4 gap-1 items-center text-center">
+        <div className="grid grid-cols-[auto_1fr_auto_1fr_auto] gap-2 items-center text-center">
             
-            <div className="flex flex-col">
-                <span className="text-[9px] text-gray-500 uppercase tracking-wide">Total</span>
+            {/* Total */}
+            <div className="flex flex-col w-8">
+                <span className="text-[9px] text-gray-500 uppercase tracking-wide">Tot</span>
                 <span className="font-bold text-sm text-white">{artefact.total_needed}</span>
             </div>
 
+            {/* Damaged */}
             <div className="flex flex-col">
                 <label htmlFor={`damaged-${artefact.name}`} className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5">Dmg</label>
                 <input
@@ -128,6 +137,27 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
                 />
             </div>
 
+            {/* Repair Arrow Button */}
+            <div className="flex items-end h-full pb-1">
+                <button 
+                    onClick={handleRepairClick}
+                    disabled={damagedCount <= 0}
+                    className={`
+                        p-1 rounded transition-colors
+                        ${damagedCount > 0 
+                            ? 'text-blue-400 hover:bg-blue-900/50 cursor-pointer' 
+                            : 'text-gray-600 cursor-default'
+                        }
+                    `}
+                    title="Repair 1 (Move Dmg to Rep)"
+                >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </button>
+            </div>
+
+            {/* Repaired */}
             <div className="flex flex-col">
                 <label htmlFor={`repaired-${artefact.name}`} className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5">Rep</label>
                 <input
@@ -141,7 +171,8 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
                 />
             </div>
 
-            <div className="flex flex-col">
+            {/* Left */}
+            <div className="flex flex-col w-8">
                 <span className="text-[9px] text-gray-500 uppercase tracking-wide">Left</span>
                 <span className={`font-bold text-sm ${leftTextColorClass}`}>
                     {remaining}

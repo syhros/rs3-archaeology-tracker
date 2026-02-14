@@ -4478,7 +4478,6 @@ export const ARTEFACTS_JSON: Record<string, ArtefactData> = {
 };
 
 export const COLLECTIONS_JSON: Record<string, CollectionData> = {
-    // ... existing collections ...
     "Zarosian I (Soran, Emissary of Zaros)": {
         "collector": "Soran, Emissary of Zaros",
         "items": [
@@ -4492,7 +4491,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Legatus Maximus figurine",
             "'Solem in Umbra' painting"
         ],
-        "collection_bonus_chronotes": 2108
+        "collection_bonus_chronotes": 2108,
+        "recurring_reward": "20 pylon batteries"
     },
     "Museum - Zarosian I (Velucia)": {
         "collector": "Velucia",
@@ -4522,7 +4522,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Order of Dis robes",
             "Ritual dagger"
         ],
-        "collection_bonus_chronotes": 5146
+        "collection_bonus_chronotes": 5146,
+        "recurring_reward": "Tetracompass piece"
     },
     "Showy Fings (Chief Tess)": {
         "collector": "Chief Tess",
@@ -4534,7 +4535,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Ceremonial plume",
             "Rod of Asclepius"
         ],
-        "collection_bonus_chronotes": 3158
+        "collection_bonus_chronotes": 3158,
+        "recurring_reward": "40 robust glass"
     },
     "Museum - Zamorakian I (Velucia)": {
         "collector": "Velucia",
@@ -4582,7 +4584,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Dominion torch",
             "Pontifex censer"
         ],
-        "collection_bonus_chronotes": 2204
+        "collection_bonus_chronotes": 2204,
+        "recurring_reward": "40 robust glass"
     },
     "Magic Man (Wise Old Man)": {
         "collector": "Wise Old Man",
@@ -4693,7 +4696,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Lion trophy",
             "She-wolf trophy"
         ],
-        "collection_bonus_chronotes": 6608
+        "collection_bonus_chronotes": 6608,
+        "recurring_reward": "Tetracompass piece"
     },
     "Zarosian II (Soran, Emissary of Zaros)": {
         "collector": "Soran, Emissary of Zaros",
@@ -4709,7 +4713,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Pontifex crozier",
             "Pontifex mitre"
         ],
-        "collection_bonus_chronotes": 5732
+        "collection_bonus_chronotes": 5732,
+        "recurring_reward": "50 Kharid-et pylon batteries"
     },
     "Museum - Zarosian II (Velucia)": {
         "collector": "Velucia",
@@ -4736,7 +4741,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Bronze Dominion medal",
             "Silver Dominion medal"
         ],
-        "collection_bonus_chronotes": 2484
+        "collection_bonus_chronotes": 2484,
+        "recurring_reward": "20 robust glass"
     },
     "Wise Am the Music Man (Wise Old Man)": {
         "collector": "Wise Old Man",
@@ -4796,7 +4802,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Funerary urn of blood",
             "Funerary urn of miasma"
         ],
-        "collection_bonus_chronotes": 2820
+        "collection_bonus_chronotes": 2820,
+        "recurring_reward": "Tetracompass piece"
     },
     "Saradominist II (Sir Atcha)": {
         "collector": "Sir Atcha",
@@ -4811,7 +4818,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Patera bowl",
             "Kantharos cup"
         ],
-        "collection_bonus_chronotes": 5202
+        "collection_bonus_chronotes": 5202,
+        "recurring_reward": "Tetracompass piece"
     },
     "Museum - Saradominist II (Velucia)": {
         "collector": "Velucia",
@@ -4899,7 +4907,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Ceremonial plume",
             "Peacocking parasol"
         ],
-        "collection_bonus_chronotes": 5688
+        "collection_bonus_chronotes": 5688,
+        "recurring_reward": "50 torn blueprint fragments"
     },
     "Museum - Dragonkin V (Velucia)": {
         "collector": "Velucia",
@@ -4919,7 +4928,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Exploratory totem",
             "Excavator portal mine"
         ],
-        "collection_bonus_chronotes": 2532
+        "collection_bonus_chronotes": 2532,
+        "recurring_reward": "2 large dungeoneering token boxes"
     },
     "Hitty Fings (Chief Tess)": {
         "collector": "Chief Tess",
@@ -4930,7 +4940,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "High priest crozier",
             "High priest orb"
         ],
-        "collection_bonus_chronotes": 5136
+        "collection_bonus_chronotes": 5136,
+        "recurring_reward": "40 robust glass"
     },
     "Green Gobbo Goodies I (General Wartface)": {
         "collector": "General Wartface",
@@ -4941,7 +4952,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Thorobshuun battle standard",
             "Yurkolgokh stink grenade"
         ],
-        "collection_bonus_chronotes": 3252
+        "collection_bonus_chronotes": 3252,
+        "recurring_reward": "Tetracompass piece"
     },
     "Museum - Bandosian I (Velucia)": {
         "collector": "Velucia",
@@ -4969,7 +4981,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "'Friendship bracelet'",
             "Homely totem"
         ],
-        "collection_bonus_chronotes": 4056
+        "collection_bonus_chronotes": 4056,
+        "recurring_reward": "Dungeoneering Wildcard and 2 large dungeoneering token boxes"
     },
     "Museum - Dragonkin VI (Velucia)": {
         "collector": "Velucia",
@@ -4991,7 +5004,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Beastkeeper helm",
             "'Nosorog!' sculpture"
         ],
-        "collection_bonus_chronotes": 2884
+        "collection_bonus_chronotes": 2884,
+        "recurring_reward": "Tetracompass piece"
     },
     "Saradominist III (Sir Atcha)": {
         "collector": "Sir Atcha",
@@ -5003,7 +5017,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Kopis dagger",
             "Xiphos short sword"
         ],
-        "collection_bonus_chronotes": 4548
+        "collection_bonus_chronotes": 4548,
+        "recurring_reward": "Tetracompass piece"
     },
     "Museum - Saradominist III (Velucia)": {
         "collector": "Velucia",
@@ -5043,7 +5058,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Golem heart",
             "Golem instruction"
         ],
-        "collection_bonus_chronotes": 6068
+        "collection_bonus_chronotes": 6068,
+        "recurring_reward": "75 torn blueprint fragments"
     },
     "Museum - Zarosian III (Velucia)": {
         "collector": "Velucia",
@@ -5073,7 +5089,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Portable phylactery",
             "'Animate Dead' spell scroll"
         ],
-        "collection_bonus_chronotes": 7442
+        "collection_bonus_chronotes": 7442,
+        "recurring_reward": "100 Kharid-et pylon batteries"
     },
     "Museum - Zamorakian III (Velucia)": {
         "collector": "Velucia",
@@ -5111,7 +5128,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Idithuun horn ring",
             "Garagorshuun anchor"
         ],
-        "collection_bonus_chronotes": 3758
+        "collection_bonus_chronotes": 3758,
+        "recurring_reward": "Tetracompass piece"
     },
     "Museum - Dragonkin I (Velucia)": {
         "collector": "Velucia",
@@ -5137,7 +5155,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Dragonkin calendar",
             "Dragonkin staff"
         ],
-        "collection_bonus_chronotes": 5524
+        "collection_bonus_chronotes": 5524,
+        "recurring_reward": "6 Anachronia resource packs"
     },
     "Museum - Bandosian II (Velucia)": {
         "collector": "Velucia",
@@ -5161,7 +5180,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "'Forged in War' sculpture",
             "Hobgoblin mansticker"
         ],
-        "collection_bonus_chronotes": 3468
+        "collection_bonus_chronotes": 3468,
+        "recurring_reward": "Tetracompass piece"
     },
     "Green Gobbo Goodies III (General Wartface)": {
         "collector": "General Wartface",
@@ -5173,7 +5193,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Horogothgar cooking pot",
             "'Da Boss Man' sculpture"
         ],
-        "collection_bonus_chronotes": 6044
+        "collection_bonus_chronotes": 6044,
+        "recurring_reward": "Tetracompass piece"
     },
     "Dragonkin II (Sharrigan)": {
         "collector": "Sharrigan",
@@ -5183,7 +5204,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Dragon burner",
             "Orthenglass flask"
         ],
-        "collection_bonus_chronotes": 3444
+        "collection_bonus_chronotes": 3444,
+        "recurring_reward": "75 rex skeleton fragments"
     },
     "Museum - Dragonkin II (Velucia)": {
         "collector": "Velucia",
@@ -5225,7 +5247,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Quintessence counter",
             "Spherical astrolabe"
         ],
-        "collection_bonus_chronotes": 10468
+        "collection_bonus_chronotes": 10468,
+        "recurring_reward": "150 torn blueprint fragments"
     },
     "Dragonkin VII (Sharrigan)": {
         "collector": "Sharrigan",
@@ -5237,7 +5260,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Portable portal generator",
             "Warped trinket"
         ],
-        "collection_bonus_chronotes": 5772
+        "collection_bonus_chronotes": 5772,
+        "recurring_reward": "Tetracompass piece"
     },
     "Museum - Dragonkin VII (Velucia)": {
         "collector": "Velucia",
@@ -5289,7 +5313,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Kontos lance",
             "Doru spear"
         ],
-        "collection_bonus_chronotes": 7022
+        "collection_bonus_chronotes": 7022,
+        "recurring_reward": "Tetracompass piece"
     },
     "Radiant Renaissance (Art Critic Jacques)": {
         "collector": "Art Critic Jacques",
@@ -5341,7 +5366,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Tsutsaroth pauldron",
             "Tsutsaroth urumi"
         ],
-        "collection_bonus_chronotes": 5434
+        "collection_bonus_chronotes": 5434,
+        "recurring_reward": "Tetracompass piece"
     },
     "Museum - Dragonkin IV (Velucia)": {
         "collector": "Velucia",
@@ -5364,7 +5390,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Gold dish",
             "'Raksha' idol"
         ],
-        "collection_bonus_chronotes": 6980
+        "collection_bonus_chronotes": 6980,
+        "recurring_reward": "150 rex skeleton fragments"
     },
     "Zarosian IV (Soran, Emissary of Zaros)": {
         "collector": "Soran, Emissary of Zaros",
@@ -5376,7 +5403,8 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Battle plans",
             "'Prima Legio' painting"
         ],
-        "collection_bonus_chronotes": 6810
+        "collection_bonus_chronotes": 6810,
+        "recurring_reward": "100 Kharid-et pylon batteries"
     },
     "Museum - Zarosian IV (Velucia)": {
         "collector": "Velucia",
@@ -5397,6 +5425,7 @@ export const COLLECTIONS_JSON: Record<string, CollectionData> = {
             "Kal-i-kra warhorn",
             "'Da Boss Man' sculpture"
         ],
-        "collection_bonus_chronotes": 4540
+        "collection_bonus_chronotes": 4540,
+        "recurring_reward": "Tetracompass piece"
     }
 };

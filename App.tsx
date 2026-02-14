@@ -290,36 +290,34 @@ function App() {
     const results: RepeatableCollectionStatus[] = completedCollections.map(col => {
         const sortedItems = [...col.items].sort((a, b) => (ARTEFACTS_JSON[a]?.level || 0) - (ARTEFACTS_JSON[b]?.level || 0));
         
-        // Calculate items status based on current bank (no strict allocation logic between collections here, simpler view)
-        // Check if any *incomplete* collections need these items? 
-        // For simplicity in this view, we just show what you HAVE. The user decides where to put it.
-        
-        let minAvailable = Infinity;
-        let completionCount = 0; // Items ready
+        let minSetsAvailable = Infinity;
+        let completionCount = 0; // Items ready (repaired or damaged)
         
         const itemsStatus = sortedItems.map(itemName => {
             const counts = artefactCounts[itemName] || { repaired: 0, damaged: 0 };
             const artefactData = ARTEFACTS_JSON[itemName];
             const artefact: Artefact = { ...artefactData, name: itemName };
-            const banked = counts.repaired || 0;
+            const repaired = counts.repaired || 0;
+            const damaged = counts.damaged || 0;
             
-            if (banked < minAvailable) minAvailable = banked;
-            if (banked > 0) completionCount++;
+            if (repaired < minSetsAvailable) minSetsAvailable = repaired;
+            if (repaired > 0 || damaged > 0) completionCount++;
 
             return {
                 name: itemName,
                 artefact,
-                banked
+                repaired,
+                damaged
             };
         });
 
-        if (sortedItems.length === 0) minAvailable = 0;
+        if (sortedItems.length === 0) minSetsAvailable = 0;
 
         return {
             collection: col,
             maxLevel: getMaxLvl(col),
             itemsStatus,
-            setsAvailable: minAvailable,
+            setsAvailable: minSetsAvailable,
             completionPercentage: sortedItems.length > 0 ? (completionCount / sortedItems.length) : 0
         };
     });
@@ -329,8 +327,8 @@ function App() {
 
     // Sort: 
     // 1. Sets Available (Desc)
-    // 2. Completion % (Desc)
-    // 3. Level (Desc) (Higher level usually more relevant for farming)
+    // 2. Completion % (Desc) - includes damaged
+    // 3. Level (Desc)
     searchedResults.sort((a, b) => {
         if (a.setsAvailable !== b.setsAvailable) return b.setsAvailable - a.setsAvailable;
         if (Math.abs(a.completionPercentage - b.completionPercentage) > 0.01) return b.completionPercentage - a.completionPercentage;
