@@ -30,7 +30,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
 
   let cardStyleClass = 'bg-gray-800 border-gray-700 hover:border-blue-500';
   let leftTextColorClass = 'text-red-400';
-  let labelColorClass = hasAnyCount ? 'text-red-300 font-semibold' : 'text-gray-500';
+  let labelColorClass = 'text-gray-500';
   let bottomSectionClass = 'border-gray-700 bg-gray-900/30';
 
   if (remaining === 0) {
@@ -38,15 +38,18 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
           // Yellow: Left is 0, but user still has damaged ones to process
           cardStyleClass = 'bg-yellow-900/40 border-yellow-600 hover:border-yellow-400';
           leftTextColorClass = 'text-yellow-400';
-          labelColorClass = 'text-yellow-300 font-semibold';
+          labelColorClass = hasAnyCount ? 'text-yellow-300 font-semibold' : 'text-gray-500';
           bottomSectionClass = 'border-yellow-700 bg-yellow-950/30';
-      } else {
-          // Green: Left is 0 and no damaged ones pending
+      } else if (hasAnyCount) {
+          // Green: Left is 0 and no damaged ones pending (only if something was entered)
           cardStyleClass = 'bg-green-900 border-green-700';
           leftTextColorClass = 'text-green-400';
           labelColorClass = 'text-green-300 font-semibold';
           bottomSectionClass = 'border-green-800 bg-green-950/30';
       }
+  } else if (hasAnyCount && remaining > 0) {
+      // Red: Items still needed and something is entered
+      labelColorClass = 'text-red-300 font-semibold';
   }
 
   const imgSrc = `/img/${artefact.img_src}`;
