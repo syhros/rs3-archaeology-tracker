@@ -9,6 +9,7 @@ interface NumberInputProps {
   step?: number;
   className?: string;
   showButtons?: boolean;
+  labelClassName?: string;
 }
 
 export const NumberInput: React.FC<NumberInputProps> = ({
@@ -20,6 +21,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
   step = 1,
   className = '',
   showButtons = true,
+  labelClassName = '',
 }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawValue = e.target.value;
@@ -61,7 +63,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
   return (
     <div className={`flex flex-col ${className}`}>
       {label && (
-        <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5 text-center">
+        <label className={`text-[9px] uppercase tracking-wide mb-0.5 text-center ${labelClassName || 'text-gray-500'}`}>
           {label}
         </label>
       )}

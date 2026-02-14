@@ -26,9 +26,10 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
   const [imgError, setImgError] = useState(false);
   
   const remaining = Math.max(0, artefact.total_needed - (damagedCount + repairedCount + donatedCount));
-  
+
   let cardStyleClass = 'bg-gray-800 border-gray-700 hover:border-blue-500';
   let leftTextColorClass = 'text-red-400';
+  let labelColorClass = 'text-red-300 font-semibold';
   let bottomSectionClass = 'border-gray-700 bg-gray-900/30';
 
   if (remaining === 0) {
@@ -36,11 +37,13 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
           // Yellow: Left is 0, but user still has damaged ones to process
           cardStyleClass = 'bg-yellow-900/40 border-yellow-600 hover:border-yellow-400';
           leftTextColorClass = 'text-yellow-400';
+          labelColorClass = 'text-yellow-300 font-semibold';
           bottomSectionClass = 'border-yellow-700 bg-yellow-950/30';
       } else {
           // Green: Left is 0 and no damaged ones pending
           cardStyleClass = 'bg-green-900 border-green-700';
           leftTextColorClass = 'text-green-400';
+          labelColorClass = 'text-green-300 font-semibold';
           bottomSectionClass = 'border-green-800 bg-green-950/30';
       }
   }
@@ -119,7 +122,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
             </div>
           )}
 
-          <div className="text-[10px] text-gray-400 mt-0.5 truncate leading-tight font-mono">
+          <div className="text-[11px] text-gray-300 mt-0.5 truncate leading-tight font-mono">
             XP: {artefact.xp} <span className="text-gray-600">|</span> Chronotes: {artefact.individual_chronotes}
           </div>
         </div>
@@ -131,7 +134,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
 
             {/* Total */}
             <div className="flex flex-col w-8">
-                <span className="text-[9px] text-gray-500 tracking-wide">Total</span>
+                <span className={`text-[9px] uppercase tracking-wide ${labelColorClass}`}>Total</span>
                 <span className="font-bold text-sm text-white">{artefact.total_needed}</span>
             </div>
 
@@ -142,6 +145,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
               label="Damaged"
               max={999}
               showButtons={true}
+              labelClassName={labelColorClass}
             />
 
             {/* Repair Buttons */}
@@ -180,11 +184,12 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
               label="Restored"
               max={999}
               showButtons={true}
+              labelClassName={labelColorClass}
             />
 
             {/* Left */}
             <div className="flex flex-col w-8">
-                <span className="text-[9px] text-gray-500 uppercase tracking-wide">Left</span>
+                <span className={`text-[9px] uppercase tracking-wide ${labelColorClass}`}>Left</span>
                 <span className={`font-bold text-sm ${leftTextColorClass}`}>
                     {remaining}
                 </span>
