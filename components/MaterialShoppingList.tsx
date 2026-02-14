@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Materials } from '../types';
+import { NumberInput } from './NumberInput';
 
 interface MaterialShoppingListProps {
   materials: Materials; // Required amounts
@@ -16,10 +17,12 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
   isOpen,
   onClose,
 }) => {
+  const [showOnlyNeeded, setShowOnlyNeeded] = useState(false);
+
   if (!isOpen) return null;
 
   const sortedMaterials = Object.entries(materials).sort((a, b) => a[0].localeCompare(b[0])) as [string, number][];
-  
+
   // Calculate Totals
   const totalNeeded = (Object.values(materials) as number[]).reduce((acc, curr) => acc + curr, 0);
   const totalBanked = sortedMaterials.reduce((acc, [name]) => acc + (bankedMaterials[name] || 0), 0);
@@ -28,19 +31,51 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
       return acc + Math.max(0, needed - banked);
   }, 0);
 
+  const filteredMaterials = showOnlyNeeded
+    ? sortedMaterials.filter(([name, needed]) => (bankedMaterials[name] || 0) < needed)
+    : sortedMaterials;
+
+  const handleSetToNeeded = (name: string, needed: number) => {
+    onMaterialBankedChange(name, needed);
+  };
+
+  const handleClearAll = () => {
+    if (window.confirm('Clear all banked material counts?')) {
+      sortedMaterials.forEach(([name]) => onMaterialBankedChange(name, 0));
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
       <div className="bg-gray-800 rounded-lg shadow-2xl w-full max-w-3xl flex flex-col max-h-[90vh] border border-gray-700">
         
         {/* Header */}
-        <div className="flex justify-between items-center p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg">
-          <div>
+        <div className="flex justify-between items-start p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg">
+          <div className="flex-1">
               <h2 className="text-xl font-bold text-white">Restoration Materials</h2>
               <p className="text-sm text-gray-400">Required for currently <span className="text-blue-400 font-semibold">Damaged</span> artefacts</p>
+              <div className="flex gap-2 mt-2">
+                <button
+                  onClick={() => setShowOnlyNeeded(!showOnlyNeeded)}
+                  className={`text-xs px-2 py-1 rounded transition-colors ${
+                    showOnlyNeeded
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {showOnlyNeeded ? 'Show All' : 'Show Only Needed'}
+                </button>
+                <button
+                  onClick={handleClearAll}
+                  className="text-xs px-2 py-1 rounded bg-red-700 text-white hover:bg-red-600 transition-colors"
+                >
+                  Clear All
+                </button>
+              </div>
           </div>
-          <button 
+          <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white p-2 rounded hover:bg-gray-700"
+            className="text-gray-400 hover:text-white p-2 rounded hover:bg-gray-700 ml-4"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -54,18 +89,26 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
             <div className="text-center text-gray-500 py-12">
               No damaged artefacts banked, or banked artefacts require no materials.
             </div>
+          ) : filteredMaterials.length === 0 ? (
+            <div className="text-center text-green-500 py-12">
+              <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-xl font-bold">All materials covered!</p>
+              <p className="text-sm text-gray-400 mt-2">You have enough of everything.</p>
+            </div>
           ) : (
             <table className="w-full text-left text-sm border-collapse">
               <thead className="text-xs text-gray-400 uppercase bg-gray-900/90 sticky top-0 z-10 shadow-sm">
                 <tr>
                   <th className="px-4 py-3 font-semibold tracking-wider">Material</th>
                   <th className="px-4 py-3 text-center w-24 font-semibold tracking-wider">Needed</th>
-                  <th className="px-4 py-3 text-center w-32 font-semibold tracking-wider">Banked</th>
+                  <th className="px-4 py-3 text-center w-40 font-semibold tracking-wider">Banked</th>
                   <th className="px-4 py-3 text-center w-24 font-semibold tracking-wider">Remaining</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-700 bg-gray-800">
-                {sortedMaterials.map(([name, needed]) => {
+                {filteredMaterials.map(([name, needed]) => {
                   const banked = bankedMaterials[name] || 0;
                   const remaining = Math.max(0, needed - banked);
                   const isComplete = remaining === 0;
@@ -76,32 +119,42 @@ export const MaterialShoppingList: React.FC<MaterialShoppingListProps> = ({
                       <td className="px-4 py-2 font-medium text-gray-200">
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 flex-shrink-0 bg-gray-900/50 rounded border border-gray-600 flex items-center justify-center p-0.5">
-                                <img 
-                                    src={materialImg} 
-                                    alt={name} 
+                                <img
+                                    src={materialImg}
+                                    alt={name}
                                     className="max-w-full max-h-full object-contain"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} 
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                                 />
                             </div>
                             <span>{name}</span>
                         </div>
                       </td>
-                      
+
                       <td className="px-4 py-2 text-center font-mono text-gray-300 align-middle">
                         {needed}
                       </td>
-                      
-                      <td className="px-4 py-2 text-center align-middle">
-                        <input 
-                            type="number" 
-                            min="0"
+
+                      <td className="px-4 py-2 align-middle">
+                        <div className="flex items-center gap-2 justify-center">
+                          <NumberInput
                             value={banked}
-                            onChange={(e) => onMaterialBankedChange(name, parseInt(e.target.value) || 0)}
-                            className="w-full bg-gray-900 border border-gray-600 rounded px-2 py-1 text-center text-white focus:border-blue-500 focus:outline-none text-sm font-mono"
-                            onClick={(e) => (e.target as HTMLInputElement).select()}
-                        />
+                            onChange={(val) => onMaterialBankedChange(name, val)}
+                            max={9999}
+                            showButtons={true}
+                            className="w-32"
+                          />
+                          {banked !== needed && (
+                            <button
+                              onClick={() => handleSetToNeeded(name, needed)}
+                              className="text-xs px-2 py-1 bg-blue-700 hover:bg-blue-600 text-white rounded transition-colors whitespace-nowrap"
+                              title="Set to exact needed amount"
+                            >
+                              = {needed}
+                            </button>
+                          )}
+                        </div>
                       </td>
-                      
+
                       <td className={`px-4 py-2 text-center font-mono font-bold align-middle ${isComplete ? 'text-green-500' : 'text-red-400'}`}>
                         {isComplete ? (
                             <span className="flex items-center justify-center gap-1">

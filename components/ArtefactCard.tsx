@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Artefact, CheckedCollections } from '../types';
+import { NumberInput } from './NumberInput';
 
 interface ArtefactCardProps {
   artefact: Artefact;
@@ -53,12 +54,23 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
   // Dig Site Info
   const primaryDigSite = artefact.dig_sites && artefact.dig_sites.length > 0 ? artefact.dig_sites[0] : null;
 
+  const [showCollections, setShowCollections] = useState(false);
+
   const handleRepairClick = () => {
     if (damagedCount > 0) {
         onCountChange(artefact.name, 'damaged', damagedCount - 1);
         onCountChange(artefact.name, 'repaired', repairedCount + 1);
     }
   };
+
+  const handleRepairAll = () => {
+    if (damagedCount > 0) {
+        onCountChange(artefact.name, 'repaired', repairedCount + damagedCount);
+        onCountChange(artefact.name, 'damaged', 0);
+    }
+  };
+
+  const hasRelevantInfo = collections.length > 0 || otherUses.length > 0;
 
   return (
     <div
@@ -116,7 +128,7 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
       {/* Grid: Total / Damaged / Arrow / Repaired / Left */}
       <div className={`p-2 border-t border-b ${bottomSectionClass}`}>
         <div className="grid grid-cols-[auto_1fr_auto_1fr_auto] gap-2 items-center text-center">
-            
+
             {/* Total */}
             <div className="flex flex-col w-8">
                 <span className="text-[9px] text-gray-500 uppercase tracking-wide">Tot</span>
@@ -124,52 +136,51 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
             </div>
 
             {/* Damaged */}
-            <div className="flex flex-col">
-                <label htmlFor={`damaged-${artefact.name}`} className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5">Dmg</label>
-                <input
-                    id={`damaged-${artefact.name}`}
-                    type="number"
-                    min="0"
-                    value={damagedCount}
-                    onChange={(e) => onCountChange(artefact.name, 'damaged', parseInt(e.target.value) || 0)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded px-1 py-0.5 text-center text-white text-sm focus:border-blue-500 focus:outline-none"
-                    onClick={(e) => (e.target as HTMLInputElement).select()}
-                />
-            </div>
+            <NumberInput
+              value={damagedCount}
+              onChange={(val) => onCountChange(artefact.name, 'damaged', val)}
+              label="Dmg"
+              max={999}
+              showButtons={true}
+            />
 
-            {/* Repair Arrow Button */}
-            <div className="flex items-end h-full pb-1">
-                <button 
+            {/* Repair Buttons */}
+            <div className="flex flex-col items-center justify-end h-full pb-1 gap-0.5">
+                <button
                     onClick={handleRepairClick}
                     disabled={damagedCount <= 0}
                     className={`
-                        p-1 rounded transition-colors
-                        ${damagedCount > 0 
-                            ? 'text-blue-400 hover:bg-blue-900/50 cursor-pointer' 
+                        p-0.5 rounded transition-colors
+                        ${damagedCount > 0
+                            ? 'text-blue-400 hover:bg-blue-900/50 cursor-pointer'
                             : 'text-gray-600 cursor-default'
                         }
                     `}
-                    title="Repair 1 (Move Dmg to Rep)"
+                    title="Repair 1"
                 >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                 </button>
+                {damagedCount > 1 && (
+                    <button
+                        onClick={handleRepairAll}
+                        className="text-blue-400 hover:bg-blue-900/50 p-0.5 rounded transition-colors text-[8px] font-bold"
+                        title={`Repair All (${damagedCount})`}
+                    >
+                        ALL
+                    </button>
+                )}
             </div>
 
             {/* Repaired */}
-            <div className="flex flex-col">
-                <label htmlFor={`repaired-${artefact.name}`} className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5">Rep</label>
-                <input
-                    id={`repaired-${artefact.name}`}
-                    type="number"
-                    min="0"
-                    value={repairedCount}
-                    onChange={(e) => onCountChange(artefact.name, 'repaired', parseInt(e.target.value) || 0)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded px-1 py-0.5 text-center text-white text-sm focus:border-blue-500 focus:outline-none"
-                    onClick={(e) => (e.target as HTMLInputElement).select()}
-                />
-            </div>
+            <NumberInput
+              value={repairedCount}
+              onChange={(val) => onCountChange(artefact.name, 'repaired', val)}
+              label="Rep"
+              max={999}
+              showButtons={true}
+            />
 
             {/* Left */}
             <div className="flex flex-col w-8">
@@ -182,39 +193,62 @@ export const ArtefactCard: React.FC<ArtefactCardProps> = ({
         </div>
       </div>
 
-      {/* Footer: Split Collections (Left) vs Other Uses (Right) */}
-      <div className="p-2 bg-gray-900/20 flex-1 grid grid-cols-2 gap-3">
-        {/* Left: Collections */}
-        <div className="text-left">
-            <ul className="space-y-1">
-                {collections.length === 0 && <li className="text-[10px] text-gray-600 italic">-</li>}
-                {collections.map((name, idx) => {
+      {/* Footer: Progressive Disclosure for Collections */}
+      {hasRelevantInfo && (
+        <div className="bg-gray-900/20">
+          <button
+            onClick={() => setShowCollections(!showCollections)}
+            className="w-full px-2 py-1.5 flex items-center justify-between hover:bg-gray-900/40 transition-colors border-t border-gray-700/50"
+          >
+            <span className="text-[10px] text-gray-500 uppercase tracking-wide">
+              Collections {collections.length > 0 && `(${collections.filter(c => !checkedCollections[c]).length}/${collections.length})`}
+            </span>
+            <svg
+              className={`w-3 h-3 text-gray-500 transition-transform ${showCollections ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {showCollections && (
+            <div className="p-2 grid grid-cols-2 gap-3 border-t border-gray-700/30">
+              {/* Left: Collections */}
+              <div className="text-left">
+                <ul className="space-y-1">
+                  {collections.length === 0 && <li className="text-[10px] text-gray-600 italic">None</li>}
+                  {collections.map((name, idx) => {
                     const isChecked = checkedCollections[name];
                     const displayName = cleanCollectionName(name);
                     return (
-                        <li key={`col-${name}-${idx}`} className={`text-[10px] leading-tight truncate ${isChecked ? 'text-green-400 line-through decoration-green-600/50' : 'text-gray-400'}`} title={displayName}>
-                            {displayName}
-                        </li>
+                      <li key={`col-${name}-${idx}`} className={`text-[10px] leading-tight truncate ${isChecked ? 'text-green-400 line-through decoration-green-600/50' : 'text-gray-400'}`} title={displayName}>
+                        {displayName}
+                      </li>
                     );
-                })}
-            </ul>
-        </div>
+                  })}
+                </ul>
+              </div>
 
-        {/* Right: Other Uses */}
-        <div className="text-right border-l border-gray-700/50 pl-2">
-            <ul className="space-y-1">
-                {otherUses.length === 0 && <li className="text-[10px] text-gray-600 italic">-</li>}
-                {otherUses.map((name, idx) => {
+              {/* Right: Other Uses */}
+              <div className="text-right border-l border-gray-700/50 pl-2">
+                <ul className="space-y-1">
+                  {otherUses.length === 0 && <li className="text-[10px] text-gray-600 italic">None</li>}
+                  {otherUses.map((name, idx) => {
                     const isChecked = checkedCollections[name];
                     return (
-                        <li key={`use-${name}-${idx}`} className={`text-[10px] leading-tight truncate ${isChecked ? 'text-green-400 line-through decoration-green-600/50' : 'text-gray-400'}`} title={name}>
-                            {name}
-                        </li>
+                      <li key={`use-${name}-${idx}`} className={`text-[10px] leading-tight truncate ${isChecked ? 'text-green-400 line-through decoration-green-600/50' : 'text-gray-400'}`} title={name}>
+                        {name}
+                      </li>
                     );
-                })}
-            </ul>
+                  })}
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -16,7 +16,7 @@ interface ExcavationListProps {
   isOpen: boolean;
   onClose: () => void;
   artefactCounts: UserArtefactCounts;
-  onCountChange: (name: string, type: 'damaged' | 'repaired', val: number) => void;
+  onCountChange?: (name: string, type: 'damaged' | 'repaired', val: number) => void;
 }
 
 export const ExcavationList: React.FC<ExcavationListProps> = ({
@@ -35,8 +35,9 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
         {/* Header */}
         <div className="flex justify-between items-center p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg">
           <div>
-              <h2 className="text-xl font-bold text-white">Excavation List</h2>
-              <p className="text-sm text-gray-400">Artefacts required to complete remaining collections</p>
+              <h2 className="text-xl font-bold text-white">Excavation Planning</h2>
+              <p className="text-sm text-gray-400">Dig sites and artefacts needed to complete collections</p>
+              <p className="text-xs text-blue-400 mt-1">Sorted by level requirement - focus on accessible sites first</p>
           </div>
           <button 
             onClick={onClose}
@@ -101,39 +102,15 @@ export const ExcavationList: React.FC<ExcavationListProps> = ({
                                         </div>
                                     </div>
 
-                                    {/* Controls */}
-                                    <div className="flex items-center gap-4 w-full md:w-auto justify-end">
-                                        
-                                        {/* Inputs */}
-                                        <div className="flex gap-2">
-                                            <div className="flex flex-col w-16">
-                                                <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5 text-center">Dmg</label>
-                                                <input
-                                                    type="number"
-                                                    min="0"
-                                                    value={currentCounts.damaged || 0}
-                                                    onChange={(e) => onCountChange(artefact.name, 'damaged', parseInt(e.target.value) || 0)}
-                                                    className="w-full bg-gray-800 border border-gray-600 rounded px-1 py-1 text-center text-white text-sm focus:border-blue-500 focus:outline-none"
-                                                    onClick={(e) => (e.target as HTMLInputElement).select()}
-                                                />
-                                            </div>
-                                            <div className="flex flex-col w-16">
-                                                <label className="text-[9px] text-gray-500 uppercase tracking-wide mb-0.5 text-center">Rep</label>
-                                                <input
-                                                    type="number"
-                                                    min="0"
-                                                    value={currentCounts.repaired || 0}
-                                                    onChange={(e) => onCountChange(artefact.name, 'repaired', parseInt(e.target.value) || 0)}
-                                                    className="w-full bg-gray-800 border border-gray-600 rounded px-1 py-1 text-center text-white text-sm focus:border-blue-500 focus:outline-none"
-                                                    onClick={(e) => (e.target as HTMLInputElement).select()}
-                                                />
-                                            </div>
+                                    {/* Status Badge Only */}
+                                    <div className="flex items-center gap-2">
+                                        <div className="flex flex-col items-center justify-center min-w-[3.5rem] bg-yellow-900/30 rounded px-3 py-2 border border-yellow-700">
+                                            <span className="text-[9px] text-gray-400 uppercase tracking-wide">Need</span>
+                                            <span className="text-xl font-bold text-yellow-400 leading-none">{count}</span>
                                         </div>
-
-                                        {/* Needed Count */}
-                                        <div className="flex flex-col items-center justify-center min-w-[3.5rem] bg-gray-800/80 rounded px-2 py-1 border border-gray-700 ml-2">
-                                            <span className="text-[9px] text-gray-500 uppercase tracking-wide">Need</span>
-                                            <span className="text-lg font-bold text-yellow-500 leading-none">{count}</span>
+                                        <div className="text-xs text-gray-500">
+                                            <div>Dmg: {currentCounts.damaged || 0}</div>
+                                            <div>Rep: {currentCounts.repaired || 0}</div>
                                         </div>
                                     </div>
                                 </div>
