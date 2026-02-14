@@ -74,7 +74,7 @@ function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [sortMethod, setSortMethod] = useState<SortMethod>('level');
-  const [selectedCollectionFilter, setSelectedCollectionFilter] = useState<string | null>(null);
+  
   const [hideCompleted, setHideCompleted] = useState(false);
   
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -266,12 +266,6 @@ function App() {
     let result = artefactsArray.filter(art => {
       const matchesSearch = art.name.toLowerCase().includes(searchTerm.toLowerCase());
       
-      // Determine if artefact is in selected collection filter
-      // Now including 'Other Uses' as they are in allCollectionsArray
-      const matchesCollection = selectedCollectionFilter 
-        ? (artefactCollectionsMap[art.name] && artefactCollectionsMap[art.name].includes(selectedCollectionFilter)) 
-        : true;
-
       // Hide Completed Filter
       let matchesHideCompleted = true;
       if (hideCompleted) {
@@ -283,7 +277,7 @@ function App() {
           }
       }
 
-      return matchesSearch && matchesCollection && matchesHideCompleted;
+      return matchesSearch && matchesHideCompleted;
     });
 
     return result.sort((a, b) => {
@@ -305,7 +299,7 @@ function App() {
       }
       return 0;
     });
-  }, [searchTerm, sortMethod, selectedCollectionFilter, hideCompleted, artefactCounts, checkedCollections]);
+  }, [searchTerm, sortMethod, hideCompleted, artefactCounts, checkedCollections]);
 
   const shoppingListMaterials = useMemo(() => {
     const totals: Materials = {};
@@ -394,7 +388,7 @@ function App() {
       <div className="flex-1 flex flex-col min-w-0">
         
         <header className="bg-gray-800 border-b border-gray-700">
-           <div className="p-4 flex items-center justify-between gap-4">
+           <div className="p-4 flex flex-wrap items-center justify-between gap-4">
              <div className="flex items-center gap-3">
                <button 
                  onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -404,7 +398,7 @@ function App() {
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                  </svg>
                </button>
-               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent truncate hidden md:block">
+               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent truncate hidden sm:block">
                  Archaeology Tracker
                </h1>
              </div>
@@ -413,7 +407,7 @@ function App() {
              <div className="flex bg-gray-700 p-1 rounded-lg border border-gray-600">
                 <button
                     onClick={() => setCurrentView('artefacts')}
-                    className={`px-4 py-1.5 text-sm font-semibold rounded-md transition-colors ${
+                    className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
                         currentView === 'artefacts' 
                             ? 'bg-blue-600 text-white shadow-sm' 
                             : 'text-gray-300 hover:text-white hover:bg-gray-600'
@@ -423,7 +417,7 @@ function App() {
                 </button>
                 <button
                     onClick={() => setCurrentView('collections')}
-                    className={`px-4 py-1.5 text-sm font-semibold rounded-md transition-colors ${
+                    className={`px-3 py-1 text-xs md:text-sm font-semibold rounded-md transition-colors ${
                         currentView === 'collections' 
                             ? 'bg-blue-600 text-white shadow-sm' 
                             : 'text-gray-300 hover:text-white hover:bg-gray-600'
@@ -436,10 +430,10 @@ function App() {
              <div className="flex gap-2">
                 <button
                     onClick={() => setIsExcavationListOpen(true)}
-                    className="flex items-center gap-2 px-3 py-2 bg-yellow-700 hover:bg-yellow-600 rounded text-sm font-semibold shadow-lg transition-transform active:scale-95"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-yellow-700 hover:bg-yellow-600 rounded text-xs md:text-sm font-semibold shadow-lg transition-transform active:scale-95"
                     title="Excavation List"
                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                     </svg>
                     <span className="hidden lg:inline">Excavation</span>
@@ -447,10 +441,10 @@ function App() {
 
                 <button
                     onClick={() => setIsShoppingListOpen(true)}
-                    className="flex items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold shadow-lg transition-transform active:scale-95"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded text-xs md:text-sm font-semibold shadow-lg transition-transform active:scale-95"
                     title="Material List"
                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                     </svg>
                     <span className="hidden lg:inline">Materials</span>
@@ -463,9 +457,6 @@ function App() {
              onSearchChange={setSearchTerm}
              sortMethod={sortMethod}
              onSortChange={setSortMethod}
-             collections={allCollectionsArray}
-             selectedCollectionFilter={selectedCollectionFilter}
-             onCollectionFilterChange={setSelectedCollectionFilter}
              totalXP={bankedTotals.xp}
              totalChronotes={bankedTotals.chronotes}
            />
@@ -494,7 +485,7 @@ function App() {
                 {processedArtefacts.length === 0 && (
                     <div className="col-span-full text-center py-20 text-gray-500">
                         <p className="text-xl">No artefacts found.</p>
-                        <p className="text-sm mt-2">Try adjusting your search or filters.</p>
+                        <p className="text-sm mt-2">Try adjusting your search.</p>
                     </div>
                 )}
               </div>
