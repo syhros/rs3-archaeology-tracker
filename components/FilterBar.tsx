@@ -82,6 +82,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   <option value="level">Level</option>
                   <option value="name">Name</option>
                   <option value="remaining">Remaining</option>
+                  <option value="damaged">Damaged</option>
                 </select>
                 <div className="pointer-events-none absolute right-1.5 md:right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>

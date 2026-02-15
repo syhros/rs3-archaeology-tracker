@@ -343,7 +343,7 @@ function App() {
   const sortedCollectionStatuses = useMemo(() => {
     // Clone to avoid mutating original
     const sorted = [...collectionStatuses];
-    
+
     sorted.sort((a, b) => {
       if (sortMethod === 'name') {
         return a.collection.name.localeCompare(b.collection.name);
@@ -358,13 +358,19 @@ function App() {
         const bReady = b.itemsStatus.filter(i => i.status === 'ready').length;
         const aPct = a.itemsStatus.length > 0 ? aReady / a.itemsStatus.length : 0;
         const bPct = b.itemsStatus.length > 0 ? bReady / b.itemsStatus.length : 0;
-        
+
         if (Math.abs(aPct - bPct) > 0.0001) return bPct - aPct;
+        return a.maxLevel - b.maxLevel;
+      } else if (sortMethod === 'damaged') {
+        const aDamaged = a.itemsStatus.filter(i => i.status === 'damaged').length;
+        const bDamaged = b.itemsStatus.filter(i => i.status === 'damaged').length;
+
+        if (bDamaged !== aDamaged) return bDamaged - aDamaged;
         return a.maxLevel - b.maxLevel;
       }
       return 0;
     });
-    
+
     return sorted;
   }, [collectionStatuses, sortMethod]);
 
@@ -424,8 +430,14 @@ function App() {
         const countsB = artefactCounts[b.name];
         const donatedB = getDonatedCount(b.name);
         const remainingB = Math.max(0, b.total_needed - ((countsB?.damaged || 0) + (countsB?.repaired || 0) + donatedB));
-        
+
         if (remainingB !== remainingA) return remainingB - remainingA;
+        return a.name.localeCompare(b.name);
+      } else if (sortMethod === 'damaged') {
+        const damagedA = artefactCounts[a.name]?.damaged || 0;
+        const damagedB = artefactCounts[b.name]?.damaged || 0;
+
+        if (damagedB !== damagedA) return damagedB - damagedA;
         return a.name.localeCompare(b.name);
       }
       return 0;
